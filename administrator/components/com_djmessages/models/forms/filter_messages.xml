@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_DJMESSAGES_FILTER_SEARCH_LABEL"
+			description="COM_DJMESSAGES_SEARCH_IN_SUBJECT"
+			hint="COM_DJMESSAGES_FILTER_SEARCH_HINT"
+		/>
+		<field
+			name="only_me"
+			type="radio"
+			label="COM_DJMESSAGES_FILTER_USER_TOGGLE_LABEL"
+			class="btn-group"
+			default="0"
+		>
+			<option value="0" onchange="this.form.submit();">COM_DJMESSAGES_OPTION_ALL_USERS</option>
+			<option value="1" onchange="this.form.submit();">COM_DJMESSAGES_OPTION_ONLY_MINE</option>
+			<option value="2" onchange="this.form.submit();">COM_DJMESSAGES_OPTION_TO_ME</option>
+			<option value="3" onchange="this.form.submit();">COM_DJMESSAGES_OPTION_FROM_ME</option>
+		</field>
+		<field
+			name="sender_state"
+			type="list"
+			label="COM_DJMESSAGES_FILTER_STATES_LABEL"
+			description="COM_DJMESSAGES_FILTER_STATES_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_DJMESSAGES_OPTION_SENDER_STATE</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+			<option value="*">JALL</option>
+		</field>
+		<field
+			name="recipient_state"
+			type="list"
+			label="COM_DJMESSAGES_FILTER_STATES_LABEL"
+			description="COM_DJMESSAGES_FILTER_STATES_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_DJMESSAGES_OPTION_RECIPIENT_STATE</option>
+			<option value="1">COM_DJMESSAGES_OPTION_READ</option>
+			<option value="0">COM_DJMESSAGES_OPTION_UNREAD</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+			<option value="*">JALL</option>
+		</field>
+		<field
+			name="date_from"
+			type="calendar"
+			default=""
+			label="COM_DJMESSAGES_FILTER_DATE_FROM_LABEL"
+			hint="COM_DJMESSAGES_FILTER_DATE_FROM_HINT"
+			onchange="this.form.submit();"
+		/>
+		<field
+			name="date_to"
+			type="calendar"
+			default=""
+			label="COM_DJMESSAGES_FILTER_DATE_TO_LABEL"
+			hint="COM_DJMESSAGES_FILTER_DATE_TO_HINT"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="a.date_time DESC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.subject ASC">COM_DJMESSAGES_HEADING_SUBJECT_ASC</option>
+			<option value="a.subject DESC">COM_DJMESSAGES_HEADING_SUBJECT_DESC</option>
+			<option value="a.state ASC">COM_DJMESSAGES_HEADING_READ_ASC</option>
+			<option value="a.state DESC">COM_DJMESSAGES_HEADING_READ_DESC</option>
+			<option value="a.user_to ASC">COM_DJMESSAGES_HEADING_TO_ASC</option>
+			<option value="a.user_to DESC">COM_DJMESSAGES_HEADING_TO_DESC</option>
+			<option value="a.user_from ASC">COM_DJMESSAGES_HEADING_FROM_ASC</option>
+			<option value="a.user_from DESC">COM_DJMESSAGES_HEADING_FROM_DESC</option>
+			<option value="a.sent_time ASC">JDATE_ASC</option>
+			<option value="a.sent_time DESC">JDATE_DESC</option>
+		</field> 
+		<field
+			name="limit"
+			type="limitbox"
+			label="JGLOBAL_LIMIT"
+			description="JGLOBAL_LIMIT"
+			class="input-mini"
+			default="5"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

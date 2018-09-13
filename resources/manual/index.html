@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Manual</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="css/pretty.css" rel="stylesheet">
+	<link href="css/manual.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/fontawesome-all.min.js" defer></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+</head>
+
+<body>
+<div id="sidebar">
+	<div id="sidebar-top">
+		<h1>Documentation</h1>
+		<p>JM Iks manual ver. 1.00</p>
+	</div>
+	<ul class="nav nav-list">
+		<li><a href="#installing-quickstart">Installing the quickstart package</a></li>
+		<li><a href="#installing-packages">Installing the template and extensions in Joomla</a></li>
+		<li><a href="#installing-template-plugins-extensions">Activating the template and plugins</a>
+			<ul class="nav nav-list">
+				<li><a href="#installing-template">Activate the template</a></li>
+				<li><a href="#installing-framework">Activate the EF4 Framework plugin</a></li>
+				<li><a href="#installing-djmegamenu">Activate the DJ-MegaMenu plugin</a></li>
+				<li><a href="#installing-djclassifieds">Activate the DJ-Classifieds plugins</a>
+				<li><a href="#installing-ajax">Activate the AJAX app for DJ-Classifieds</a></li>
+				<li><a href="#installing-djmediatools">Activate the DJ-MediaTools plugins</a></li>
+				<li><a href="#installing-djmessages">Activate the DJ-Messages plugins</a></li>
+				<li><a href="#installing-djsuggester">Activate the DJ-Suggester Light plugin</a></li>
+				<li><a href="#installing-djquerymonster">Activate the DJ-jQueryMonster plugin</a></li>
+			</ul>
+		</li>
+		<li><a href="#preparing-sampledata">Preparing sample data</a>
+			<ul class="nav nav-list">
+				<li><a href="#transfering-images">Transfering images for content</a></li>
+				<li><a href="#importing-settings">Importing the template settings</a></li>
+				<li><a href="#changing-logo">Changing the logo</a></li>
+			</ul>
+		</li>
+		<li><a href="#configuring-menu">Configuring a menu</a>
+			<ul class="nav nav-list">
+				<li><a href="#creating-menu">Creating a menu</a></li>
+				<li><a href="#hiding-component">Hiding component part on home page</a></li>
+				<li><a href="#assigning-layout">Assigning a layout to the home page</a></li>
+			</ul>
+		</li>
+		<li><a href="#configuring-djmegamenu">Configuring the DJ-MegaMenu extension</a>
+			<ul class="nav nav-list">
+				<li><a href="#djmegamenu-module-parameters">Module parameters</a></li>
+				<li><a href="#djmegamenu-displaying-columns">Displaying columns in submenu</a></li>
+				<li><a href="#djmegamenu-displaying-module">Displaying a module in submenu</a></li>
+				<li><a href="#djmegamenu-documentation">Documentation</a></li>
+			</ul>
+		</li>
+		<li><a href="#configuring-djclassifieds">Configuring the DJ-Classifieds extension</a>
+			<ul class="nav nav-list">
+				<li><a href="#djclassifieds-global-configuration">Global configuration</a></li>
+				<li><a href="#djclassifieds-component-settings">Component settings</a></li>
+				<li><a href="#djclassifieds-displaying-component">Displaying a component on a website</a></li>
+				<li><a href="#djclassifieds-modules-settings">Modules settings</a></li>
+				<li><a href="#djclassifieds-plugins-settings">Plugins settings</a></li>
+				<li><a href="#djclassifieds-documentation">Documentation</a></li>
+			</ul>
+		</li>
+		<li><a href="#configuring-ajax">Configuring the AJAX app for DJ-Classifieds</a>
+			<ol class="nav nav-list">
+				<li><a href="#ajax-settings">Plugin Settings</a></li>
+				<li><a href="#ajax-documentation">Documentation</a></li>
+			</ol>
+		</li>
+		<li><a href="#configuring-djmediatools">Configuring the DJ-MediaTools extension</a>
+			<ol class="nav nav-list">
+				<li><a href="#djmediatools-global-configuration">Global configuration</a></li>
+				<li><a href="#djmediatools-component-settings">Component settings</a></li>
+				<li><a href="#djmediatools-displaying-component">Displaying a component on a website</a></li>
+				<li><a href="#djmediatools-module-settings">Module settings</a></li>
+				<li><a href="#djmediatools-plugins-settings">Plugins settings</a></li>
+				<li><a href="#djmediatools-documentation">Documentation</a></li>
+			</ol>
+		</li>
+		<li><a href="#configuring-djmessages">Configuring the DJ-Messages extension</a>
+			<ul class="nav nav-list">
+				<li><a href="#djmessages-component-settings">Component settings</a></li>
+				<li><a href="#djmessages-displaying-messages">Displaying messages on your website</a></li>
+				<li><a href="#djmessages-plugins">Plugins</a></li>
+				<li><a href="#djmessages-modules">Modules</a></li>
+				<li><a href="#djmessages-documentation">Documentation</a></li>
+			</ul>
+		</li>
+		<li><a href="#configuring-akeeba-social">Configuring the Akeeba Social Login extension</a>
+			<ul class="nav nav-list">
+				<li><a href="#akeeba-social-documentation">Documentation</a></li>
+			</ul>
+		</li>
+		<li><a href="#configuring-osmap">Configuring the OSMap extension</a>
+			<ul class="nav nav-list">
+				<li><a href="#osmap-social-documentation">Documentation</a></li>
+			</ul>
+		</li>
+		<li><a href="#configuring-modules">Configuring modules</a>
+			<ul class="nav nav-list">
+				<li><a href="#jm-simple-tabs">JM Simple Tabs</a></li>
+				<li><a href="#jm-social-icons">JM Social Icons</a></li>
+				<li><a href="#custom-modules">Other modules used on the demo site</a></li>
+			</ul>
+		</li>
+		<li><a href="#module-positions">Module positions</a></li>
+		<li><a href="#module-suffixes">Module settings</a></li>
+		<li><a href="#typography">Typography</a></li>
+		<li><a href="#editing-template">Editing the template files</a>
+			<ul class="nav nav-list">
+				<li> <a href="#editing-files-structure">The template files structure</a> </li>
+				<li> <a href="#editing-custom-styles">Custom CSS</a> </li>
+				<li> <a href="#editing-code-injection">Code injection</a> </li>
+			</ul>
+		</li>
+		<li><a href="#updating-template">Updating the template</a></li>
+		<li><a href="#responsive-layout">Responsive layout</a></li>
+		<li><a href="#joomla-optimization">Joomla optimization</a> </li>
+		<li><a href="#rtl-languages">Using the template with RTL languages</a></li>
+		<li><a href="#psd-slices">PSD slices</a></li>
+		<li><a href="#other-links">Other useful links</a></li>
+	</ul>
+</div>
+<!-- Main -->
+<div id="main" class="container-fluid">
+	<div class="row-fluid">
+		<!-- Content -->
+		<div class="span12">
+			<div id="installing-quickstart">
+				<div class="page-header">
+					<h1>Installing the quickstart (demo copy)</h1>
+				</div>
+				<div class="alert alert-info">Installing the quickstart package is the fastest and easiest way to get an exact copy of our demo site. Skip this point if you want configure everything from a scratch by installing the template and extensions manually on an existing Joomla installation.</div>
+				<p>From your download area at <a href="http://www.joomla-monster.com/" target="_blank">Joomla-Monster.com</a> you need to download the quickstart package. The package is named as "quickstart.zip" and it will be needed in this step.</p>
+				<p>Instead of installing the template and all extensions separately, you can simply install the quickstart package which is the exact copy of the demo site. 
+					<br>This way you will save a lot of time on configuring all settings from a scratch.</p>
+				<p>In the below article, you will find :</p>
+				<ul>
+					<li>a video tutorial on how to install the quickstart package step by step</li>
+					<li>solutions to common issues during quickstart installation</li>
+				</ul>
+				<p><a class="btn-primary btn" href="https://www.joomla-monster.com/documentation/installation/how-to-install-a-quickstart" target="_blank">Read how to install a quickstart</a></p>
+			</div>
+			<div id="installing-packages">
+				<div class="page-header">
+					<h1>Installing the template and extensions in Joomla</h1>
+				</div>
+				<p>From your download area at Joomla-Monster.com, you need to download the zip packages of the template, modules and extensions:</p>
+				<ul>
+					<li>template</li>
+					<li>DJ-Classifieds</li>
+					<li>DJ-Classifieds theme</li>
+					<li>AJAX app for DJ-Classifieds</li>
+					<li>DJ-MegaMenu</li>
+					<li>DJ-MediaTools</li>
+					<li>DJ-Messages</li>
+					<li>JM Offcanvas Button</li>
+					<li>JM Simple Tabs</li>
+					<li>JM Social Icons</li>
+				</ul>
+
+				<p>From download area at DJ-Extensions.com (it is our sister company), you need to download the zip packages of some extensions:</p>
+				<ul>
+					<li>DJ-Suggester Light</li>
+					<li>DJ-jQueryMonster </li>
+				</ul>
+
+				<p>From akeebabackup.com download Social login solution:</p>
+				<ul>
+					<li>Akeeba Social Login</li>
+				</ul>
+				<p>From joomlashack.com download sitemap extension:</p>
+				<ul>
+					<li>OSMap</li>
+				</ul>
+
+				<p>All the above packages are required in this step because you need to install them one by one.</p>
+
+				<p>Log in to the backend of your site as follows:
+					<br> <strong>www.yoursite.com/administrator</strong></p>
+				<p>From the top bar menu, click on "Extensions → Manage → Install".
+					<br> On this page you can install a template, component, module, plugin or language package.</p>
+				<p>1) On the "Upload Package File" tab – browse your PC and select the template package, click on "Upload &amp; Install".</p>
+				<p><img class="img-thumbnail" src="images/img1.png" /></p>
+				<p>2) You should get a message saying that installing the package was successful.</p>
+				<p><img class="img-thumbnail" src="images/img4.png" /></p>
+			</div>
+			<div id="installing-template-plugins-extensions">
+				<div class="page-header">
+					<h1>Activating the template and plugins</h1>
+				</div>
+				<div id="installing-template">
+					<h2>1. Activate the template</h2>
+					<p>From the top bar menu, click on "Extensions → Templates → Styles".
+						<br>On this page you will see a list of installed templates. Tick on "your-template-name" and click on the "Default" button to set this template as the default one.</p>
+					<p><img class="img-thumbnail" src="images/img3.png" alt="Installing the Template" /></p>
+				</div>
+				<div id="installing-framework">
+					<h2>2. Activate the EF4 Framework plugin</h2>
+					<p>From the top bar menu, click on "Extensions → Plugins". On this page you will see a list of available plugins in your Joomla. 
+						<br>Search for "EF4 Joomla-Monster Framework" plugin and make sure it is published.</p>
+					<p><img class="img-thumbnail" src="images/img5.png" /></p>
+				</div>
+				<div id="installing-djmegamenu">
+					<h2>3. Activate the DJ-MegaMenu plugin</h2>
+					<p>From the top bar menu, click on "Extensions → Plugins". On this page you will see a list of available plugins in your Joomla. 
+						<br>Search for "DJ-MegaMenu system plugin" plugin and make sure it is published.</p>
+					<p><img class="img-thumbnail" src="images/img6.png" /></p>
+				</div>
+				<div id="installing-djclassifieds">
+					<h2>4. Activate the DJ-Classifieds plugins</h2>
+					<p>From the top bar menu, click on "Extensions → Plugins". On this page you will see a list of available plugins in your Joomla. 
+						<br>Search for DJ-Classifieds plugins and make sure they are published.</p>
+					<p><img class="img-thumbnail" src="images/img7.png" /></p>
+					<p>The above image is for preview purpose only. You may see a different set of DJ-Classifieds plugins on your site.</p>
+					<h3>DJ-Classifieds Theme</h3>
+					<p>Next, you will need to set the DJ-Classifieds theme as the default one in the <a href="#configuring-djclassifieds">DJ-Classifieds global configuration</a>.</p>
+				</div>
+
+				<div id="installing-ajax">
+					<h2>5. Activate the AJAX app for DJ-Classifieds</h2>
+					<p>From the top bar menu, click on "Extensions → Plugins". On this page you will see a list of available plugins in your Joomla. 
+						<br>Search for 	System - DJ-Classifieds Ajax plugin and make sure it is published.</p>
+					<p><img class="img-thumbnail" src="images/img7b.png" /></p>
+				</div>
+
+				<div id="installing-djmediatools">
+					<h2>6. Activate the DJ-MediaTools plugins</h2>
+					<p>From the top bar menu, click on "Extensions → Plugins". On this page you will see a list of available plugins in your Joomla. 
+						<br>Search for DJ-MediaTools plugins and make sure they are published.</p>
+					<p><img class="img-thumbnail" src="images/img8.png" /></p>
+					<p>The above image is for preview purpose only. You may see a different set of DJ-MediaTools plugins on your site.</p>
+				</div>
+				<div id="installing-djmessages">
+					<h2>7. Activate the DJ-Messages plugins</h2>
+					<p>From the top bar menu, click on "Extensions → Plugins". On this page you will see a list of available plugins in your Joomla. 
+						<br>Search for DJ-Messages plugins and make sure they are published.</p>
+					<p><img class="img-thumbnail" src="images/img12.png" /></p>
+					<p>The above image is for preview purpose only. You may see a different set of DJ-Messages plugins on your site.</p>
+				</div>
+				<div id="installing-djsuggester">
+					<h2>8. Activate the DJ-Suggester Light plugin</h2>
+					<p>From the top bar menu, click on "Extensions → Plugins". On this page you will see a list of available plugins in your Joomla. 
+						<br>Search for DJ-Suggester plugin and make sure it is published.</p>
+					<p><img class="img-thumbnail" src="images/img12b.png" /> </p>
+					<p>After that, you should select where to display suggestions in the plugin configuration.</p>
+					<p><img class="img-thumbnail" src="images/img12c.png" /></p>
+					<p><img class="img-thumbnail" src="images/img12d.png" /> </p>
+				</div>
+				<div id="installing-djquerymonster">
+					<h2>9. Activate the DJ-jQueryMonster plugin</h2>
+					<p>From the top bar menu, click on "Extensions → Plugins". On this page you will see a list of available plugins in your Joomla. 
+						<br>Search for DJ-jQueryMonster plugin and make sure it is published.</p>
+					<p><img class="img-thumbnail" src="images/img4c.png" /> </p>
+					<p>After that, you need to enable the jQuery and jQuery UI options in the plugin configuration.</p>
+					<p><img class="img-thumbnail" src="images/img4d.png" /> </p>
+				</div>
+			</div>
+			<div id="preparing-sampledata">
+				<div class="page-header">
+					<h1>Preparing sample data</h1>
+				</div>
+				<div id="transfering-images">
+					<h2>1. Transfering images for content</h2>
+					<p>From your download area at <a href="http://www.joomla-monster.com/" target="_blank">Joomla-Monster.com</a> you need to download the quickstart package.
+						<br>First of all, you need to unpack this file.
+						<br>Next step is to transfer all files from this location:</p>
+					<p><span><code>quickstart/images/</code></span></p>
+					<p>to this location on your server:</p>
+					<p><span><code>root/images/</code></span></p>
+<pre>quickstart
+  |
+  |-- administrator
+  |-- bin
+  |-- cache
+  |-- cli
+  |-- components
+  |-- images		# transfer all files from this location
+  |-- includes
+  |-- languages
+  |-- layouts
+  |-- libraries
+  |-- logs
+  |-- media
+  |-- modules
+  |-- plugins
+  |-- templates
+  |-- tmp
+</pre>							
+					<p>We recommend to use Filezilla to transfer files. It is a popular FTP client. Read more details on <a href="https://wiki.filezilla-project.org/Using" target="_blank">how to use Filezilla</a>.
+						<br>If you have such an option, you can also use a file manager in the control panel of your hosting plan.</p>
+				</div>
+				<div id="importing-settings">
+					<h2>2. Importing the template settings </h2>
+					<p>The template is built on the <a href="https://www.joomla-monster.com/documentation/template-frameworks/ef4-framework" target="_blank">EF4 Joomla-Monster</a> framework.
+						<br>It is an advanced framework for Joomla templates which allows to configure many useful settings using the template parameters.</p>
+					<p>From the top bar menu, click on "Extensions → Templates → Styles".<br>On this page you will see a list of installed templates. Click on "Your-template-name - Default" to edit this template parameters.</p>
+					<p><img class="img-thumbnail" src="images/img014.png" /></p>
+					<p>Click on the "Settings Storage" tab. In this section, you can import the default settings.
+						<br>Click on the "Stored Settings" dropdown. In the dropdown, you will find the default settings for each version of your template. 
+						<br>Select one of the settings and click on the "Load" button.</p>
+					<p><img class="img-thumbnail" src="images/img015.png" /></p>
+					<p>The detailed documentation about template settings in the EF4 framework you will find here:</p>
+					<p><a class="btn btn-primary" href="https://www.joomla-monster.com/documentation/template-frameworks/ef4-framework" target="_blank">EF4 Framework documentation</a></p>
+				</div>
+				<div id="changing-logo">
+					<h2>3. Changing the logo</h2>
+				</div>
+				<p><img class="img-thumbnail" src="images/img187.png" /></p>
+				<p>After importing the template settings, you will probably see the logo file from our sample data. You can change that logo to your own in the template parameters.</p>
+				<p><a class="btn btn-primary" href="https://www.joomla-monster.com/documentation/template-frameworks/ef4-framework/settings#jm-basic-settings" target="_blank">Read how to change the logo</a></p>
+			</div>
+			<div id="configuring-menu">
+				<div class="page-header">
+					<h1>Configuring a menu</h1>
+				</div>
+				<div id="creating-menu">
+					<h2>1. Creating a menu</h2>
+					<p><a class="btn btn-primary" href="https://www.joomla-monster.com/documentation/joomla-basics/how-to-create-a-menu" target="_blank">Read on how to create a menu and menu items</a></p>
+					<p><strong>Worth to mention:</strong></p>
+					<p>Menu item type for "Home" menu item is not relevant, because on demo page component part is hidden. You can select "Single article" or "Featured Articles" types.</p>
+				</div>
+				<div id="hiding-component">
+					<h2>2. Hiding component part on home page</h2>
+					<p>On the home page of demo template, we published modules only. Component part should be disabled.</p>
+					<p>From the top bar menu, click on "Extensions → Template Manager → Your-template-name - Default → Basic Settings → Other settings ".</p>
+					<p>Select menu item "Home" in filed Disable component to disable component display on this menu item.</p>
+					<p><img class="img-thumbnail" src="images/img158.png" alt="" /></p>
+				</div>
+				<div id="assigning-layout">
+					<h2>3. Assigning a layout to the home page</h2>
+					<p>On the live demo, we use a different layout for the home page.
+					<p>Go to "Layout Builder" tab where you need to select the "Home" layout:</p>
+					<p><img class="img-thumbnail" src="images/img162.png" alt="" /></p>
+					<p>Now you need to assign this style to the "Home" menu item. Go to "Menu Assignement" tab and assign this template style to the "Home" menu item:</p>
+					<p><img class="img-thumbnail" src="images/img163.png" alt="" /></p>
+					<p>Now, click on "Save &amp; Close" to save settings.</p>
+				</div>
+			</div>
+			<div id="configuring-djmegamenu">
+				<div class="page-header">
+					<h1>Configuring the DJ-MegaMenu extension</h1>
+				</div>
+				<p>DJ-MegaMenu is an advanced menu system that gives you wide range of possibilities to set up the menu as you need. It allows to set the amount of columns per each menu item, as well as put the modules inside.</p>
+				<p><img class="img-thumbnail" src="images/img186.png" /></p>
+				<div id="djmegamenu-module-parameters">
+					<h2>1. Module Parameters</h2>
+					<p>After the DJ-MegaMenu installation, the next step is to set up the module parameters.
+						<br>From the top bar menu, click on "Extensions → Modules". On this page you will see a list of available modules in your Joomla. Search for the DJ-MegaMenu module and click on it.</p>
+					<p>Let's take a closer look at the most important settings:</p>
+					<p><img class="img-thumbnail" src="images/img26.png" /></p>
+					<p><img class="img-thumbnail" src="images/img26b.png" /></p>
+					<p><img class="img-thumbnail" src="images/img26c.png" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ul>
+						<li><strong>Menu name</strong> – choose a menu you want to display within the DJ-MegaMenu module</li>
+						<li><strong>Position</strong> – make sure the module is displayed on the proper module position.
+							<br>Read more about <a href="#module-positions">module positions</a>.</li>
+						<li><strong>Status</strong> – you need to set "Published" to publish this module</li>
+						<li><strong>Theme</strong> – choose "Override from template" as the default one</li>
+						<li><strong>Columns width in pixels</strong> – enter the columns width</li>
+						<li><strong>Mobile Menu</strong> – choose a menu type for mobile devices </li>
+						<li><strong>Mobile Menu Theme</strong> – choose a theme for mobile menu </li>
+						<li><strong>Mobile Menu trigger width</strong> – choose when the mobile menu button should appear for small screens</li>
+					</ul>
+					<p>To display a menu button like for the "Post an ad +", you need to add a class to the menu item:</p>
+					<p><img class="img-thumbnail" src="images/img189.png" alt="" /></p>
+				</div>
+				<div id="djmegamenu-displaying-columns">
+					<h2>2. Displaying columns in submenu</h2>
+					<p>Please read this article on how to display multiple columns in submenu:</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/faq/dj-megamenu-faq/how-to-display-multiple-columns-in-submenu" target="_blank">Read how to display multiple columns in submenu</a></p>
+				</div>
+				<div id="djmegamenu-displaying-module">
+					<h2>3. Displaying a module in submenu</h2>
+					<p>Please read this article on how to display a module in submenu:</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/faq/dj-megamenu-faq/how-to-display-module-inside-the-menu-column" target="_blank">Read how to display a module inside the submenu column</a></p>
+				</div>
+				<div id="djmegamenu-documentation">
+					<h2>4. Documentation</h2>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-megamenu/" target="_blank">Read the DJ-MegaMenu documentation</a></p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/faq/dj-megamenu-faq/" target="_blank">Read the DJ-MegaMenu FAQ</a></p>
+				</div>
+			</div>
+			<div id="configuring-djclassifieds">
+				<div class="page-header">
+					<h1>Configuring the DJ-Classifieds extension</h1>
+				</div>
+				<p>DJ-Classifieds extension needs no introduction to anyone. A complete solution if you want to display classified ads with Joomla.
+					<br>Let's start with configuring the global options of component.</p>
+				<div id="djclassifieds-global-configuration">
+					<h2>1. Global configuration</h2>
+					<p>From the top bar menu, click on "Components → DJ-Classifieds". On this page you will see the control panel of DJ-Classifieds component. Click on "Options".</p>
+					<p><img class="img-thumbnail" src="images/img27.png" alt="" /></p>
+					<p>For detailed documentation regarding the DJ-Classifieds global options please visit this page:</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-classifieds/configuration" target="_blank">Read about DJ-Classifieds component configuration</a></p>
+					<p>This is how the "Global" tab looks on the live demo:</p>
+					<p><img class="img-thumbnail" src="images/img28.png" alt="" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ul>
+						<li><strong>Google Maps Server Key &amp; Browser Key</strong> - you will find more details about how to generate them: <a href="https://dj-extensions.com/faq/dj-classifieds-faq/how-to-use-google-maps-api-keys">How to use Google Maps API keys</a></li>
+					</ul>
+					<p>This is how the "Views" tab looks on the live demo:</p>
+					<p><img class="img-thumbnail" src="images/img29.png" alt="" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ul>
+						<li><strong>Theme</strong> - choose the theme as the default one. The theme name should be the same as the template name. It is important to get the same design as on live demo.</li>
+						<li><strong>Include default CSS</strong> - make sure this option is set to "No"</li>
+						<li><strong>Image dimensions</strong> - pay attention to the image dimensions on the images tab</li>
+					</ul>
+					<p>This is how the "Images" tab looks on the live demo:</p>
+					<p><img class="img-thumbnail" src="images/img30.png" alt="" /></p>
+					<p>On the "Security" and "SEO Settings" tabs we used the default settings.</p>
+				</div>
+				<div id="djclassifieds-component-settings">
+					<h2>2. Component settings</h2>
+					<p>From the top bar menu, click on "Components → DJ-Classifieds". On this page you will see the control panel of DJ-Classifieds component.
+						<br>Before you start adding categories, you need to configure some settings that may be useful for you and your
+						site visitors, such as extra fields, locations, promotions etc.</p>
+					<h3>Extra fields</h3>
+					<p>In the DJ-Classifieds control panel click on "Extra Fields".</p>
+					<p><img class="img-thumbnail" src="images/img31.png" alt="" /></p>
+					<p>The DJ-Classifieds component allows to assign extra fields to the advert details from the certain category. 
+						<br>Extra fields you can display on the blog, table and single ad view, as well as in the search module.</p>
+					<p>To create a new extra field, click on "New".</p>
+					<p><a class="btn btn-primary" href="https://dj-extensions.com/documentation/dj-classifieds/extra-fields" target="_blank">Read how to create a new custom field</a></p>
+					<h3>Location</h3>
+					<p>In the DJ-Classifieds control panel click on "Location".</p>
+					<p><img class="img-thumbnail" src="images/img36.png" alt="" /></p>
+					<p>In the location settings, you can add predefined locations that will appear for example when a user will be adding a new ad or in the search module.</p>
+					<p>When a user is adding a new add, there is also possibility to display a map which allows to target a user and set the geographic location.
+						<br>This map can be enabled in the <a href="#djclassifieds-global-configuration">global configuration</a>.</p>
+					<p>To create a new location, click on "New".</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-classifieds/locations" target="_blank">Read how to create a new location</a></p>
+					<h3>Promotions</h3>
+					<p>In the DJ-Classifieds control panel click on "Promotions".</p>
+					<p><img class="img-thumbnail" src="images/img41.png" alt="" /></p>
+					<p>You can choose from 5 promotion types and decide which promotions should be published for users as well as you can set a price for each promotion type.
+						<br>On the live demo, we used the default settings for promotions.</p>
+					<p><a href="http://dj-extensions.com/documentation/dj-classifieds/promotions" class="btn btn-primary" target="_blank">Read more about promotions</a></p>
+					<h3>Durations</h3>
+					<p>In the DJ-Classifieds control panel click on "Durations".</p>
+					<p><img class="img-thumbnail" src="images/img43.png" alt="" /></p>
+					<p>In the Durations settings, you can manage durations of displaying ads on your site. You can create a new duration and set a price for each duration on the list.
+						<br>A user may choose a duration while adding a new ad on your site. On the live demo,
+						we used the default settings for durations.</p>
+					<p><a href="http://dj-extensions.com/documentation/dj-classifieds/durations" class="btn btn-primary" target="_blank">Read more about durations</a></p>
+					<h3>Types</h3>
+					<p>In the DJ-Classifieds control panel click on "Types".</p>
+					<p><img class="img-thumbnail" src="images/img44.png" alt="" /></p>
+					<p>In the Types settings, you can define an unlimited types of ads, for example: for sale, rent, free, exchange.
+						<br>The types can be marked in different colors which you can customize as you wish.</p>
+					<p><a class="btn btn-primary" href="https://dj-extensions.com/documentation/dj-classifieds/types" target="_blank">Read more about types</a></p>
+					<h3>Points System</h3>
+					<p>In the DJ-Classifieds control panel, click on "Points Packages" or "User Points".</p>
+					<p><img class="img-thumbnail" src="images/img47.png" alt="" /></p>
+					<p>Points system is a feature that allows users to buy points and use them to pay for posting ads on your site.</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-classifieds/points-system" target="_blank">Read more about points</a></p>
+					<h3>Categories</h3>
+					<p>Now you can pass to create categories of ads. In the DJ-Classifieds control panel click on "Categories".</p>
+					<p><img class="img-thumbnail" src="images/img48.png" alt="" /></p>
+					<p>To create a new category, click on "New".</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-classifieds/add-category" target="_blank">Read how to create a new category</a></p>
+					<h3>Items</h3>
+					<p>If needed, you can add an advert from the back-end. In the DJ-Classifieds control panel click on "Items".</p>
+					<p><img class="img-thumbnail" src="images/img52.png" alt="" /></p>
+					<p>To create a new ad, click on "New".</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-classifieds/add-item" target="_blank">Read how to create a new ad</a></p>
+				</div>
+				<div id="djclassifieds-displaying-component">
+					<h2>3. Displaying a component on a website</h2>
+					<p>The DJ-Classifieds includes many component views. You can see them all on live demo:</p>
+					<ul>
+						<li>Add item</li>
+						<li>Category blog layout</li>
+						<li>Category table layout</li>
+						<li>Category tree</li>
+						<li>Favourites ads</li>
+						<li>Offers submitted</li>
+						<li>Points packages</li>
+						<li>Profile editing</li>
+						<li>Regions tree</li>
+						<li>Sales history</li>
+						<li>Single ad view</li>
+						<li>Subsciptions Plans</li>
+						<li>User items</li>
+						<li>User Orders history</li>
+						<li>User Points</li>
+					</ul>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-classifieds/displaying-the-dj-classifieds-on-website" target="_blank">How to display the DJ-Classifieds on a website</a></p>
+				</div>
+				<div id="djclassifieds-modules-settings">
+					<h2>4. Module settings</h2>
+					<p>The DJ-Classifieds extension includes several modules that you can display on your website.</p>
+					<p>A list of DJ-Classifieds modules used on the live demo:</p>
+					<ol>
+						<li>DJ-Classifieds Category Tree</li>
+						<li>DJ-Classifieds Items</li>
+						<li>DJ-Classifieds Maps</li>
+						<li>DJ-Classifieds Menu</li>
+						<li>DJ-Classifieds Regions</li>
+						<li>DJ-Classifieds Search</li>
+					</ol>
+					<h3>DJ-Classifieds Category Tree</h3>
+					<p>This module allows to display categories as tree.</p>
+					<p>From the top bar menu, click on "Extensions → Modules", then click on "New" and click on "DJ-Classifieds Category Tree".</p>
+					<p><img class="img-thumbnail" src="images/img144.png" alt="" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ol>
+						<li><strong>Title</strong> - enter a module title. A module must have a title, otherwise you won't be able to save the module.</li>
+						<li><strong>Position</strong> - select a module position. This way you will put a module on the desired place.
+							<br>Read more details regarding the <a href="#module-positions">module positions</a>.</li>
+						<li><strong>Module class suffix</strong> - enter a module class suffix to change the module design.
+							<br>Read more about <a href="#module-suffixes">module suffixes</a> in this template.</li>
+						<li><strong>Category tree sort type</strong> - choose how you want to sort the category items in the module</li>
+						<li><strong>Category tree columns</strong> - choose a number of columns to display category items</li>
+						<li><strong>Type of first level</strong> - choose a type of the first level category item</li>
+						<li><strong>Parent category</strong> - choose a parent category for this module</li>
+					</ol>
+					<p>When you complete the form, click on "Save &amp; Close" to save the module.</p>
+					<p><a class="btn btn-primary" href="https://dj-extensions.com/documentation/dj-classifieds/category-tree-module" target="_blank">Read more about DJ-Classifieds Category Tree module parameters</a></p>
+					<p>On the live demo, we have displayed one "DJ-Classifieds Category Tree" module:</p>
+					<h4>DJ-Classifieds Category Tree <small>on the "header-1" module position</small></h4>
+					<p><img class="img-thumbnail" src="images/img176.png" alt="" /></p>
+					<p>Let's see the module parameters:</p>
+					<p><img class="img-thumbnail" src="images/img145.png" alt="" /></p>
+					<h3>DJ-Classifieds Items</h3>
+					<p>This module allows to display ads from selected categories.</p>
+					<p>From the top bar menu, click on "Extensions → Modules", then click on "New" and click on "DJ-Classifieds Category Items".</p>
+					<p><img class="img-thumbnail" src="images/img59.png" alt="" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ol>
+						<li><strong>Title</strong> - enter a module title. A module must have a title, otherwise you won't be able to save the module.</li>
+						<li><strong>Position</strong> - select a module position. This way you will put a module on the desired place.
+							<br>Read more details regarding the <a href="#module-positions">module positions</a>.</li>
+						<li><strong>Number of items</strong> and <strong>Number of columns</strong> - enter how many ads you want to display. If you would like to display ads in columns, then select a number of columns.</li>
+						<li><strong>Categories</strong> and <strong>Regions</strong> - specify from which categories and regions you wish to display ads. Leave empty to display ads from all categories and regions.</li>
+					</ol>
+					<p>When you complete the form, click on "Save &amp; Close" to save the module.</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-classifieds/items-module" target="_blank">Read more about DJ-Classifieds Items module parameters</a></p>
+					<p>On the live demo, we have displayed several "DJ-Classifieds Items" modules:</p>
+					<h4>Recent Ads <small>on the "top1-1" module position</small></h4>
+					<p><img class="img-thumbnail" src="images/img177.png" alt="" /></p>
+					<p>Let's see the module parameters:</p>
+					<p><img class="img-thumbnail" src="images/img60.png" alt="" /></p>
+					<h4>Features items <small>on the "djcf-items-top" module position</small></h4>
+					<p><img class="img-thumbnail" src="images/img178.png" alt="" /></p>
+					<p>Let's see the module parameters:</p>
+					<p><img class="img-thumbnail" src="images/img61.png" alt="" /></p>
+					<p><img class="img-thumbnail" src="images/img139.png" alt="" /></p>
+					<h4>My other offers <small>on the "djcf-item-bottom" module position</small></h4>
+					<p><img class="img-thumbnail" src="images/img178b.png" alt="" /></p>
+					<p>Let's see the module parameters:</p>
+					<p><img class="img-thumbnail" src="images/img62.png" alt="" /></p>
+					<p><img class="img-thumbnail" src="images/img140.png" alt="" /></p>
+
+					<h3>DJ-Classifieds Maps</h3>
+					<p>This module allows to display the Google Map with locations of ads.</p>
+					<p>From the top bar menu, click on "Extensions → Modules", then click on "New" and click on "DJ-Classifieds Maps".</p>
+					<p><img class="img-thumbnail" src="images/img64.png" alt="" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ol>
+						<li><strong>Title</strong> - enter a module title. A module must have a title, otherwise you won't be able to save the module.</li>
+						<li><strong>Position</strong> - select a module position. This way you will put a module on the desired place.
+							<br>Read more details regarding the <a href="#module-positions">module positions</a>.</li>
+						<li><strong>Map width</strong> and <strong>Map height</strong> - enter the Google Map demonsions</li>
+						<li><strong>Default address</strong> - enter the default address. The default address will be selected on the Google Map.</li>
+					</ol>
+					<p>When you complete the form, click on "Save &amp; Close" to save the module.</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-classifieds/maps-module" target="_blank">Read more about DJ-Classifieds Maps module parameters</a></p>
+					<p>On the live demo, we have displayed one "DJ-Classifieds Maps" module:</p>
+					<h4>Classifieds Map <small>on the "classifieds-map" module position</small></h4>
+					<p><img class="img-thumbnail" src="images/img179.png" alt="" /></p>
+					<p>Let's see the module parameters:</p>
+					<p><img class="img-thumbnail" src="images/img65.png" alt="" /></p>
+					<h3>DJ-Classifieds Menu</h3>
+					<p>This module displays a menu with all ads categories.</p>
+					<p>From the top bar menu, click on "Extensions → Modules", then click on "New" and click on "DJ-Classifieds Menu".</p>
+					<p><img class="img-thumbnail" src="images/img67.png" alt="" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ol>
+						<li><strong>Title</strong> - enter a module title. A module must have a title, otherwise you won't be able to save the module.</li>
+						<li><strong>Position</strong> - select a module position. This way you will put a module on the desired place.
+							<br>Read more details regarding the <a href="#module-positions">module positions</a>.</li>
+						<li><strong>Link to new ad view</strong> - choose if you want to display a link to "Add Item" view. On that view, a user can add a new ad.</li>
+					</ol>
+					<p>When you finnish filling the form, click on "Save &amp; Close" to save the module.</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-classifieds/menu-module" target="_blank">Read more about DJ-Classifieds Menu module parameters</a></p>
+					<p>On the live demo, we have displayed one "DJ-Classifieds Menu" module:</p>
+					<h4>Main categories <small>on the "bottom4-1" module position</small></h4>
+					<p><img class="img-thumbnail" src="images/img179b.png" alt="" /></p>
+					<p>Let's see the module parameters:</p>
+					<p><img class="img-thumbnail" src="images/img65b.png" alt="" /></p>
+
+					<h3>DJ-Classifieds Regions</h3>
+					<p>This module displays a menu with all ads locations.</p>
+					<p>From the top bar menu, click on "Extensions → Modules", then click on "New" and click on "DJ-Classifieds Regions".</p>
+					<p><img class="img-thumbnail" src="images/img150.png" alt="" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ol>
+						<li><strong>Title</strong> - enter a module title. A module must have a title, otherwise you won't be able to save the module.</li>
+						<li><strong>Position</strong> - select a module position. This way you will put a module on the desired place.
+							<br>Read more details regarding the <a href="#module-positions">module positions</a>.</li>
+						<li><strong>Module class suffix</strong> - enter a module class suffix to change the module design.
+							<br>Read more about <a href="#module-suffixes">module suffixes</a> in this template.</li>
+					</ol>
+					<p>When you finnish filling the form, click on "Save &amp; Close" to save the module.</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-classifieds/regions-module" target="_blank">Read more about DJ-Classifieds Regions module parameters</a></p>
+					<p>On the live demo, we have displayed one "DJ-Classifieds Regions" module:</p>
+					<h4>Main categories <small>on the "bottom4-1" module position</small></h4>
+					<p><img class="img-thumbnail" src="images/img179c.png" alt="" /></p>
+					<p>Let's see the module parameters:</p>
+					<p><img class="img-thumbnail" src="images/img65c.png" alt="" /></p>
+
+					<h3>DJ-Classifieds Search</h3>
+					<p>This module allows you to search ads by attributes.</p>
+					<p>From the top bar menu, click on "Extensions → Modules", then click on "New" and click on "DJ-Classifieds Search".</p>
+					<p><img class="img-thumbnail" src="images/img69.png" alt="" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ol>
+						<li><strong>Title</strong> - enter a module title. A module must have a title, otherwise you won't be able to save the module.</li>
+						<li><strong>Position</strong> - select a module position. This way you will put a module on the desired place.
+							<br>Read more details regarding the <a href="#module-positions">module positions</a>.</li>
+						<li><strong>Layout</strong> - choose if you want to display a search module vartically or horizontally</li>
+						<li><strong>Result view</strong> - choose if you want to display a search results in blog or table view</li>
+					</ol>
+					<p>When you finnish filling the form, click on "Save &amp; Close" to save the module.</p>
+					<p>On the live demo, we have displayed several "DJ-Classifieds Search" modules:</p>
+					<h4>Home search <small>on the "header-1" module position</small></h4>
+					<p><img class="img-thumbnail" src="images/img180.png" alt="" /></p>
+					<p>Let's see the module parameters:</p>
+					<p><img class="img-thumbnail" src="images/img71.png" alt="" /></p>
+
+					<h4>Category search <small>on the "header-1" module positions</small></h4>
+					<p><img class="img-thumbnail" src="images/img181.png" alt="" /></p>
+					<p>Let's see the module parameters:</p>
+					<p><img class="img-thumbnail" src="images/img70.png" alt="" /></p>
+
+					<h3>DJ-Classifieds Stats</h3>
+					<p>This module allows you to display stats about classified ads on your site.</p>
+					<p>From the top bar menu, click on "Extensions → Modules", then click on "New" and click on "DJ-Classifieds Stats".</p>
+					<p><img class="img-thumbnail" src="images/img153.png" alt="" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ol>
+						<li><strong>Title</strong> - enter a module title. A module must have a title, otherwise you won't be able to save the module.</li>
+						<li><strong>Position</strong> - select a module position. This way you will put a module on the desired place.
+							<br>Read more details regarding the <a href="#module-positions">module positions</a>.</li>
+						<li><strong>Module class suffix</strong> - enter a module class suffix to change the module design.
+							<br>Read more about <a href="#module-suffixes">module suffixes</a> in this template.</li>
+					</ol>
+					<p>When you finnish filling the form, click on "Save &amp; Close" to save the module.</p>
+				</div>
+				<div id="djclassifieds-plugins-settings">
+					<h2>5. Plugins settings</h2>
+					<p>The DJ-Classifieds extension includes several plugins that you can use on your website.
+						<br>From the top bar menu, click on "Extensions → Plugins". On this page you will see a list of all plugins.</p>
+					<h3>Payment Plugins</h3>
+					<p>This is a list of available payment plugins in the DJ-Classifieds extension.</p>
+					<ul>
+						<li>DJ-Classifieds 2Checkout payment</li>
+						<li>DJ-Classifieds Stripe payment</li>
+						<li>DJ-Classifieds Skrill payment</li>
+						<li>DJ-Classifieds Mercado Pago payment</li>
+						<li>DJ-Classifieds Ideal payment</li>
+						<li>DJ-Classifieds Sofort payment</li>
+						<li>DJ-Classifieds DotPay SMS payment</li>
+						<li>DJ-Classifieds Przelewy24 payment</li>
+						<li>DJ-Classifieds Authorize.net payment</li>
+						<li>DJ-Classifieds PayU payment</li>
+						<li>DJ-Classifieds PayU bix payment</li>
+						<li>DJ-Classifieds PayU South Africa payment</li>
+						<li>DJ-Classifieds ROBOKASA payment</li>
+						<li>DJ-Classifieds Paypal payment</li>
+						<li>DJ-Classifieds Bank Transfer payment</li>
+					</ul>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-classifieds/payment-plugins" target="_blank"> Read more about payment plugins</a></p>
+					<h3>Other plugins</h3>
+					<p>Beside the payment plugins, there are also three additional plugins.</p>
+					<ul>
+						<li>DJ-Classifieds Pagebreak - this plugin allows to display tabs or accordion in an ad description</li>
+						<li>DJ-Classifieds Quickicon - this plugin displays the DJ-Classifieds icon in the control panel of Joomla</li>
+						<li>Search DJ-Classifieds - this plugin allows to search within ads content using the Joomla search component</li>
+					</ul>
+					<h3>Premium apps</h3>
+					<ul>
+						<li>Subscription Plans App</li>
+						<li>Ajax</li>
+						<li>Search Alerts</li>
+						<li>Multi Categories App</li>
+						<li>Attachments App</li>
+						<li>Ghost Ads</li>
+						<li>Internal Messaging</li>
+						<li>Coupons</li>
+						<li>Invoices</li>
+						<li>Bad Words </li>
+						<li>AltaUserPoints</li>
+					</ul>
+					<p><a class="btn btn-primary" href="https://dj-extensions.com/dj-classifieds/apps" target="_blank">Check all premium apps for DJ-Classifieds</a></p>
+				</div>
+				<div id="djclassifieds-documentation">
+					<h2>6. Documentation</h2>
+					<p><a class="btn btn-primary" href="https://dj-extensions.com/documentation/dj-classifieds/" target="_blank">Read the DJ-Classifieds documentation</a></p>
+					<p><a class="btn btn-primary" href="https://dj-extensions.com/faq/dj-classifieds-faq/" target="_blank">Read the DJ-Classifieds FAQ</a></p>
+				</div>
+			</div>
+			<div id="configuring-ajax">
+				<div class="page-header">
+					<h1>Configuring the AJAX app for DJ-Classifieds</h1>
+				</div>
+				<div>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/u2C9QC-5cNc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+				<div id="ajax-settings">
+					<h3>1. Plugin Settings</h3>
+					<p>The AJAX app for DJ-Classifieds includes one plugin.</p>
+					<p>The plugin enables dynamic Ajax calls for blog/table pagination, sorting, categories and search filtering.</p>
+					<p>Dynamic Ajax calls mean that you can navigate the mentioned sections without site reloading.</p>
+					<h4 class="muted">System - DJ-Classifieds Ajax plugin</h4>
+					<p>Let's take a look at the plugin settings we use on live demo.</p>
+					<p>From the top bar menu, click on "Extensions → Plugin Manager". On this page you will see a list of all plugins.</p>
+					<p>Click on the "System - DJ-Classifieds Ajax" plugin.</p>
+					<p><img class="img-thumbnail" src="images/ajax/img1.png" alt="" /></p>
+				</div>
+				<div id="ajax-documentation">
+					<h3>2. Documentation</h3>
+					<p><a class="btn btn-primary" href="https://dj-extensions.com/faq/dj-classifieds-faq/how-ajax-app-for-dj-classifieds-works" target="_blank">The AJAX app documentation</a></p>
+				</div>
+			</div>
+			<div id="configuring-djmediatools">
+				<div class="page-header">
+					<h1>Configuring the DJ-MediaTools Extension</h1>
+				</div>
+				<p>DJ-MediaTools extension allows to create slideshows and galleries, insert them into articles, modules or create separate component views.
+					<br>Let's start with configuring the global options of component.</p>
+				<div id="djmediatools-global-configuration">
+					<h2>1. Global configuration</h2>
+					<p>From the top bar menu, click on "Components → DJ-MediaTools". On this page you will see the control panel of DJ-MediaTools component. Click on "Options".</p>
+					<p><img class="img-thumbnail" src="images/img72.png" alt="" /></p>
+					<p>For detailed documentation regarding the DJ-MediaTools global options please visit this page:</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-mediatools/configuration" target="_blank">Read about DJ-MediaTools component configuration</a></p>
+					<p>This is how the "Component views" tab looks on the live demo:</p>
+					<p><img class="img-thumbnail" src="images/img73.png" alt="" /></p>
+					<p>This is how the "Basic album options" tab looks on the live demo:</p>
+					<p><img class="img-thumbnail" src="images/img74.png" alt="" /></p>
+					<p>This is how the "Layout element options" tab looks on the live demo:</p>
+					<p><img class="img-thumbnail" src="images/img75.png" alt="" /></p>
+					<p>This is how the "Customize layout" tab looks on the live demo:</p>
+					<p><img class="img-thumbnail" src="images/img76.png" alt="" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ol>
+						<li><strong>Previous button</strong> - this is a path to the "Previous" button in the custom navigation.
+							<br>The path is: <code>images/modules/navi/prev.png</code></li>
+						<li><strong>Next button</strong> - this is a path to the "Next" button in the custom navigation.
+							<br>The path is: <code>images/modules/navi/next.png</code></li>
+						<li><strong>Play button</strong> - this is a path to the "Play" button in the custom navigation.
+							<br>The path is: <code>images/modules/navi/play.png</code></li>
+						<li><strong>Pause button</strong> - this is a path to the "Pause" button in the custom navigation.
+							<br>The path is: <code>images/modules/navi/pause.png</code></li>
+					</ol>
+					<p>On the "Upload settings" and "Permissions" tabs we used the default settings.</p>
+				</div>
+				<div id="djmediatools-component-settings">
+					<h2>2. Component Settings</h2>
+					<p>From the top bar menu, click on "Components → DJ-MediaTools". On this page you will see the control panel of DJ-MediaTools component.
+						<br>The first step is to create an album for your slides.</p>
+					<h3>Albums</h3>
+					<p>In the DJ-MediaTools control panel click on "Albums".</p>
+					<p><img class="img-thumbnail" src="images/img77.png" alt="" /></p>
+					<p>To create a new album, click on "New".</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-mediatools/creating-new-album" target="_blank">Read more how to create a new album</a></p>
+					<p>Once, you have created an album with custom items as album source, you can pass on to create your first custom item.</p>
+					<h3>Custom items</h3>
+					<p>In the DJ-MediaTools control panel click on "Custom items".</p>
+					<p><img class="img-thumbnail" src="images/img81.png" alt="" /></p>
+					<p>To create a new custom item, click on "New".</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-mediatools/creating-new-custom-item" target="_blank">Read more how to create a new custom item</a></p>
+				</div>
+				<div id="djmediatools-displaying-component">
+					<h2>3. Displaying Component on Website</h2>
+					<p>The DJ-MediaTools includes two component views. You can see them all on live demo:</p>
+					<ul>
+						<li>Album Grid</li>
+						<li>Gallery Grid</li>
+						<li>Modern Slider</li>
+						<li>Slider</li>
+						<li>Slideshow</li>
+						<li>Slideshow with thumbnails</li>
+						<li>Tabber</li>
+						<li>Skitter Slideshow</li>
+						<li>Nivo Slider</li>
+						<li>Kwicks Panels</li>
+					</ul>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-mediatools/displaying-component-on-your-website" target="_blank">How to display the DJ-MediaTools component on website</a>.</p>
+				</div>
+				<div id="djmediatools-module-settings">
+					<h2>4. Module settings</h2>
+					<p>The DJ-MediaTools extension includes one module.</p>
+					<h3>DJ-MediaTools Album</h3>
+					<p>This module allows to display an album in one of several layouts.</p>
+					<p>From the top bar menu, click on "Extensions → Modules", then click on "New" and click on "DJ-MediaTools Album".</p>
+					<p><img class="img-thumbnail" src="images/img87.png" alt="" /></p>
+					<p><strong>Worth to mention:</strong></p>
+					<ol>
+						<li><strong>Title</strong> - enter a module title. A module must have a title, otherwise you won't be able to save the module.</li>
+						<li><strong>Position</strong> - select a module position. This way you will put a module on the desired place.
+							<br>Read more details regarding the <a href="#module-positions">module positions</a>.</li>
+						<li><strong>Album</strong> - choose an album which you want to display within the module</li>
+						<li><strong>Album layout</strong> - choose the album layout which you want to display within the module</li>
+					</ol>
+					<div class="alert alert-info">If you leave an empty option or as inherit, it will take settings from <a href="#djmediatools-global-configuration"> global configuration</a>.
+						<br>The hierarchy of inheriting from lowest to highest priority: Global configuration » Album settings » Module settings</div>
+					<p>When you complete the form, click on "Save &amp; Close" to save the module.</p>
+					<p><a class="btn btn-primary" href="http://dj-extensions.com/documentation/dj-mediatools/module-album-layout" target="_blank">Read more about DJ-MediaTools Album module</a></p>
+				</div>
+				<div id="djmediatools-plugins-settings">
+					<h2>5. Plugins settings</h2>
+					<p>The DJ-MediaTools extension includes several plugins that you can use on your website.</p>
+					<p>From the top bar menu, click on "Extensions → Plugins". On this page you will see a list of all plugins.</p>
+					<h3>Album Source Plugins</h3>
+					<p>This is a list of available album source plugins in the DJ-MediaTools extension.</p>
+					<ul>
+						<li>DJ-MediaTools Source - Joomla Content</li>
+						<li>DJ-MediaTools Source - DJ-Catalog2</li>
+						<li>DJ-MediaTools Source - DJ-Classifieds</li>
+						<li>DJ-MediaTools Source - Folder</li>
+						<li>DJ-MediaTools Source - K2</li>
+						<li>DJ-MediaTools Source - VirtueMart</li>
+					</ul> Read more about <a href="http://dj-extensions.com/documentation/dj-mediatools/album-source-plugins" target="_blank">album source plugins</a>.
+					<h3>Other Plugins</h3>
+					<p>Beside the album source plugins, there are also two additional plugins.</p>
+					<ul>
+						<li>DJ-MediaTools content plugin - this plugin allows to display an album inside article.
+							<br>Read more about <a href="http://dj-extensions.com/documentation/dj-mediatools/content-plugin" target="_blank">DJ-MediaTools content plugin</a>.</li>
+						<li>DJ-MediaTools editor button - this plugin displays a button in Joomla editor.
+							<br>Read more about <a href="http://dj-extensions.com/documentation/dj-mediatools/editor-button-plugin" target="_blank">DJ-MediaTools editor button</a>.</li>
+					</ul>
+				</div>
+				<div id="djmediatools-documentation">
+					<h2>6. Documentation</h2>
+					<p><a class="btn btn-primary" href="https://dj-extensions.com/documentation/dj-mediatools/" target="_blank">Read the DJ-MediaTools documentation</a></p>
+					<p><a class="btn btn-primary" href="https://dj-extensions.com/faq/dj-mediatools-faq/" target="_blank">Read the DJ-MediaTools FAQ</a></p>
+				</div>
+			</div>
+				<div id="configuring-djmessages">
+					<div class="page-header">
+						<h1>Configuring the DJ-Messages Extension</h1>
+					</div>
+					<p>DJ-Messages is easy to setup Joomla PMS (Private Messaging System) that lets website users communicate with each other by using a simple inbox/outbox solution. It is also integrated with DJ-Classifieds out of the box.</p>
+					<div id="djmessages-component-settings">
+						<h2>1. Component Settings</h2>
+						<p>From the top bar menu, click on "Components → DJ-Messages". On this page you will see the control panel of DJ-Messages component.</p>
+						<p><img class="img-thumbnail" src="images/messages/img001.png" alt="" /></p>
+						<p>For detailed documentation regarding the DJ-Messages options please visit this page:</p>
+						<p><a class="btn btn-primary" href="https://dj-extensions.com/documentation/dj-messages/component-s-settings" target="_blank">Read about DJ-Messages component configuration</a></p>
+					</div>
+					<div id="djmessages-displaying-messages">
+						<h2>2. Displaying messages on your website</h2>
+						<p>You can display the link to the DJ-Messages Inbox by adding it to any menu you like.</p>
+						<p>Just create a new menu item in your Joomla menu and choose "DJ-Messages → Messages" as the type.</p>
+						<p>For detailed documentation regarding the DJ-Messages options please visit this page:</p>
+						<p><a class="btn btn-primary" href="https://dj-extensions.com/documentation/dj-messages/displaying-messages-on-your-website" target="_blank">Read about displaying messages</a></p>
+					</div>
+					<div id="djmessages-plugins">
+						<h2>3. Plugins</h2>
+						<p>The DJ-Messages extension includes several plugins that you can use on your website.
+							<br>From the top bar menu, click on "Extensions → Plugins". On this page you will see a list of all plugins.
+							<br>This is a list of available plugins in the DJ-Messages extension.</p>
+						<ul>
+							<li>DJ-Classifieds - DJ-Messages integration</li>
+							<li>DJ-Messages - DJ-Classifieds</li>
+						</ul>
+						<p><a class="btn btn-primary" href="https://dj-extensions.com/documentation/dj-messages/how-to-integrate-dj-messages-with-dj-classifieds-component" target="_blank">Read more how to integrate DJ-Messages with DJ-Classifieds</a></p>
+					
+					</div>
+					<div id="djmessages-modules">
+						<h2>4. Modules</h2>
+						<p>The DJ-Messages includes several modules which allow you to display DJ-Messages in a component.</p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/1KKE530307U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						<p><a class="btn btn-primary" href="https://dj-extensions.com/documentation/dj-messages/modules" target="_blank">Read more about modules in DJ-Messages</a></p>
+					</div>
+					<div id="djmessages-documentation">
+						<h2>5. Documentation</h2>
+						<p><a class="btn btn-primary" href="https://dj-extensions.com/documentation/dj-messages/" target="_blank">Read the DJ-Messages documentation</a></p>
+						<p><a class="btn btn-primary" href="https://dj-extensions.com/faq/dj-messages-faq/" target="_blank">Read the DJ-Messages FAQ</a></p>
+					</div>
+				</div>
+
+				<div id="configuring-akeeba-social">
+					<div class="page-header">
+						<h1>Configuring the Akeeba Social Login extension</h1>
+					</div>
+					<div id="akeeba-social-documentation">
+						<h3>Documentation</h3>
+						<p><a class="btn btn-primary" href="https://github.com/akeeba/sociallogin/wiki" target="_blank">The Akeeba Social Login documentation</a></p>
+					</div>
+				</div>
+
+				<div id="configuring-osmap">
+					<div class="page-header">
+						<h1>Configuring the OSMap extension</h1>
+					</div>
+					<div id="osmap-documentation">
+						<h3>Documentation</h3>
+						<p><a class="btn btn-primary" href="https://www.joomlashack.com/docs/osmap/" target="_blank">The OSMap documentation</a></p>
+					</div>
+				</div>
+
+				<div id="configuring-modules">
+					<div class="page-header">
+						<h1>Configuring modules</h1>
+					</div>
+
+					<div id="jm-simple-tabs">
+						<h2>1. JM Simple Tabs</h2>
+						<p>This module allows to display content in tabs.</p>
+						<p>From the top bar menu, click on "Extensions → Modules", then click on "New" and click on "JM Simple Tabs".</p>
+						<p>On the live demo, we have displayed one JM Simple Tabs module:</p>
+						<p><img class="img-thumbnail" src="images/img167.png" alt="" /></p>
+						<h4>Help <small>on the "help" module position</small></h4>
+						<p>Let's see the module parameters:</p>
+						<p><img class="img-thumbnail" src="images/img167a.png" alt="" /></p>
+					</div>
+					<div id="jm-social-icons">
+						<h2>2. JM Social Icons</h2>
+						<p>This module allows to display social media icons with links to profiles.</p>
+						<p><img class="img-thumbnail" src="images/img167-b.png" alt="" /></p>
+						<h4>JM Social Icons <small>on the "footer-mod-4" module position</small></h4>
+						<p>Let's see the module parameters:</p>
+						<p><img class="img-thumbnail" src="images/img174c.png" alt="" /></p>
+					</div>
+
+					<div id="custom-modules">
+						<h2>3. Other modules used on the demo site</h2>
+
+						<h4>Custom Banner <small>on the "top1-1" or "djcf-item-column" or "djcf-item-description" module positions</small></h4>
+						<p><img class="img-thumbnail" src="images/img173-a.png" alt="" /></p>
+						<p>This is a custom HTML module.</p>
+						<p><a class="btn btn-primary" href="https://www.joomla-monster.com/documentation/joomla-tutorials/how-to-add-google-adsense-or-a-custom-banner" target="_blank">Read how to display banners in Joomla</a></p>
+
+						<h4>Description Homepage <small>on the "bottom3-1" module position</small></h4>
+						<p><img class="img-thumbnail" src="images/img169.png" alt="" /></p>
+						<p>This is a custom HTML module with suffixes " borderbottom margin-ms".</p>
+
+						<h3>Footer modules</h3>
+						<p><img class="img-thumbnail" src="images/img174.png" alt="" /></p>
+						<h4>Logo Footer <small>on the "footer-mod-1" module position</small></h4>
+						<p>This is a custom HTML module.</p>
+
+						<h4>Company <small>on the "footer-mod-2" module position</small></h4>
+						<p>This is a Joomla menu module.</p> 
+
+						<h4>Blog <small>on the "footer-mod-3" module position</small></h4>
+						<p>This is a Joomla menu module.</p> 
+
+						<h4>JM Social Icons <small>on the "footer-mod-4" module position</small></h4>
+						<p>Screenshots and description for this module you will find in the <a href="#jm-social-icons">JM Social Icons module settings</a>.</p>
+
+						<h4>Copyrights <small>on the "copyrights" module position</small></h4>
+						<p>This is a custom HTML module.</p>
+
+						<h4>Joomla-Monster footer</h4>
+						<p>This is <a href="https://www.joomla-monster.com/" target="_blank">Joomla-Monster.com</a> footer link. Read more on <a href="http://www.joomla-monster.com/blog/joomla-templates/joomla-monster-footer-link-can-be-removed-for-free" target="_blank">how to remove the footer link</a>.</p>
+					</div>
+				</div>
+				<div id="module-positions">
+					<div class="page-header">
+						<h1>Module positions in the template</h1>
+					</div>
+					<p>The template is using fully responsive layout that adjusts to various screens: desktops, tablets or mobiles.
+						<br /><a href="http://www.joomla-monster.com/index.php?option=com_content&amp;id=137&amp;view=category&amp;Itemid=548" target="_blank">EF4 Framework</a> includes <a href="http://www.joomla-monster.com/index.php?option=com_content&amp;catid=137&amp;id=901&amp;view=article&amp;Itemid=1034" target="_blank">Layout Builder</a> tool which allows you to customize template layout for different screen dimensions.</p>
+					<p><a class="btn btn-primary" href="https://templates.joomla-monster.com/joomla30/jm-iks/en/module-positions" target="_blank">Check module positions</a></p>
+				</div>
+
+				<div id="module-suffixes">
+					<div class="page-header">
+						<h1>Module settings</h1>
+					</div>
+					<p>There are several available module designs that you can control by entering the correct suffix name as a module parameter.</p>
+					<p><a class="btn btn-primary" href="https://templates.joomla-monster.com/joomla30/jm-iks/en/module-settings" target="_blank">Check module settings</a></p>
+				</div>
+				<div id="typography">
+					<div class="page-header">
+						<h1>Typography</h1>
+					</div>
+					<p>You will find extended typography here:<br></p>
+					<p><a class="btn btn-primary" href="https://templates.joomla-monster.com/joomla30/jm-iks/en/typography" target="_blank">Typography</a></p>
+					<p>In the typography article you will find some examples of custom code used in the template.</p>
+					<p><a class="btn btn-primary" href="http://www.joomla-monster.com/blog/joomla-3-0/how-to-create-a-custom-html-module" target="_blank">Read more on how to create a custom HTML module</a></p>
+				</div>
+				<div id="editing-template">
+					<div class="page-header">
+						<h1>Editing with the template files</h1>
+					</div>
+					<div id="editing-files-structure">
+						<h2>1. The Template Files Structure</h2>
+						<p>Let's take a closer look to the template files structure.</p>
+<pre>your-template-name
+  |
+  |-- assets                   # stored settings for the template parameters, layouts and assignements
+  |-- cache                    # compressed CSS and JS files if you have enabled CSS/JS compression in the <a href="https://www.joomla-monster.com/documentation/template-frameworks/ef4-framework/settings#jm-advanced-features" target="_blank">Advanced Features</a> tab
+  |-- css                      # compiled CSS files
+  |-- fonts                    # uploaded fonts are stored here
+  |-- html                     # overrides of the output from the Joomla core and extensions. Read more on <a href="http://docs.joomla.org/How_to_override_the_output_from_the_Joomla!_core" target="_blank">how to override the output from the Joomla! Core</a>.
+  |-- images                   # template images
+  |-- js                       # template scripts
+  |-- language                 # template language files
+  |-- less                     # template less files
+  |-- lib                      # template helper files
+  |-- tpl                      # template layout and block files
+  |-- component.php            # displays the component view only, used for such views like popups, pdf, etc.
+  |-- error.php                # error page file
+  |-- favicon.ico              # favicon icon file
+  |-- index.php                # main index file
+  |-- offline.php              # offline page file
+  |-- template_preview.png     # large thumbnail of the template image
+  |-- template_thumbnail.png   # small thumbnail of the template image
+  |-- templateDefaults.json    # default settings for the template parameters
+  |-- templateDetails.xml      # template details and parameters
+</pre>
+					</div>
+					<div id="editing-custom-styles">
+						<h2>2. Adding Custom CSS Styles to the Template</h2>
+						<p>The template allows to add custom.less file which you can use to add your custom CSS or LESS styles. This file is loaded as the last one stylesheet in the "head" section of the template, so you can easily overwrite existing
+							CSS styles for selected elements that are located in a different file.</p>
+						<p><a class="btn btn-primary" href="https://www.joomla-monster.com/documentation/template-tutorials/how-to-add-your-own-css-styles-to-joomla-template-based-on-ef4-framework" target="_blank">How to add your own CSS styles to Joomla template based on EF4 framework?</a></p>
+					</div>
+					<div id="editing-code-injection">
+						<h2>3. Custom Code Injection to the Head Section</h2>
+						<p>Many useful tools such as Google Analytics or other tracking services require to add a JavaScript code to the "head" section of template in order to be able to track a site.</p>
+						<p><a class="btn btn-primary" href="http://www.joomla-monster.com/blog/joomla-templates/how-to-add-a-web-analytics-tracking-code-into-the-joomla-template" target="_blank">How to add a web analytics tracking code into the Joomla template</a></p>
+					</div>
+				</div>
+				<div id="updating-template">
+					<div class="page-header">
+						<h1>Updating the template</h1>
+					</div>
+					<p>From time to time, we release the template updates. If you wonder how to update your template, please check our tutorials.</p>
+					<p><a class="btn btn-primary" href="https://www.joomla-monster.com/documentation/installation/how-to-update-a-template" target="_blank">Read how to update a template</a></p>
+					<p><a class="btn btn-primary" href="https://www.joomla-monster.com/documentation/joomla-extensions/how-to-update-dj-classifieds-theme" target="_blank">Read how to update a DJ-Classifieds theme</a></p>
+				</div>
+				<div id="responsive-layout">
+					<div class="page-header">
+						<h1>Responsive Layout</h1>
+					</div>
+					<p>The template is responsive. In the <a href="#module-positions">module positions</a> section, you can see how the template and module positions behaviour on smaller screens.</p>
+					<h3>Disable Responsive</h3>
+					<p>There is a possibility to disable the responsive feature. The template will be displayed on smaller screens in the same way as on desktops. The responsive feature you can simply disable in the "Template Layout" settings of template parameters.
+						<br>Read more about the <a href="https://www.joomla-monster.com/documentation/template-frameworks/ef4-framework/layout-builder" target="_blank">template layout</a> settings.</p>
+					<h3>Hide Modules on Small Screens</h3>
+					<p><a class="btn btn-primary" href="http://www.joomla-monster.com/knowledge-base-area/templates-documentation/general-info-framework-for-joomla-3-0/utility-classes-for-showing-and-hiding-content-by-device" target="_blank">Read more on how to hide modules on small screens</a></p>
+				</div>
+				<div id="joomla-optimization">
+					<div class="page-header">
+						<h1>Joomla Optimization</h1>
+					</div>
+					<p> Page load time affects two important factors that may have influence on the success of your site: seo rank and conversion rate. As you can read in Google Webmaster Guidelines, page load optimization is one of the best practices to get your site
+						on the top of SEO rankings. In other hand, a fast loading website is more friendly to visitors. </p>
+					<p> <strong>Most important things to do :</strong></p>
+					<br>
+					<ol>
+						<li>Enable in "Extensions → Templates → Styles → Your-template-name → Advanced features" :
+							<br>
+							<ul>
+								<li>Compress CSS</li>
+								<li>Compress JS</li>
+								<li>Compress HTML</li>
+							</ul>
+						</li>
+						<li>Enable in "System → Global Configuration"
+							<br>
+							<ul>
+								<li>Cache</li>
+								<li>Gzip Page Compression</li>
+							</ul>
+						</li>
+						<li>Add .htaccess file (expire headers for files)</li>
+						<li>Optimize images in DJ-Mediatools (resmush.it)
+							<br>
+							<ul>
+								<li>Components → DJ-Mediatools → Images and CSS → Optimize</li>
+							</ul>
+						</li>
+					</ol>
+					<p><a class="btn btn-primary" href="http://www.joomla-monster.com/blog/web-development/11-tips-to-speed-up-your-joomla-website" target="_blank">11 tips to speed-up your Joomla website</a></p>
+				</div>
+				<div id="rtl-languages">
+					<div class="page-header">
+						<h1>Using the Template for the RTL Languages</h1>
+					</div>
+					<p>On the live demo, you can preview the "RTL Languages" option which you can select from main menu.</p>
+					<p>If you want to display your template in RTL option to visitors, you simply need to install a RTL language and set it to default.
+						<br>Read more <a href="http://www.joomla-monster.com/blog/joomla-3-0/built-in-language-installer-in-joomla" target="_blank">how to install a language for Joomla</a>.</p>
+				</div>
+				<div id="psd-slices">
+					<div class="page-header">
+						<h1>PSD Slices</h1>
+					</div>
+					<p>The template is not provided with PSD slices.</p>
+				</div>
+				<div id="other-links">
+					<div class="page-header">
+						<h1>Other Useful Links</h1>
+					</div>
+					<p>Our services:</p>
+					<p><a href="http://www.joomla-monster.com/services/our-services" target="_blank">http://www.joomla-monster.com/services/our-services</a></p>
+					<p>I have Joomla automatically installed on my server. How can I install Quickstart now?</p>
+					<p><a href="http://www.joomla-monster.com/blog/joomla-3-0/i-have-joomla-automatically-installed-on-my-server-how-can-i-install-quickstart-now" target="_blank">http://www.joomla-monster.com/blog/joomla-3-0/i-have-joomla-automatically-installed-on-my-server-how-can-i-install-quickstart-now</a></p>
+					<p>Use the quickstart package as a manual:</p>
+					<p><a href="http://www.joomla-monster.com/blog/customization/use-the-quickstart-package-as-a-manual" target="_blank">http://www.joomla-monster.com/blog/customization/use-the-quickstart-package-as-a-manual</a></p>
+					<p>How to change the template name:</p>
+					<p><a href="http://www.joomla-monster.com/blog/joomla-templates/how-to-change-joomla-3-2-5-template-name" target="_blank">http://www.joomla-monster.com/blog/joomla-templates/how-to-change-joomla-3-2-5-template-name</a></p>
+					<p>Front-end site management in Joomla 3.x:</p>
+					<p><a href="http://www.joomla-monster.com/blog/joomla-3-0/front-end-site-managing-in-joomla-3" target="_blank">http://www.joomla-monster.com/blog/joomla-3-0/front-end-site-managing-in-joomla-3</a></p>
+					<p>Template duplication – make your website style different on subpages:</p>
+					<p><a href="http://www.joomla-monster.com/blog/joomla-3-0/template-duplication-make-your-website-style-different-on-subpages" target="_blank">http://www.joomla-monster.com/blog/joomla-3-0/template-duplication-make-your-website-style-different-on-subpages</a></p>
+					<p>Got "no input file specified" or "404 - component not found" error messages?</p>
+					<p><a href="http://www.joomla-monster.com/blog/joomla-3-0/got-no-input-file-specified-or-404-component-not-found-error-messages" target="_blank">http://www.joomla-monster.com/blog/joomla-3-0/got-no-input-file-specified-or-404-component-not-found-error-messages</a></p>
+					<p>How to stop Joomla! editor from cleaning some HTML elements?</p>
+					<p><a href="http://www.joomla-monster.com/blog/joomla-3-0/how-to-stop-joomla-editor-from-cleaning-some-html-elements" target="_blank">http://www.joomla-monster.com/blog/joomla-3-0/how-to-stop-joomla-editor-from-cleaning-some-html-elements</a></p>
+					<p>Single Contact</p>
+					<p><a href="https://www.joomla-monster.com/documentation/joomla-basics/how-to-configure-a-contact-form">https://www.joomla-monster.com/documentation/joomla-basics/how-to-configure-a-contact-form</a></p>
+					<p>Paginate Your Article using tabs or pages</p>
+					<p><a href="https://www.joomla-monster.com/documentation/joomla-tutorials/how-to-paginate-your-article-using-tabs-slides-or-pages">https://www.joomla-monster.com/documentation/joomla-tutorials/how-to-paginate-your-article-using-tabs-slides-or-pages</a></p>
+					<p>Built-in language installer in Joomla</p>
+					<p><a href="http://www.joomla-monster.com/blog/joomla-3-0/built-in-language-installer-in-joomla" target="_blank">http://www.joomla-monster.com/blog/joomla-3-0/built-in-language-installer-in-joomla</a></p>
+					<p>How to modify LESS and CSS files in Joomla 3.x template?</p>
+					<p><a href="http://www.joomla-monster.com/blog/joomla-templates/how-to-modify-less-and-css-files-in-joomla-3-0-template" target="_blank">http://www.joomla-monster.com/blog/joomla-templates/how-to-modify-less-and-css-files-in-joomla-3-0-template</a></p>
+					<p>How to unlock my article, module or menu item?</p>
+					<p><a href="http://www.joomla-monster.com/blog/joomla-3-0/how-to-unlock-my-article-module-or-menu-item" target="_blank">http://www.joomla-monster.com/blog/joomla-3-0/how-to-unlock-my-article-module-or-menu-item</a></p>
+					<p>More articles:</p>
+					<p><a href="http://www.joomla-monster.com/blog" target="_blank">http://www.joomla-monster.com/blog</a></p>
+					<p>DJ-Classifieds Documentation:</p>
+					<p><a href="http://dj-extensions.com/documentation/dj-classifieds/" target="_blank">http://dj-extensions.com/documentation/dj-classifieds/</a></p>
+					<p>DJ-Classifieds FAQ:</p>
+					<p><a href="http://dj-extensions.com/faq/dj-classifieds-faq/" target="_blank">http://dj-extensions.com/faq/dj-classifieds-faq/</a></p>
+					<p>DJ-MediaTools Documentation:</p>
+					<p><a href="http://dj-extensions.com/documentation/dj-mediatools/" target="_blank">http://dj-extensions.com/documentation/dj-mediatools/</a></p>
+					<p>DJ-MegaMenu Documentation:</p>
+					<p><a href="http://dj-extensions.com/documentation/dj-megamenu/" target="_blank">http://dj-extensions.com/documentation/dj-megamenu/</a></p>
+					<p>DJ-MegaMenu FAQ:</p>
+					<p><a href="http://dj-extensions.com/faq/dj-megamenu-faq/" target="_blank">http://dj-extensions.com/faq/dj-megamenu-faq/</a></p>
+					<p>DJ-Messages Documentation:</p>
+					<p><a href="http://dj-extensions.com/documentation/dj-messages/" target="_blank">http://dj-extensions.com/documentation/dj-messages/</a></p>
+					<p>JM Simple Image Slider</p>
+					<p><a href="https://www.joomla-monster.com/joomla-modules/i/228-jm-simple-image-slider#details" target="_blank">https://www.joomla-monster.com/joomla-modules/i/228-jm-simple-image-slider#details</a></p>
+					<p>JM Social Icons</p>
+					<p><a href="https://www.joomla-monster.com/joomla-modules/i/237-jm-social-icons#details" target="_blank">https://www.joomla-monster.com/joomla-modules/i/237-jm-social-icons#details</a></p>
+					<p>JM Simple Tabs</p>
+					<p><a href="https://www.joomla-monster.com/joomla-modules/i/231-jm-simple-tabs#details" target="_blank">https://www.joomla-monster.com/joomla-modules/i/231-jm-simple-tabs#details</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="back-top">
+	<a href="#"><i class="fas fa-angle-up"></i></a>
+</div>
+<script src="js/run_prettify.js"></script>
+<script>
+	jQuery(document).ready(function() {
+		// smooth scroll
+		jQuery('#sidebar a[href^="#"], #main a[href^="#"]').bind('click.smoothscroll', function(e) {
+			e.preventDefault();
+			var target = this.hash;
+			jQuerytarget = jQuery(target);
+			jQuery('html, body').stop().animate({
+				'scrollTop': jQuerytarget.offset().top
+			}, 500);
+		});
+		// enable magnific popup
+		jQuery('.img-thumbnail').each(function() {
+			var img = jQuery(this);
+			// img.parent('p').addClass('text-center');
+			img.wrap('<a class="img-link" href="' + img.attr('src') + '"></a>');
+			
+		});
+		jQuery('.img-link').magnificPopup({
+			type: 'image'
+		});
+		// enable scroll spy
+		jQuery('body').scrollspy({
+			target: '#sidebar',
+			offset: 40
+		});
+		// hide #jm-back-top first
+		jQuery("#back-top").hide();
+		// fade in #jm-back-top
+		jQuery(function() {
+			jQuery(window).scroll(function() {
+				if (jQuery(this).scrollTop() > 100) {
+					jQuery('#back-top').fadeIn();
+				} else {
+					jQuery('#back-top').fadeOut();
+				}
+			});
+			// scroll body to 0px on click
+			jQuery('#back-top a').click(function() {
+				jQuery('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+		});
+	});
+</script>
+</body>
+
+</html>

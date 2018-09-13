@@ -1,0 +1,94 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";  
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+
+@import "template_mixins.less";
+
+// MEGAMENU
+//---------------------------------------------------------------
+
+.dj-megamenu-override {
+  #jm-top-menu-nav & {
+    float: right;
+  }
+}
+
+.dj-megamenu-override li.dj-up {
+  float: right;
+  a.dj-up_a {
+    //animated underline
+    &:after{
+      left: auto;
+      right: 0;
+    }
+    // custom-button-ms
+    &.button-ms {
+      .box-shadow(@JMboxShadowRTL);
+    }
+    span.dj-drop {
+      padding-right: 0;
+      padding-left: 20px;
+      &:after {
+        right: auto;
+        left: -1px;
+      }
+    }
+  }
+  //menu item image title
+  a span.image-title {
+    margin: 0 5px 0 0;
+  }
+  &:last-child a.dj-up_a {
+    margin-left: 0;
+  }
+}
+
+// submenu
+// --------------------------  
+
+//first level submenu
+.dj-megamenu-override {
+  li:hover,
+  li.hover {
+    div.dj-subwrap {
+      left: auto;
+      right: 0;
+      .box-shadow(@JMboxShadowRTL);
+    }
+  }
+}
+
+//next level submenu
+.dj-megamenu-override {
+  li:hover,
+  li.hover {
+    div.dj-subwrap div.dj-subwrap {
+      left: auto;
+      right: 100%;
+    }
+  }
+}
+
+//submenu tree list
+.dj-megamenu-override .dj-subtree {
+  margin-left: 0;
+  margin-right: 16px;
+}
+
+//mobile button
+#jm-top-menu-nav .dj-mobile-open-btn {
+  margin-left: 0;
+  margin-right: 15px;
+}

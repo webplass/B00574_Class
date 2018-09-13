@@ -1,0 +1,391 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// Variables used in Theme Customizer you will find in file 'lib/jm_template.php'.
+
+// Color versions
+// --------------------------------------------------
+
+//scheme
+@JMstyle: @JMcolorVersion;
+@JMstyle2: @JMcomplementaryColor;
+
+// Globals
+// --------------------------------------------------
+
+//images directory
+@JMimgDir: @JMimagesDir;
+
+//font weight
+@JMfontWeightRegular: 400;
+@JMfontWeightMedium: 600;
+@JMfontWeightBold: 700;
+@JMbaseFontWeight: @JMfontWeightRegular;
+
+//line height
+@JMbaseLineHeight: 1.7;
+
+//links
+@JMstyleLink: @JMstyle;
+
+//borders
+@JMborder: @JMbaseBorderColor;
+
+//ripple effects
+@JMdarkRippleColor: @black;
+@JMlightRippleColor: @white;
+
+//box shadow
+@JMboxShadow: 1px 1px 1px 0.3px rgba(0, 0, 0, 0.24);
+@JMboxShadowRTL: -1px 1px 1px 0.3px rgba(0, 0, 0, 0.24);
+
+// Layout values
+// --------------------------------------------------
+
+//base space
+
+@JMbaseSpace: 32px;
+
+//header
+@JMheaderHeight: 65px;
+
+//copyright
+@JMfooterFontSize: round(@JMbaseFontSize * 0.93);
+
+//offcanvas
+@JMoffCanvasToolbarBackground: jmdarken(@JMoffCanvasBackground, 20%);
+@JMoffCanvasIconSize: 20px;
+
+// breadcrumbs
+@JMbreadcrumbsFontSize: @JMbaseFontSize;
+
+// Forms values
+// --------------------------------------------------
+
+//buttons
+@JMbuttonFontSize: @JMbaseFontSize;
+@JMbuttonFontWeight: @JMfontWeightMedium;
+@JMbuttonFontColor: @JMcolorVersionContent;
+@JMbuttonBackground: @JMstyle;
+@JMbuttonBackgroundActive: lighten(@JMstyle,5%);
+
+//dropdowns (article edit button list background)
+@JMstyleButtonDropdown: @JMstyle;
+
+//inputs
+@JMinputHeight: 30px;
+@JMinputPadding: 5px; // 20px lineheight + padding + border
+@JMinputFontSize: 13px;
+@JMinputBackground: #fff;
+@JMinputFontColor: @JMbaseFontColor;
+@JMinputBorder: fade(@black, 24%);
+@JMinputBorderHover: @JMstyle;
+@JMinputBorderWidth: 1px;
+
+//readmore
+@JMreadmoreFontSize: @JMbuttonFontSize;
+@JMreadmoreFontWeight: @JMbuttonFontWeight;
+@JMreadmoreFontColor: @JMstyle;
+@JMreadmorePadding: 8px 16px;
+@JMreadmoreBackgroundHover: fade(@JMdarkRippleColor,5%);
+
+// Modules values
+// --------------------------------------------------
+
+@JMmoduleTitleFontWeight: @JMfontWeightBold;
+
+// Menu Module values
+// --------------------------------------------------
+
+//tags
+@JMtagsLinkColor: @JMbaseFontColor;
+@JMtagsBackgroundColor: fade(@black,11%);
+@JMtagsBackgroundColorActive: fade(@black,21%);
+@JMtagsFontSize: 13px;
+@JMtagsLineHeight: 20px;
+
+// DJ Megamenu values
+// --------------------------------------------------
+
+//elements
+@JMtopmenuSubtitleFontSize: round(@JMtopmenuFontSize * 0.7);
+@JMtopmenuSubtitleFontWeight: @JMfontWeightRegular;
+
+//submenu
+@JMtopmenuSubmenuFontSize: @JMtopmenuFontSize;
+@JMtopmenuSubmenuLineHeight: round(@JMtopmenuSubmenuFontSize * 1.5);
+@JMtopmenuSubmenuSubtitleFontSize: round(@JMtopmenuSubmenuFontSize * 0.8);
+@JMtopmenuSubmenuModuleTitleFontWeight: @JMmoduleTitleFontWeight;
+@JMtopmenuSubmenuHoverBackground: fade(@JMdarkRippleColor,5%);
+
+// Template values
+// --------------------------------------------------
+
+//headings
+@JMheadingsFontWeight: @JMfontWeightMedium;
+@JMheadingsFontFamily: inherit;
+@JMheadingsFontColor: inherit;
+
+//blog titles
+@JMblogTitleFontColor: @JMarticleTitleColor;
+@JMblogTitleFontColorHover: @JMstyle;
+@JMblogTitleFontWeight: @JMfontWeightMedium;
+
+//articles titles
+@JMarticleTitleFontColor: @JMarticleTitleColor;
+@JMarticleTitleFontColorHover: @JMstyle;
+@JMarticleTitleFontWeight: @JMfontWeightMedium;
+
+//article info
+@JMarticleInfoFontColor: darken(@JMbaseFontColor,5%);
+@JMarticleInfoFontSize: 0.9em;
+
+//tables
+@JMtableBackground: transparent;
+@JMtableBackgroundAccent: transparent; // for striping
+@JMtableBackgroundHover: #F5f5F5; // for hover
+@JMtableBorder: @JMborder; // table and cell border
+
+@JMtableHeadFontColor: @JMbaseFontColor;
+@JMtableHeadFontColorActive: @JMmoduleTitleColor;
+@JMtableHeadFontWeight: 400;
+@JMtableHeadBackground: transparent;
+@JMtableBorderRadius: @baseBorderRadius;
+
+//accordion
+@JMaccordionFontColor: @JMclassifiedsBoxTitleFontColor;
+@JMaccordionFontColorHover: @JMstyle;
+@JMaccordionContentFontColor: @JMclassifiedsBoxFontColor;
+@JMaccordionFontSize: round(@JMbaseFontSize * 1.15);
+@JMaccordionFontWeight: @JMfontWeightMedium;
+@JMaccordionBorderColor: @JMclassifiedsBoxBorder;
+@JMaccordionBackgroundColor: @JMclassifiedsBoxBackground;
+
+//tabs
+@JMtabsFontSize: @JMbaseFontSize;
+@JMtabsFontWeight: @JMfontWeightMedium;
+@JMtabsFontColor: @JMbaseFontColor;
+@JMtabsFontColorHover: @JMstyle;
+@JMtabsBorderColor: @JMstyle;
+
+//pager
+@JMpagerFontColor: @JMstyle;
+@JMpagerFontColorHover: @JMstyle;
+@JMpagerFontSize: @JMbaseFontSize;
+@JMpagerFontWeight: @JMfontWeightMedium;
+@JMpagerBackground: transparent;
+@JMpagerBackgroundHover: fade(@JMdarkRippleColor,5%);
+@JMpagerHeight: 36px;
+
+//pagination
+@JMpaginationBorder: @JMborder;
+@JMpaginationFontSize: @JMbaseFontSize;
+@JMpaginationFontWeight: @JMbaseFontWeight;
+@JMpaginationFontColor: darken(@JMbaseFontColor, 19%);
+@JMpaginationBackground: fade(@JMdarkRippleColor,5%);
+@JMpaginationActiveFontColor: @JMcolorVersionContent;
+@JMpaginationInactiveFontColor: lighten(@JMbaseFontColor, 34%);
+@JMpaginationHeight: 36px;
+@JMstylePaginationActiveBackground: @JMstyle;
+
+//labels
+@JMtemplateLabelFontColor: @JMmoduleTitleColor;
+@JMtemplateLabelFontSize: round(@JMbaseFontSize * 0.92);
+@JMtemplateLabelFontWeight: @JMclassifiedsAdvertLabelFontWeight;
+@JMtemplateLabelFontTransform: @JMclassifiedsAdvertLabelFontTransform;
+
+// Classifieds
+// --------------------------------------------------
+
+
+//new icon
+@JMclassifiedsNewIconBackground: @JMstyle2;
+@JMclassifiedsNewIconFontColor: @JMcolorVersionContent;
+
+//type icon
+@JMclassifiedsTypeButtonHeight: 20px;
+@JMclassifiedsTypeButtonFontSize: 12px;
+@JMclassifiedsTypeButtonFontWeight: @JMbaseFontWeight;
+@JMclassifiedsTypeButtonFontTransform: uppercase;
+
+//search module
+@JMsearchButtonBackground: @JMstyle;
+@JMsearchInputFontColor: @JMinputFontColor;
+@JMsearchInputBackground: @white;
+@JMclassifiedsSmallInputWidth: 75px;
+@JMclassifiedsSearchSeparator: 20px;
+@JMclassifiedsModuleSearchLabelFontColor: @JMclassifiedsAdvertLabelFontColor;
+@JMclassifiedsModuleSearchLabelFontSize: @JMtemplateLabelFontSize;
+@JMclassifiedsModuleSearchLabelFontWeight: @JMclassifiedsAdvertLabelFontWeight;
+@JMclassifiedsModuleSearchLabelFontTransform: @JMclassifiedsAdvertLabelFontTransform;
+
+//search icon on item image
+@JMclassifiedsSearchIconBackground: @black;
+@JMclassifiedsSearchIconColor: @white;
+
+//categories
+@JMclassifiedsCategoryTitleFontColor: @JMclassifiedsBoxTitleFontColor;
+@JMclassifiedsCategoryTitleFontSize: @JMblogTitleFontSize;
+@JMclassifiedsCategoryTitleFontWeight: 400;
+
+//table
+@JMclassifiedsTableTitleFontSize: @JMblogTitleFontSize;
+@JMclassifiedsTableTitleFontFamily: @JMblogTitleFontFamily;
+@JMclassifiedsTableTitleFontWeight: 400;
+@JMclassifiedsTableTitleColor: @JMclassifiedsBoxTitleFontColor;
+@JMclassifiedsTablePriceFontColor: @JMclassifiedsAdvertPriceFontColor;
+@JMclassifiedsTablePriceFontSize: @JMclassifiedsAdvertPriceFontSize;
+@JMclassifiedsTablePriceFontWeight: @JMclassifiedsAdvertPriceFontWeight;
+
+//all views - item title
+@JMclassifiedsItemTitleFontColor: @JMclassifiedsBoxTitleFontColor;
+
+//blog
+@JMclassifiedsBlogTitleFontSize: @JMblogTitleFontSize;
+@JMclassifiedsBlogTitleFontFamily: @JMblogTitleFontFamily;
+@JMclassifiedsBlogTitleFontWeight: 400;
+@JMclassifiedsBlogLabelsFontSize: @JMbaseFontSize;
+@JMclassifiedsBlogLabelsLineHeight: @JMbaseLineHeight;
+@JMclassifiedsBlogLabelsFontColor: @JMclassifiedsBoxFontColor;
+@JMclassifiedsBlogPriceFontSize: @JMclassifiedsAdvertPriceFontSize;
+@JMclassifiedsBlogPriceFontColor: @JMstyle2;
+@JMclassifiedsBlogPriceFontWeight: @JMclassifiedsAdvertPriceFontWeight;
+@JMclassifiedsAuctionIconFontColor: @JMstyle2;
+@JMclassifiedsSpecialIconFontColor: @white;
+@JMclassifiedsSpecialIconBackground: #f9a90f;
+@JMclassifiedsFavIconFontColor: @white;
+@JMclassifiedsFavIconBackground: #e74c3c;
+@JMclassifiedsFavIconBackgroundInactive: #cccccc;
+@JMclassifiedsVerifiedIconBackground: @JMstyle;
+
+//smart table
+@JMclassifiedsSmartTableHeadingFontSize: @JMblogTitleFontSize;
+@JMclassifiedsSmartTableHeadingFontFamily: @JMblogTitleFontFamily;
+@JMclassifiedsSmartTableHeadingFontWeight: @JMblogTitleFontWeight;
+@JMclassifiedsSmartTableHeadingFontColor: @JMclassifiedsBoxTitleFontColor;
+@JMclassifiedsSmartTableLabelsFontColor: @JMclassifiedsBoxFontColor;
+@JMclassifiedsSmartTablePriceFontColor: @JMclassifiedsAdvertPriceFontColor;
+@JMclassifiedsSmartTablePriceFontSize: @JMclassifiedsAdvertPriceFontSize;
+@JMclassifiedsSmartTablePriceFontWeight: @JMclassifiedsAdvertPriceFontWeight;
+@JMclassifiedsSmartTableAuctionFontSize: @JMclassifiedsAdvertPriceFontSize - 3;
+@JMclassifiedsSmartTablePriceNegotiableFontSize: @JMbaseFontSize;
+@JMclassifiedsSmartTableContentWidth: 78%;
+@JMclassifiedsSmartTableDetailsWidth: 22%;
+
+//lables and values
+@JMclassifiedsAdvertLabelFontColor: @JMclassifiedsBoxTitleFontColor;
+@JMclassifiedsAdvertLabelFontSize: round(@JMbaseFontSize * 1.15);
+@JMclassifiedsAdvertLabelLineHeight: round(@JMclassifiedsAdvertLabelFontSize * @JMbaseLineHeight);
+@JMclassifiedsAdvertLabelFontWeight: @JMfontWeightMedium;
+@JMclassifiedsAdvertLabelFontTransform: none;
+@JMclassifiedsProfileNameFontSize: round(@JMbaseFontSize * 1.125);
+@JMclassifiedsProfileNameFontWeight: 400;
+
+@JMclassifiedsFormsLabelFontColor: @JMclassifiedsAdvertLabelFontColor;
+@JMclassifiedsFormsLabelFontSize: @JMtemplateLabelFontSize;
+@JMclassifiedsFormsLabelLineHeight: round(@JMbaseFontSize * @JMbaseLineHeight);
+@JMclassifiedsFormsLabelFontWeight: @JMclassifiedsAdvertLabelFontWeight;
+@JMclassifiedsFormsLabelFontTransform: @JMclassifiedsAdvertLabelFontTransform;
+
+@JMclassifiedsAdvertFieldValueFontColor: @JMclassifiedsBoxFontColor;
+@JMclassifiedsAdvertFieldValueFontSize: round(@JMbaseFontSize * 0.92);
+@JMclassifiedsAdvertFieldValueFontWeight: @JMbaseFontWeight;
+
+//advert
+
+@JMclassifiedsAdvertPriceLabelFontColor: jmdarken(@JMclassifiedsBoxFontColor, 90%);
+@JMclassifiedsAdvertPriceFontColor: @JMstyle2;
+@JMclassifiedsAdvertPriceFontSize: 20px;
+@JMclassifiedsAdvertPriceFontWeight: 400;
+@JMclassifiedsAdvertPriceNegotiableFontSize: @JMbaseFontSize;
+@JMclassifiedsItemPriceFontSize: round(@JMbaseFontSize * 1.7);
+@JMclassifiedsItemPriceFontWeight: 400;
+@JMclassifiedsItemTitleFontSize: @JMarticleTitleFontSize;
+@JMclassifiedsItemTitleFontFamily: @JMarticleTitleFontFamily;
+
+//promotions
+@JMclassifiedsPromo: screen(@JMstyle, #eeeeee);
+@JMclassifiedsPromoBackground: @JMclassifiedsPromo; //mix colors ~ light blue
+@JMclassifiedsPromoBorderColor: darken(@JMclassifiedsPromo, 20%);
+
+//tooltip
+@JMclassifiedsTooltipBackground: @JMclassifiedsBoxBackground;
+@JMclassifiedsTooltipBorder: @JMclassifiedsBoxBorder;
+@JMclassifiedsTooltipFontColor: @JMbaseFontColor;
+
+//module items
+@JMclassifiedsModuleItemsTopPadding: 16px;
+@JMclassifiedsModuleItemsTitleFontSize: 16px;
+@JMclassifiedsModuleItemsTitleFontWeight: @JMfontWeightMedium;
+@JMclassifiedsModuleItemsTitleFontColor: @JMmoduleTitleColor;
+@JMclassifiedsModuleItemsLabelsFontColor: lighten(@JMmoduleTitleColor,30%);
+@JMclassifiedsModuleItemsBoxedBackground: @JMclassifiedsBoxBackground;
+@JMclassifiedsModuleItemsBoxedFontColor: @JMclassifiedsBoxFontColor;
+@JMclassifiedsModuleItemsBoxedTitleFontColor: @JMclassifiedsBoxTitleFontColor;
+@JMclassifiedsModuleItemsBoxedLabelsFontColor: lighten(@JMclassifiedsBoxTitleFontColor,30%);
+@JMclassifiedsModuleItemsPriceFontSize: round(@JMbaseFontSize * 1.42);
+@JMclassifiedsModuleItemsPriceFontColor: @JMstyle2;
+@JMclassifiedsModuleItemsPriceFontWeight: @JMfontWeightMedium;
+
+//regions
+@JMclassifiedsRegionMsFontSize: round(@JMbaseFontSize * 1.125);
+@JMclassifiedsRegionMsLineHeight: round(@JMclassifiedsRegionMsFontSize * 1.25);
+@JMclassifiedsRegionMsFontWeight: @JMfontWeightMedium;
+@JMclassifiedsRegionMsColor: @JMclassifiedsBoxTitleFontColor;
+@JMclassifiedsRegionMsBackground: @JMclassifiedsBoxBackground;
+
+// Mediatools
+// --------------------------------------------------
+
+//headings
+@JMmediatoolsHeadingFontSize: @JMarticleTitleFontSize;
+@JMmediatoolsHeadingFontFamily: @JMarticleTitleFontFamily;
+@JMmediatoolsHeadingFontWeight: @JMarticleTitleFontWeight;
+@JMmediatoolsHeadingFontColor: @JMarticleTitleFontColor;
+
+//slide
+@JMmediatoolsDescriptionFontSize: @JMbaseFontSize;
+@JMmediatoolsSlideTitleFontSize: @JMmoduleTitleFontSize;
+@JMmediatoolsSlideTitleFontWeight: 400;
+@JMmediatoolsSlideTitleFontColor: @JMmediatoolsDescriptionFontColor;
+
+//extrafields
+@JMmediatoolsDateFontColor: @JMmediatoolsDescriptionFontColor;
+@JMmediatoolsCategoryFontColor: @JMmediatoolsDescriptionFontColor;
+@JMmediatoolsPriceFontColor: @JMstyle2;
+
+//navigation
+@JMmediatoolsNavigationActiveFont: @JMcolorVersionContent;
+@JMstyleMediatoolsNavigationBackground: @JMstyle;
+@JMstyleMediatoolsNavigationBackgroundHover: fade(@JMdarkRippleColor,5%);
+@JMstyleMediatoolsNavigationBorder: @JMstyle;
+@JMstyleMediatoolsNavigationFont: darken(@JMbaseFontColor,19%);
+
+//tabber
+@JMmediatoolsTabberFontSize: @JMbaseFontSize;
+@JMmediatoolsTabberFontWeight: @JMfontWeightMedium;
+@JMmediatoolsTabberFontColor: fade(@JMmediatoolsDescriptionBackground,87%);
+@JMmediatoolsTabberActiveFontColor: @JMmediatoolsDescriptionFontColor;
+@JMmediatoolsTabberBackground: @JMmediatoolsDescriptionFontColor;
+@JMmediatoolsTabberActiveBackground: lighten(@JMmediatoolsDescriptionBackground,30%);
+
+//screen 480px
+@JMmediatoolsSmallScreenSlideTitleFontSize: 14px;
+@JMmediatoolsSmallScreenSlideDescriptionFontSize: 14px;
+
+// Reviews
+// --------------------------------------------------
+
+@JMreviewsTitleFontSize: @JMmoduleTitleFontSize;
+@JMreviewsTitleFontFamily: @JMmoduleTitleFontFamily;
+@JMreviewsTitleFontColor: @JMmoduleTitleColor;
+@JMreviewsTitleFontWeight: 400;
+@JMreviewsFontSize: @JMbaseFontSize;
+@JMreviewsLineHeight: @JMbaseLineHeight;
+@JMreviewsColor: lighten(@JMbaseFontColor, 28%);
+
+@JMbaseSpace: 30px;

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" client="site" method="upgrade" group="djclassifieds">
+	<name>plg_djclassifieds_gdpr</name>
+	<creationDate>April 2018</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>3.7.3</version>
+	<description>PLG_DJCLASSIFIEDS_DJCLASSIFIEDSGDPR</description>
+	<files>
+		<filename plugin="gdpr">gdpr.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">								
+			</fieldset>
+		</fields>
+	</config>
+</extension>

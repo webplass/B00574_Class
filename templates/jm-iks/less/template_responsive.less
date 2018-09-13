@@ -1,0 +1,422 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+
+@import "template_mixins.less";
+
+// RESPONSIVE
+//---------------------------------------------------------------
+
+.visible-large-desktop {
+	display: none;
+}
+
+@media (min-width: 1500px) {
+	html.no-scroll {
+		width: auto;
+		overflow-y: visible;
+		position: static;
+	}
+	.off-canvas-right .jm-wrapper {
+		padding-right: @JMoffCanvasWidth;
+	}
+	.off-canvas-left .jm-wrapper {
+		padding-left: @JMoffCanvasWidth;
+	}
+	.off-canvas-left #jm-offcanvas-content {
+		left: 0;
+		overflow-y: auto;
+	}
+	.off-canvas-right #jm-offcanvas-content {
+		right: 0;
+		overflow-y: auto;
+	}
+	.hide-large-desktop {
+		display: none;
+	}
+	.visible-large-desktop {
+		display: block;
+	}
+}
+
+@media (max-width: 1199px) {
+
+	//dj-megamenu
+	// --------------------------
+	.dj-megamenu-override li.dj-up a.dj-up_a {
+		padding: 13px;
+	}
+
+	// layout
+	// --------------------------
+	#jm-logo-sitedesc {
+		min-width: 0;
+	}
+
+}
+
+@media (max-width: 979px) {
+
+	// global
+	// --------------------------
+
+	//module height
+	.jm-module-in {
+		height: auto !important;
+	}
+
+	//responsive images
+	img {
+		.box-sizing(border-box);
+	}
+
+	//fix on displaying buttons on webkit browsers
+	.btn {
+		-webkit-appearance: none;
+	}
+
+	// layout
+	// --------------------------
+
+	#jm-back-top span {
+		width: 40px;
+		height: 40px;
+	}
+
+	//footer
+	#jm-footer-left,
+	#jm-footer-right {
+		width: 100%;
+		text-align: center;
+		.text-right {
+			text-align: center;
+		}
+	}
+	#jm-footer-left + #jm-footer-right {
+		margin-top: 20px;
+	}
+
+	//menu columns
+	.nav.menu.col2,
+	.col2 .nav.menu,
+	.nav.menu.col3,
+	.col3 .nav.menu,
+	.nav.menu.col4,
+	.col4 .nav.menu,
+	.nav.menu.col5,
+	.col5 .nav.menu {
+		li {
+			width: 33.3%;
+			&:nth-child(3n + 1) {
+				clear: both;
+			}
+			&:nth-child(2n + 1),
+			&:nth-child(4n + 1),
+			&:nth-child(5n + 1) {
+				clear: none;
+			}
+		}
+	}
+
+	.scrolled .showonscroll-ms.hidden-tablet {
+		display: none !important;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	// global
+	// --------------------------
+
+	//responsive inputs
+	input, select, textarea {
+		max-width: 100%;
+	}
+
+	// joomla
+	// --------------------------
+
+	//article items
+	.items-row {
+		margin-bottom: @JMbaseSpace;
+	}
+	.items-row .item {
+		margin-bottom: @JMbaseSpace;
+	}
+
+	// layout
+	// --------------------------
+
+	#jm-search {
+		clear: both;
+		padding: 0 0 20px;
+	}
+
+	#jm-footer-left {
+		padding-bottom: 10px;
+	}
+
+	// modules
+	// --------------------------
+
+	//menu columns
+	.nav.menu.col2,
+	.col2 .nav.menu,
+	.nav.menu.col3,
+	.col3 .nav.menu,
+	.nav.menu.col4,
+	.col4 .nav.menu,
+	.nav.menu.col5,
+	.col5 .nav.menu {
+		li {
+			width: 50%;
+			&:nth-child(2n + 1) {
+				clear: both;
+			}
+			&:nth-child(3n + 1),
+			&:nth-child(4n + 1),
+			&:nth-child(5n + 1) {
+				clear: none;
+			}
+		}
+	}
+
+	.scrolled .showonscroll-ms.hidden-phone {
+		display: none !important;
+	}
+
+	#jm-allpage .search-ms.locationcategory-ms form {
+		> .search_radius,
+		> .search_cats {
+			display: none;
+		}
+	}
+
+	#jm-allpage .search-ms.locationcategory-ms.focus form {
+		> .search_radius,
+		> .search_cats {
+			display: block;
+		}
+	}
+
+	#jm-allpage .search-ms.category-ms form {
+		> .search_cats {
+			display: none;
+		}
+	}
+
+	#jm-allpage .search-ms.category-ms.focus form {
+		> .search_cats {
+			display: block;
+		}
+	}
+
+	#jm-allpage .search-ms.location-ms form {
+		> .search_radius {
+			display: none;
+		}
+		&.focus {
+			> .search_radius {
+				display: block;
+			}
+		}
+	}
+
+	#jm-allpage .search-ms.location-ms.focus form {
+		> .search_radius {
+			display: block;
+		}
+	}
+
+	#jm-allpage .search-ms.locationcategory-ms,
+	#jm-allpage .search-ms.category-ms,
+	#jm-allpage .search-ms.location-ms {
+		.dj_cf_search {
+			background: @JMsearchInputBackground;
+		}
+		.search_word {
+			width: 100%;
+			input[type="text"] {
+				.border-radius(@baseBorderRadius 0 0 0);
+				border: 0 !important;
+				border-bottom: 1px solid @JMinputBorder !important;
+			}
+		}
+		.search_radius,
+		.search_cats {
+			clear: both;
+			float: none;
+			width: auto;
+		}
+		.search_radius {
+			> input {
+				border: 0 !important;
+			}
+		}
+		/*.search_cats {
+			> select {
+				border: 0 !important;
+			}
+		}*/
+		.search_buttons {
+			a.button {
+				left: 100%;
+			}
+		}
+	}
+
+	html[dir='rtl'] {
+		#jm-allpage .search-ms.locationcategory-ms,
+		#jm-allpage .search-ms.category-ms,
+		#jm-allpage .search-ms.location-ms {
+			.search_buttons {
+				a.button {
+					left: auto;
+					right: 100%;
+				}
+			}
+		}
+	}
+
+	#jm-allpage .search-ms.locationcategory-ms {
+		.search_cats {
+			> select {
+				border: 0 !important;
+				border-top: 1px solid @JMinputBorder !important;
+			}
+		}
+	}
+  #jm-allpage .search-ms.is-advanced.bg-ms .dj_cf_search .search-wrapper{
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+	// modules
+	// --------------------------
+
+	//tabs
+	.nav-tabs > li,
+	dl.tabs > dt,
+	.nav-pills > li {
+		float: left;
+		width: 100%;
+		.box-sizing(border-box);
+	}
+	.nav-tabs > li + li, dl.tabs > dt + li,
+	.nav-tabs > li + dt, dl.tabs > dt + dt {
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 17px;
+	}
+
+	.nav-tabs.nav-tabs-responsive {
+		> li {
+			display: none;
+			width: 23%;
+			margin: 0;
+			> a {
+				max-width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				word-wrap: normal;
+				width: 100%;
+				text-align: center;
+				vertical-align: top;
+				.box-sizing(border-box);
+				border-radius: 0;
+			}
+			&.active {
+				width: 54%;
+				&:first-child {
+					margin-left: 23%;
+				}
+			}
+			&.active,
+			&.prev,
+			&.next {
+				display: block;
+			}
+
+			&.next > a,
+			&.prev > a {
+				-webkit-transition: none;
+				transition: none;
+				.text {
+					display: none;
+				}
+				&:before {
+					position: relative;
+					display: inline-block;
+					vertical-align: top;
+					font-family: 'Glyphicons Halflings';
+					font-style: normal;
+					font-weight: 400;
+					line-height: 1;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				}
+			}
+			&.prev > a:before {
+				content: "\e079";
+			}
+			&.next > a:before {
+				content: "\e080";
+			}
+
+		}
+	}
+
+	html[dir='rtl'] .nav-tabs.nav-tabs-responsive {
+		> li {
+			&.active {
+				&:first-child {
+					margin-left: 0;
+					margin-right: 23%;
+				}
+			}
+			&.prev > a:before {
+				content: "\e080";
+			}
+			&.next > a:before {
+				content: "\e079";
+			}
+
+		}
+	}
+
+	//menu columns
+	.nav.menu.col2,
+	.col2 .nav.menu,
+	.nav.menu.col3,
+	.col3 .nav.menu,
+	.nav.menu.col4,
+	.col4 .nav.menu,
+	.nav.menu.col5,
+	.col5 .nav.menu {
+		li {
+			width: 100%;
+			clear: both;
+		}
+	}
+}
+
+// EXTENSIONS import
+//---------------------------------------------------------------
+
+@import "djmediatools_responsive.less";

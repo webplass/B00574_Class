@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" 
+				readonly="true" class="readonly" />
+		
+		<field name="name" type="text" class="inputbox"
+				size="40" label="COM_DJCLASSIFIEDS_NAME" required="true" />
+		
+		<field name="source" type="list" label="COM_DJCLASSIFIEDS_FIELGROUP_TYPE" >
+			<option value="0">COM_DJCLASSIFIEDS_FOR_CATEGORY_FIELDS</option>
+			<option value="1">COM_DJCLASSIFIEDS_FOR_CONTACT_FIELDS</option>
+			<option value="2">COM_DJCLASSIFIEDS_FOR_PROFILE_REGISTRATION_FIELDS</option>
+		</field>
+		
+		<field showon="source:2" name="groups_assignment" size="12" type="usergroup" label="COM_DJCLASSIFIEDS_GROUPS_ASSIGMENT_ON_REGISTRATION"  description="COM_DJCLASSIFIEDS_GROUPS_ASSIGMENT_ON_REGISTRATION_DESC" />
+		 
+	</fieldset>
+</form>

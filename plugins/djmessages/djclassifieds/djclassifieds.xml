@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" method="upgrade" group="djmessages">
+	<name>plg_djmessages_djclassifieds</name>
+	<creationDate>February 2018</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_DJMESSAGES_DJCLASSIFIEDS_DESCRIPTION</description>
+	<files>
+		<filename plugin="djclassifieds">djclassifieds.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="note1" type="note" label="PLG_DJMESSAGES_DJCLASSIFIEDS_CONFIG_NOTE_BACKEND" />
+				<field name="profile_link" type="radio" class="btn-group" default="1" label="PLG_DJMESSAGES_DJCLASSIFIEDS_CONFIG_LINK">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field 
+					name="contact_fields" 
+					type="sql" 
+					multiple="true" 
+					query="SELECT id, name FROM #__djcf_fields WHERE source=2 AND access=0 ORDER BY name" 
+					key_field="id"
+					value_field="name"
+					label="PLG_DJMESSAGES_DJCLASSIFIEDS_CONFIG_FIELDS"
+				/>
+				
+				<field name="note2" type="note" label="PLG_DJMESSAGES_DJCLASSIFIEDS_CONFIG_NOTE_FRONTEND" />
+				<field name="profile_link_site" type="radio" class="btn-group" default="1" label="PLG_DJMESSAGES_DJCLASSIFIEDS_CONFIG_LINK">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field 
+					name="contact_fields_site" 
+					type="sql" 
+					multiple="true" 
+					query="SELECT id, name FROM #__djcf_fields WHERE source=2 AND access=0 ORDER BY name" 
+					key_field="id"
+					value_field="name"
+					label="PLG_DJMESSAGES_DJCLASSIFIEDS_CONFIG_FIELDS"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DJCLASSIFIEDS_REGISTRATION">
+	</layout>
+	<fields name="params">
+		<fieldset  name="global" label="COM_DJCLASSIFIEDS_CONFIG_GLOBAL_SETTINGS_LABEL" addfieldpath="/administrator/components/com_djclassifieds/models/fields">
+			<field name="registration_gid" type="djcffieldsreggroup" default="0" default_name="COM_DJCLASSIFIEDS_GROUPID" label="COM_DJCLASSIFIEDS_FIELDS_GROUP" description="COM_DJCLASSIFIEDS_FIELDS_GROUP_DESC" />
+		</fieldset>
+	</fields>
+	<state>
+		<name>COM_DJCLASSIFIEDS_REGISTRATION</name>
+	</state>
+</metadata>

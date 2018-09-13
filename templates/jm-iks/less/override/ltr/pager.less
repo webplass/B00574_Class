@@ -1,0 +1,78 @@
+//
+// Pager pagination
+// --------------------------------------------------
+
+
+.pager {
+  margin: @JMbaseSpace 0;
+  list-style: none;
+  text-align: center;
+  .clearfix();
+}
+.pager li {
+  display: inline;
+  padding: 0;
+}
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 0 16px;
+  line-height: @JMpagerHeight;
+  .transition(all 0.2s ease-in);
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: @JMpagerFontSize;
+  font-weight: @JMpagerFontWeight;
+  color: @JMpagerFontColor;
+  background: @JMpagerBackground;
+  .border-radius(@baseBorderRadius);
+  position: relative;
+  overflow: hidden;
+  //ripple
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+    background: @JMdarkRippleColor;
+    .border-radius(100%);
+    .opacity(10);
+    .scale(0);
+  }
+  &:not(:active):after {
+    animation: ripple 1s ease-out;
+  }
+  /* fixes initial animation run, without user input, on page load.*/
+  &:after {
+    visibility: hidden;
+  }
+  &:focus:after {
+    visibility: visible;
+  }
+}
+.pager li > a:hover,
+.pager li > a:focus {
+	color: @JMpagerFontColorHover;
+  background: @JMpagerBackgroundHover;
+}
+.pager .next > a,
+.pager .next > span {
+  float: right;
+}
+.pager .previous > a,
+.pager .previous > span {
+  float: left;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  .opacity(60);
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<!--  Basic user account settings. -->
+		<fieldset name="settings">
+			<field name="djmsg_info" type="spacer" label="PLG_SYSTEM_DJMESSAGES_CONFIG_INFO" description="PLG_SYSTEM_DJMESSAGES_CONFIG_INFO_DESC" />
+		
+			<field name="djmsg_state" type="radio" default="0" 
+				label="PLG_SYSTEM_DJMESSAGES_CONFIG_ALLOW_MESSAGES" 
+				description="PLG_SYSTEM_DJMESSAGES_CONFIG_ALLOW_MESSAGES_DESC" class="btn-group">
+				
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			
+			<field name="djmsg_visible" showon="djmsg_state:1" type="radio" default="0" 
+				label="PLG_SYSTEM_DJMESSAGES_CONFIG_VISIBLE" 
+				description="PLG_SYSTEM_DJMESSAGES_CONFIG_VISIBLE_DESC" class="btn-group">
+				
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

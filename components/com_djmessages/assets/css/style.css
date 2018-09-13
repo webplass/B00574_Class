@@ -1,0 +1,438 @@
+/** container for list of messages **/
+.djmsg-messages-messages {
+	
+}
+
+/** Folders navigation container **/
+.djmsg-messages-messages .djmsg-nav {
+	
+}
+
+/** table that holds list of messages **/
+.djmsg-messages-messages .msg-messages-table {
+	width: 100%;
+	max-width: 100%;
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 40px;
+}
+
+.djmsg-messages-messages .msg-messages-table tbody,
+.djmsg-messages-messages .msg-messages-table thead,
+.djmsg-messages-messages .msg-messages-table th,
+.djmsg-messages-messages .msg-messages-table td,
+.djmsg-messages-messages .msg-messages-table tr {
+	border: 0;
+	padding: 0;
+	background: none !important;
+}
+
+.djmsg-messages-messages .msg-messages-table tr {
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.djmsg-messages-messages .msg-messages-table tbody tr:last-child {
+	border-bottom: 0;
+}
+
+.djmsg-messages-messages .msg-messages-table td,
+.djmsg-messages-messages .msg-messages-table th {
+	padding: 10px;
+	background: none;
+	vertical-align: top;
+	line-height: inherit;
+	text-align: inherit;
+}
+
+.djmsg-messages-messages .msg-messages-table tbody input[type="checkbox"] {
+	margin-top: 0;
+	vertical-align: top;
+}
+
+.djmsg-messages-messages .msg-messages-table th:last-child {
+	text-align: right;
+	min-width: 200px;
+}
+
+html[dir="rtl"] .djmsg-messages-messages .msg-messages-table th:last-child {
+	text-align: left;
+}
+
+.djmsg-messages-messages .msg-messages-table .btn-mini {
+	display: inline-block;
+	vertical-align: middle;
+	color: currentColor;
+	background: none;
+	font-family: inherit;
+	font-size: 0.85em;
+	line-height: inherit;
+	font-weight: normal;
+	padding: 0;
+	margin: 0 20px 0 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border: 0;
+	text-shadow: none;
+	overflow: visible;
+	transition: none;
+	-webkit-transition: none;
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+html[dir="rtl"] .djmsg-messages-messages .msg-messages-table .btn-mini {
+	margin: 0 0 0 20px;
+}
+
+.djmsg-messages-messages .msg-messages-table .btn-mini.active {
+	opacity: 1;
+}
+
+.djmsg-messages-messages .msg-messages-table .btn-mini::before,
+.djmsg-messages-messages .msg-messages-table .btn-mini::after {
+	display: none;
+}
+
+.djmsg-messages-messages .msg-messages-table .btn-mini:last-child {
+	margin: 0;
+}
+
+/*.djmsg-messages-messages .msg-messages-table .btn-mini i {*/
+	/*margin-right: 5px;*/
+/*}*/
+
+.djmsg-messages-messages .djmsg-message-body span {
+	display: block;
+}
+
+.djmsg-messages-messages .djmsg-message-title a,
+.djmsg-messages-messages .djmsg-message-intro a {
+	color: inherit;
+}
+
+.djmsg-messages-messages .djmsg-message-intro,
+.djmsg-messages-messages .djmsg-message-time {
+	opacity: 0.7;
+}
+
+.djmsg-messages-messages .djmsg-username,
+.djmsg-messages-messages .djmsg-message-time {
+	font-size: 0.75em;
+	text-transform: uppercase;
+}
+
+.djmsg-messages-messages .djmsg-message-time {
+	float: right;
+}
+
+/** Buttons container ex. mark read, sort options, etc. */
+/*.djmsg-messages-messages .msg-ui-buttons {*/
+/*}*/
+
+/*.djmsg-messages-messages .msg-ui-buttons::after {*/
+	/*display: block;*/
+	/*content: "";*/
+	/*clear: both;*/
+/*}*/
+
+/*.djmsg-messages-messages .msg-ui-buttons .btn-group {*/
+	/*float: right;*/
+/*}*/
+
+/*.djmsg-messages-messages .msg-ui-buttons .btn-group:first-child {*/
+	/*float: left;*/
+/*}*/
+
+/** Filters & search toolbar **/
+.djmsg-messages-messages .msg-ui-search {
+	margin: 0 0 40px;
+}
+
+.djmsg-messages-messages .msg-ui-search::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+.djmsg-messages-messages .form-search {
+	float: left;
+}
+
+html[dir="rtl"] .djmsg-messages-messages .form-search {
+	float: right;
+}
+
+	/** Filters container **/
+.djmsg-messages-messages .msg-ui-filters {
+	float: right;
+}
+
+html[dir="rtl"] .djmsg-messages-messages .msg-ui-filters {
+	float: left;
+}
+
+/** container for message details **/
+.djmsg-messages-message {
+	
+}
+
+/** Subject (heading) of the message **/
+.djmsg-messages-message .djmsg-subject {
+	
+}
+
+/** Message information **/
+.djmsg-messages-message .djmsg-info {
+	
+}
+
+/** Message body **/
+.djmsg-messages-message .djmsg-message {
+	
+}
+
+/** Message form **/
+.djmsg-messages-message #djmsg-message-form {
+	
+}
+
+/** Pagination **/
+.djmsg-messages-messages .djmsg-messages-pagination .pagination {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-align: inherit;
+}
+
+/** Component template **/
+
+html body.contentpane {
+	background: none !important;
+	padding: 40px 0 !important;
+}
+
+/** Message form **/
+
+#djmsg-message-form,
+#djmsg-message-form fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+#djmsg-message-form legend,
+.djmsg-messages-message .djmsg-attachments h4 {
+	display: block;
+	font-size: 1.2em;
+	line-height: normal;
+	padding: 0;
+	margin: 0 0 20px;
+	text-transform: uppercase;
+	border: 0;
+	font-weight: bold;
+}
+
+#djmsg-message-form label {
+	display: inline-block;
+	margin-bottom: 5px;
+	font-size: 1em;
+	line-height: normal;
+	font-weight: normal;
+}
+
+#djmsg-message-form label .star {
+	color: red;
+}
+
+#djmsg-message-form .control-group {
+	display: block;
+	margin: 0 0 20px;
+}
+
+#djmsg-message-form .control-group:last-child {
+	margin: 0;
+}
+
+#djmsg-message-form .control-label,
+#djmsg-message-form .controls {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#djmsg-message-form input[type="text"],
+#djmsg-message-form textarea {
+	margin: 0;
+}
+
+.djmsg-messages-message .djmsg-close-button {
+	text-transform: uppercase;
+	font-size: 0.75em;
+}
+
+.djmsg-messages-message .djmsg-close-button.pull-right {
+	float: right;
+}
+
+html[dir="rtl"] .djmsg-messages-message .djmsg-close-button.pull-right {
+	float: left;
+}
+
+.djmsg-messages-message .djmsg-subject,
+.djmsg-messages-message .djmsg-info,
+.djmsg-messages-message .djmsg-message,
+.djmsg-messages-message .djmsg-attachments {
+	margin: 0 0 20px;
+}
+
+.djmsg-messages-message .djmsg-info .article-info {
+	font-size: 0.75em;
+	color: inherit;
+}
+
+.djmsg-messages-message .djmsg-attachments ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	float: none;
+}
+
+.djmsg-messages-message .djmsg-info dt,
+.djmsg-messages-message .djmsg-info dd {
+	float: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-size: 1em;
+	line-height: normal;
+}
+
+.djmsg-messages-message .djmsg-info dt {
+	font-weight: bold;
+}
+
+.djmsg-messages-message .djmsg-unban,
+.djmsg-messages-message .djmsg-ban {
+	position: relative;
+	margin-left: 20px;
+}
+
+html[dir="rtl"] .djmsg-messages-message .djmsg-unban,
+html[dir="rtl"] .djmsg-messages-message .djmsg-ban {
+	margin-left: 0;
+	margin-right: 20px;
+}
+
+.djmsg-messages-message .djmsg-unban::before,
+.djmsg-messages-message .djmsg-ban::before {
+	content: '';
+	width: 2px;
+	height: 2px;
+	background: rgba(0,0,0,0.2);
+	position: absolute;
+	left: -12px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+html[dir="rtl"] .djmsg-messages-message .djmsg-unban::before,
+html[dir="rtl"] .djmsg-messages-message .djmsg-ban::before {
+	left: auto;
+	right: -12px;
+}
+
+.djmsg-messages-message .djmsg-attachments ul li {
+	display: inline;
+	float: none;
+	padding: 0;
+	margin: 0 5px 0 0;
+	border: 0;
+}
+
+html[dir="rtl"] .djmsg-messages-message .djmsg-attachments ul li {
+	margin: 0 0 0 5px;
+}
+
+.djmsg-messages-message .djmsg-attachments ul li::before,
+.djmsg-messages-message .djmsg-attachments ul li::after {
+	display: none;
+}
+
+.djmsg-messages-message .btn {
+	display: inline-block;
+}
+
+/** Tabs **/
+
+.djmsg-messages-messages .djmsg-nav .nav-tabs {
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	margin: 0 0 20px;
+	padding: 0;
+	display: block;
+}
+
+.djmsg-messages-messages .djmsg-nav .nav-tabs > li {
+	float: left;
+	padding: 0;
+	margin: 0 0 -1px;
+}
+
+html[dir="rtl"] .djmsg-messages-messages .djmsg-nav .nav-tabs > li {
+	float: right;
+}
+
+.djmsg-messages-messages .djmsg-nav .nav-tabs > li > a {
+	display: block;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border: 1px solid transparent;
+	-webkit-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	color: inherit;
+}
+
+.djmsg-messages-messages .djmsg-nav .nav-tabs > li > a:after,
+.djmsg-messages-messages .djmsg-nav .nav-tabs > li > a:before {
+	display: none;
+}
+
+.djmsg-messages-messages .djmsg-nav .nav-tabs > .active > a,
+.djmsg-messages-messages .djmsg-nav .nav-tabs > .active > a:hover,
+.djmsg-messages-messages .djmsg-nav .nav-tabs > .active > a:focus {
+	color: inherit;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-bottom-color: transparent;
+	cursor: default;
+}
+
+.djmsg-messages-messages .tab-content {
+	overflow: visible;
+}
+
+.djmsg-messages-messages .tab-content > .tab-pane,
+.djmsg-messages-messages .pill-content > .pill-pane {
+	display: none;
+}
+
+.djmsg-messages-messages .tab-content > .active,
+.djmsg-messages-messages .pill-content > .active {
+	display: block;
+}
+
+/** Responsive **/
+
+@media (max-width: 767px) {
+	.djmsg-messages-messages .form-search,
+	.djmsg-messages-messages .msg-ui-filters {
+		float: none;
+	}
+	.djmsg-messages-messages .form-search + .djmsg-messages-messages .msg-ui-filters {
+		margin-top: 10px;
+	}
+	.djmsg-messages-messages .msg-messages-table th:last-child {
+		min-width: 0;
+	}
+}

@@ -1,0 +1,657 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MEDIATOOLS
+//---------------------------------------------------------------
+
+//remove default mediatools styles
+.dj-galleryGrid,
+.dj-mslider,
+.djslider-loader,
+.dj-slideshow,
+.dj-slideshowThumbs,
+.dj-tabber {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	outline: none;
+}
+
+.dj-slideshow-in,
+.dj-slideshowThumbs-in,
+.dj-tabber,
+.nivoSlider,
+.box_skitter,
+.dj-tab {
+	.box-shadow(none) !important;
+}
+
+//pagination
+.djslider-loader .load-button,
+.dj-slideshow .dj-load-button,
+.dj-mslider .dj-load-button {
+	border: none !important;
+	background: none !important;
+	.opacity(100) !important;
+	.transition(background 0.2s ease-in);
+	.box-shadow(none) !important;
+}
+
+.dj-load-button .dj-key {
+	font-weight: normal !important;
+	line-height: 36px !important;
+}
+
+//album title
+.dj-cat-title {
+	font-family: @JMmediatoolsHeadingFontFamily;
+	font-size: @JMmediatoolsHeadingFontSize;
+	font-weight: @JMmediatoolsHeadingFontWeight;
+	color: @JMmediatoolsHeadingFontColor;
+	margin: 0 0 20px;
+}
+
+//description background
+.dj-slide-desc-bg {
+	background: @JMmediatoolsDescriptionBackground !important;
+	.opacity(@JMmediatoolsDescriptionBackgroundOpacity) !important;
+}
+
+//description text
+.dj-slide-desc-text {
+	font-size: @JMmediatoolsDescriptionFontSize !important;
+	padding: 32px !important;
+	line-height: @JMbaseLineHeight !important;
+	color: fade(@JMmediatoolsDescriptionFontColor,80%) !important;
+	a {
+		color: fade(@JMmediatoolsDescriptionFontColor,80%) !important;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	div[style="clear: both"] {
+		display: none;
+	}
+	//smaller padding for selected layouts
+	.dj-galleryGrid &,
+	.dj-mslider &,
+	.djslider-loader & {
+		padding: 24px !important;
+	}
+}
+
+//slide title
+.dj-ctitle-in,
+.dj-slide-title {
+	font-size: @JMmediatoolsSlideTitleFontSize !important;
+	text-transform: none;
+	font-weight: @JMmediatoolsSlideTitleFontWeight !important;
+	line-height: 1.2 !important;
+	margin: 0 !important;
+}
+
+.dj-slide-title {
+	color: @JMmediatoolsSlideTitleFontColor !important;
+	a {
+		color: @JMmediatoolsSlideTitleFontColor !important;
+	}
+}
+
+.dj-slide-title + .dj-slide-description {
+	margin-top: 10px;
+}
+
+//extra wrapper
+.dj-extra {
+	float: none !important;
+	display: table-footer-group;
+	> div {
+		float: left;
+		margin-right: 10px;
+		&.date {
+			color: @JMmediatoolsDateFontColor;
+		}
+		&.category {
+			color: @JMmediatoolsCategoryFontColor !important;
+			a {
+				color: @JMmediatoolsCategoryFontColor !important;
+			}
+		}
+		&.price {
+			clear: both;
+			font-weight: @JMfontWeightMedium;
+			color: @JMmediatoolsPriceFontColor;
+		}
+	}
+	//cgange order of title
+	+ .dj-slide-title {
+		display: table-header-group;
+	}
+	//space hack
+	&:before {
+		content: '-';
+		.opacity(0);
+		line-height: 10px;
+		display: block;
+	}
+}
+
+//readmore
+.dj-readmore-wrapper {
+	padding: 0 !important;
+	margin: 10px 0 0 !important;
+	text-align: left !important;
+	a {
+		font-size: @JMreadmoreFontSize !important;
+		font-weight: @JMreadmoreFontWeight;
+		color: @JMreadmoreFontColor !important;
+		text-transform: uppercase;
+	}
+}
+
+// Album View
+// --------------------------
+
+#djmediatools .dj-categories {
+	margin: 0 -@JMbaseSpace/2;
+	.cf();
+	.dj-ctitle-bg {
+		background: @JMmediatoolsDescriptionBackground;
+		.opacity(@JMmediatoolsDescriptionBackgroundOpacity) !important;
+	}
+	.dj-category-in {
+		background: none;
+        .border-radius(@baseBorderRadius);
+		overflow: hidden;
+		border: none;
+	}
+	a.dj-category,
+	a.dj-category:hover {
+		background: none;
+		border: none;
+		.box-shadow(none);
+		.border-radius(0);
+		padding: 0 @JMbaseSpace/2;
+		margin: 0;
+	}
+	.dj-ctitle-in {
+		color: @JMmediatoolsSlideTitleFontColor !important;
+		padding: 24px !important;
+		text-align: center;
+		&:hover {
+			color: @JMmediatoolsSlideTitleFontColor !important;
+		}
+	}
+}
+
+//pagination
+#djmediatools {
+    .dj-pagination {
+        border-top: 0;
+    }
+}
+
+// Gallery Grid
+// --------------------------
+
+.dj-galleryGrid {
+	.dj-slide {
+		max-width: 100%;
+		.dj-slide-in {
+			.border-radius(@baseBorderRadius);
+		}
+	}
+}
+
+// Modern Slider
+// --------------------------
+
+.dj-mslider {
+	.dj-slide {
+		.border-radius(@baseBorderRadius);
+	}
+	.dj-indicators-in {
+		padding: 0 !important;
+		height: 12px;
+		line-height: 12px;
+	}
+	.dj-load-button {
+		height: 12px !important;
+		width: 12px !important;
+		margin: 0 2px !important;
+		.border-radius(6px) !important;
+		.box-sizing(border-box);
+		border: 2px solid @JMstyleMediatoolsNavigationBackground !important;
+		background: transparent !important;
+		&:focus {
+			outline: none;
+		}
+		&.dj-load-button-active {
+			background: @JMstyleMediatoolsNavigationBackground !important;
+		}
+	}
+}
+
+// Slider
+// --------------------------
+
+.djslider-loader {
+	padding-top: 0 !important; //fix for strange padding on the top
+	padding-bottom: 0 !important; //fix of dj-mediatools bug on responsive layouts, remove once the bug will be fixed
+	.dj-slides > li {
+		.border-radius(@baseBorderRadius);
+	}
+	.navigation-container-custom {
+		height: 12px;
+		line-height: 12px;
+	}
+	//large margin for home design
+	.djslider + .navigation-container-custom {
+		margin-top: 20px !important;
+	}
+	.load-button {
+		height: 12px !important;
+		width: 12px !important;
+		margin: 0 4px !important;
+		.border-radius(6px) !important;
+		.box-sizing(border-box);
+		border: 2px solid @JMstyleMediatoolsNavigationBackground !important;
+		background: transparent !important;
+		&:focus {
+			outline: none;
+		}
+		&.load-button-active {
+			background: @JMstyleMediatoolsNavigationBackground !important;
+		}
+	}
+}
+
+// Slideshow
+// --------------------------
+
+.dj-slideshow {
+	.dj-slide {
+		.border-radius(@baseBorderRadius);
+	}
+	.dj-load-button {
+		display: inline-block;
+		background: transparent !important;
+		height: 36px !important;
+		width: 36px !important;
+		.border-radius(@baseBorderRadius) !important;
+		.transition(all 0.2s ease-in);
+		margin: 3px !important;
+		.dj-key {
+			font-size: 16px !important;
+			color: @JMstyleMediatoolsNavigationFont !important;
+		}
+		&:hover {
+			background: @JMstyleMediatoolsNavigationBackgroundHover !important;
+		}
+		&.dj-load-button-active {
+			background: @JMstyleMediatoolsNavigationBackground !important;
+			.dj-key {
+				color: @JMmediatoolsNavigationActiveFont !important;
+			}
+		}
+	}
+}
+
+// Slideshow with Thumbnails
+// --------------------------
+
+.dj-slideshowThumbs {
+	.dj-slide,
+	.dj-indicators img {
+		.border-radius(@baseBorderRadius);
+	}
+	.dj-indicators {
+		padding: 8px 0 !important;
+		background: none !important;
+		.box-shadow(none) !important;
+		img {
+			max-width: none !important;
+		}
+	}
+	.dj-indicators-in {
+		padding: 0 !important;
+	}
+	.dj-load-button {
+		border: none !important;
+		margin: 0 !important;
+		padding-left: 8px;
+		&:first-child {
+			padding: 0;
+		}
+	}
+}
+
+// Tabber
+// --------------------------
+
+.dj-tabber {
+	padding: 0 !important;
+	border: 0 !important;
+	background: transparent !important;
+	//reset margin for responsive layout
+	.dj-tabs {
+		margin-top: 0 !important;
+	}
+	.dj-tabber-in {
+		.border-radius(@baseBorderRadius);
+	}
+	//tab
+	.dj-tab {
+		background: @JMmediatoolsTabberBackground !important;
+		.box-shadow(none) !important;
+		margin: 0 !important;
+		padding: 0 16px !important;
+		.box-sizing(border-box);
+		position: relative;
+		//tab image
+		img {
+			border: 0 !important;
+			margin-right: 16px !important;
+			.border-radius(@baseBorderRadius);
+		}
+		//tab active
+		&.dj-tab-active {
+			padding: 0 16px !important;
+			background: @JMmediatoolsTabberActiveBackground !important;
+			//reset border for active tab
+			&:after {
+				display: none;
+			}
+			span {
+				color: @JMmediatoolsTabberActiveFontColor !important;
+			}
+		}
+	}
+	.dj-tab-in {
+		text-transform: none;
+		color: @JMmediatoolsTabberFontColor !important;
+		font-size: @JMmediatoolsTabberFontSize !important;
+		font-weight: @JMmediatoolsTabberFontWeight !important;
+		line-height: 1.2 !important;
+		text-shadow: none !important;
+	}
+	//tab indicator
+	.dj-tab-indicator {
+		width: 0 !important;
+		&.dj-tab-indicator-right {
+			background: none !important;
+		}
+		&.dj-tab-indicator-left {
+			background: none !important;
+		}
+	}
+}
+
+// Skitter
+// --------------------------
+
+.skitter.skitter-square {
+	background: none !important;
+	border: 0 !important;
+	margin-left: auto;
+	margin-right: auto;
+	.image {
+		.border-radius(@baseBorderRadius);
+	}
+	//description container
+	.label_skitter {
+		background: none !important;
+		.opacity(100) !important;
+		//reset styles
+		p {
+			font-size: 14px !important;
+			letter-spacing: none !important;
+			font-family: inherit !important;
+			letter-spacing: normal !important;
+			color: fade(@JMmediatoolsDescriptionFontColor,80%) !important;
+		}
+	}
+	//pagination
+	.info_slide_dots .image_number {
+		.box-shadow(none) !important;
+		.border-radius(50%) !important;
+		padding: 0 !important;
+		width: 12px !important;
+		height: 12px !important;
+		line-height: 12px;
+		border: 2px solid @JMstyleMediatoolsNavigationBackground !important;
+		background: transparent!important;
+		margin: 0 2px !important;
+		.box-sizing(border-box);
+		&.image_number_select {
+			background: @JMstyleMediatoolsNavigationBackground !important;
+		}
+		&:hover {
+			background: @JMstyleMediatoolsNavigationBackground !important;
+		}
+	}
+}
+
+// NivoSlider
+// --------------------------
+
+#jm-allpage .slider-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	//container
+	.nivoSlider {
+		.border-radius(@baseBorderRadius);
+	}
+	//pagination
+	.nivo-controlNav {
+		padding: 32px 0 10px !important;
+		a {
+			margin: 0 3px !important;
+			.opacity(100)!important;
+			text-indent: 0 !important;
+			width: 36px !important;
+			height: 36px !important;
+			font-size: 16px !important;
+			font-weight: normal!important;
+			line-height: 36px !important;
+			.transition(all 0.2s ease-in);
+			text-decoration: none !important;
+			.border-radius(@baseBorderRadius) !important;
+			background-image: none !important;
+			color: @JMstyleMediatoolsNavigationFont !important;
+			&:hover {
+				background: @JMstyleMediatoolsNavigationBackgroundHover !important;
+			}
+			&.active {
+				color: @JMmediatoolsNavigationActiveFont !important;
+				background: @JMstyleMediatoolsNavigationBackground !important;
+			}
+		}
+	}
+}
+
+// Kwicks Panels
+// --------------------------
+
+@JMmediatoolsDescriptionBackgroundOpacityTmp: @JMmediatoolsDescriptionBackgroundOpacity / 100;
+
+#jm-allpage .kwicks {
+	> li {
+		max-width: 100%;
+		.border-radius(@baseBorderRadius);
+	}
+	.dj-slide-desc {
+		max-width: 100%;
+		background: rgba(red(@JMmediatoolsDescriptionBackground), green(@JMmediatoolsDescriptionBackground), blue(@JMmediatoolsDescriptionBackground), @JMmediatoolsDescriptionBackgroundOpacityTmp) !important;
+		.opacity(0) !important;
+	}
+	.kwicks-expanded {
+		.dj-slide-desc {
+			.opacity(100) !important;
+		}
+	}
+}
+
+// Masonry
+// --------------------------
+
+#jm-allpage .dj-masonry {
+	margin: 0 auto;
+	.dj-slide {
+		.dj-slide-desc-in {
+			opacity: 1;
+			background: none;
+			color: inherit;
+		}
+		&:hover,
+		&:focus {
+			.dj-slide-desc-in {
+				opacity: 1;
+				background: none;
+			}
+		}
+		.dj-slide-desc-bg {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+		}
+		.dj-slide-desc-text {
+			padding: 15px !important;
+		}
+	}
+	.dj-slide-in {
+		.border-radius(@baseBorderRadius);
+	}
+}
+
+// arrowsnav--ms
+// --------------------------
+
+.arrows-nav-ms {
+	.dj-navigation,
+	.navigation-container {
+		top: -35px !important;
+		.dj-prev,
+		.prev-button {
+			right: 32px !important;
+			left: auto !important;
+		}
+		.dj-next,
+		.next-button {
+			right: 0 !important;
+			left: auto !important;
+		}
+	}
+}
+
+// navigation suffixes
+// --------------------------
+
+.top-left-nav-ms,
+.top-right-nav-ms,
+.bot-left-nav-ms,
+.bot-right-nav-ms {
+	.dj-navigation,
+	.navigation-container {
+		img {
+			background: @JMmediatoolsDescriptionBackground;
+			.opacity(60)!important;
+			max-width: 40px;
+			&:hover {
+				background: @JMstyleMediatoolsNavigationBackground;
+				.opacity(100)!important;
+			}
+		}
+	}
+}
+
+.top-left-nav-ms {
+	.dj-navigation,
+	.navigation-container {
+		top: 32px !important;
+		img {
+			max-width: 40px;
+		}
+		.dj-prev,
+		.prev-button {
+			left: 32px !important;
+			right: auto !important; //image width + gutter + space (40 + 32 + 1)
+		}
+		.dj-next,
+		.next-button {
+			right: auto !important;
+			left: 73px !important;
+		}
+	}
+}
+
+.top-right-nav-ms {
+	.dj-navigation,
+	.navigation-container {
+		top: 32px !important;
+		img {
+			max-width: 40px;
+		}
+		.dj-prev,
+		.prev-button {
+			left: auto !important;
+			right: 73px !important; //image width + gutter + space (40 + 32 + 1)
+		}
+		.dj-next,
+		.next-button {
+			right: 32px !important;
+		}
+	}
+}
+
+.bot-left-nav-ms {
+	.dj-navigation,
+	.navigation-container {
+		top: auto !important;
+		bottom: 32px !important;
+		img {
+			max-width: 40px;
+		}
+		.dj-prev,
+		.prev-button {
+			left: 32px !important;
+			right: auto !important; //image width + gutter + space (40 + 32 + 1)
+		}
+		.dj-next,
+		.next-button {
+			right: auto !important;
+			left: 73px !important;
+		}
+	}
+}
+
+.bot-right-nav-ms {
+	.dj-navigation,
+	.navigation-container {
+		top: auto !important;
+		bottom: 32px !important;
+		img {
+			max-width: 40px;
+		}
+		.dj-prev,
+		.prev-button {
+			left: auto !important;
+			right: 73px !important; //image width + gutter + space (40 + 32 + 1)
+		}
+		.dj-next,
+		.next-button {
+			right: 32px !important;
+		}
+	}
+}
+
+#plgParams_component {
+	margin: 0 0 @JMbaseSpace;
+}

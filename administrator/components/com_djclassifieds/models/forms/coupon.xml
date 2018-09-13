@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" class="readonly" />		
+		<field name="name" type="text" class="inputbox required" required="true" size="40" label="COM_DJCLASSIFIEDS_NAME" description="COM_DJCLASSIFIEDS_NAME"  />		
+		<field name="coupon_code" type="text" class="inputbox" size="40" label="COM_DJCLASSIFIEDS_COUPON_CODE" description="COM_DJCLASSIFIEDS_COUPON_CODE"  />				
+		<field name="groups_restriction" size="12" multiple="true" type="usergroup" label="COM_DJCLASSIFIEDS_POINT_GROUPS"  description="COM_DJCLASSIFIEDS_POINT_GROUPS_DESC" />		
+		<field name="published" type="list" label="COM_DJCLASSIFIEDS_PUBLISHED" description="COM_DJCLASSIFIEDS_PUBLISHED"	class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field> 
+		<field name="usage_count" filter="integer" type="text" default="0" class="inputbox" size="40" label="COM_DJCLASSIFIEDS_USAGE_COUNT" description="COM_DJCLASSIFIEDS_USAGE_COUNT"  />
+		<field name="description" filter="raw" type="editor" class="inputbox" label="COM_DJCLASSIFIEDS_DESCRIPTION" description="COM_DJCLASSIFIEDS_DESCRIPTION" required="false" />				
+	</fieldset>
+	<fields name="params">
+		<fieldset name="global"  label="COM_DJCLASSIFIEDS_CONFIG_GLOBAL_SETTINGS_LABEL" addfieldpath="/administrator/components/com_djclassifieds/models/fields">			
+			<field name="amount_use" type="list" class="inputbox" size="1" default="1" label="COM_DJCLASSIFIEDS_CONFIG_USE_AMOUNT" description="COM_DJCLASSIFIEDS_CONFIG_USE_AMOUNT_DESC"	>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				
+			</field>
+			<field showon="amount_use:1" name="amount" filter="float" type="text" class="inputbox" default="0" label="COM_DJCLASSIFIEDS_CONFIG_AMOUNT_DISCOUNT"  />
+			
+			<field name="amount_percent_use" type="list" class="inputbox" size="1" default="0" label="COM_DJCLASSIFIEDS_CONFIG_USE_AMOUNT_PERCENTAGE" description="COM_DJCLASSIFIEDS_CONFIG_USE_AMOUNT_PERCENTAGE_DESC"	>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field showon="amount_percent_use:1"  name="amount_percent" filter="float" type="text" class="inputbox" default="0" label="COM_DJCLASSIFIEDS_CONFIG_AMOUNT_PERCENTAGE_DISCOUNT"  />	
+			
+			<field name="percent_first" type="list" class="inputbox" size="1" default="0" label="COM_DJCLASSIFIEDS_CONFIG_PERCENT_FIRST" description="COM_DJCLASSIFIEDS_CONFIG_PERCENT_FIRST_DESC"	>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="use_promotions" type="list" class="inputbox" size="1" default="0" label="COM_DJCLASSIFIEDS_CONFIG_USE_ON_PROMOTIONS" description="COM_DJCLASSIFIEDS_CONFIG_USE_ON_PROMOTIONS_DESC"	>				
+				<option value="0">JNO</option>
+				<option value="1">COM_DJCLASSIFIEDS_CONFIG_PROMOTIONS_LIMIT</option>
+				<option value="2">COM_DJCLASSIFIEDS_CONFIG_SELECTED_PROMOTIONS</option>
+			</field>
+			<field showon="use_promotions:1" name="promotions_limit" filter="integer" type="text" class="inputbox" default="1" label="COM_DJCLASSIFIEDS_CONFIG_FREE_PROMOTIONS_LIMIT"  />
+			<field showon="use_promotions:2"  name="promotions_list" type="djcfpromotion" class="inputbox" default="1" label="COM_DJCLASSIFIEDS_CONFIG_FREE_PROMOTIONS_LIST"  />	
+			
+			<field name="use_categories" type="list" class="inputbox" size="1" default="0" label="COM_DJCLASSIFIEDS_CONFIG_USE_ON_CATEGORIES" description="COM_DJCLASSIFIEDS_CONFIG_USE_ON_CATEGORIES_DESC"	>
+				<option value="0">JNO</option>
+				<option value="1">COM_DJCLASSIFIEDS_CONFIG_CATEGORIES_LIMIT</option>
+				<option value="2">COM_DJCLASSIFIEDS_CONFIG_SELECTED_CATEGORIES</option>
+			</field>
+			<field showon="use_categories:1" name="categories_limit" filter="integer" type="text" class="inputbox" default="1" label="COM_DJCLASSIFIEDS_CONFIG_FREE_CATEGORIES_LIMIT"  />
+			<field showon="use_categories:2" multiple="true" size="10" name="categories_list" type="djcfcategory" class="inputbox" default="1" label="COM_DJCLASSIFIEDS_CONFIG_FREE_CATEGORIES_LIST"  />
+			
+			<field name="has_start_date" type="list" class="inputbox" size="1" default="0" label="COM_DJCLASSIFIEDS_CONFIG_START_DATE_RESTRICTION" description="COM_DJCLASSIFIEDS_CONFIG_START_DATE_RESTRICTION_DESC"	>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>	
+			<field showon="has_start_date:1" name="start_date" type="calendar" format="%Y-%m-%d" class="inputbox" default="NOW" label="COM_DJCLASSIFIEDS_CONFIG_START_DATE"  />	
+			<field name="has_expiration_date" type="list" class="inputbox" size="1" default="0" label="COM_DJCLASSIFIEDS_CONFIG_EXPIRATION_DATE_RESTRICTION" description="COM_DJCLASSIFIEDS_CONFIG_EXPIRATION_DATE_RESTRICTION_DESC"	>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>	
+			<field showon="has_expiration_date:1" name="expiration_date" type="calendar" format="%Y-%m-%d" class="inputbox" default="NOW" label="COM_DJCLASSIFIEDS_CONFIG_EXPIRATION_DATE"  />	
+			<field name="has_max_reuse" type="list" class="inputbox" size="1" default="1" label="COM_DJCLASSIFIEDS_CONFIG_HAS_MAX_USAGE_LIMIT" description="COM_DJCLASSIFIEDS_CONFIG_HAS_MAX_USAGE_LIMIT_DESC"	>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field showon="has_max_reuse:1" name="max_reuse" type="text" filter="integer" class="inputbox" default="1" label="COM_DJCLASSIFIEDS_CONFIG_MAX_USAGE_LIMIT"  />
+			
+			<field name="has_max_user_reuse" type="list" class="inputbox" size="1" default="1" label="COM_DJCLASSIFIEDS_CONFIG_HAS_MAX_USAGE_LIMIT_PER_USER" description="COM_DJCLASSIFIEDS_CONFIG_HAS_MAX_USAGE_LIMIT_PER_USER_DESC"	>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field showon="has_max_user_reuse:1" name="max_user_reuse" type="text" filter="integer" class="inputbox" default="1" label="COM_DJCLASSIFIEDS_CONFIG_MAX_USAGE_LIMIT_PER_USER"  />	
+						
+		</fieldset>
+	</fields>
+	
+</form>

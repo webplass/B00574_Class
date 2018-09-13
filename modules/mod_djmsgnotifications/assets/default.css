@@ -1,0 +1,50 @@
+.mod_djmsgnotifications .djmsg_link {
+	
+}
+
+.mod_djmsgnotifications.layout-number .djmsg_link {
+	display: inline-block;
+	vertical-align: top;
+	color: inherit;
+	position: relative;
+	text-decoration: none;
+	padding-right: 20px;
+}
+
+html[dir='rtl'] .mod_djmsgnotifications.layout-number .djmsg_link {
+	padding-right: 0;
+	padding-left: 20px;
+}
+
+.mod_djmsgnotifications .djmsg_icon {
+	font-size: 20px;
+	line-height: 40px;
+	margin-right: 5px;
+}
+
+html[dir='rtl'] .mod_djmsgnotifications .djmsg_icon {
+	margin-right: 0;
+	margin-left: 5px;
+}
+
+.mod_djmsgnotifications .djmsg_icon + .djmsg_number,
+.mod_djmsgnotifications .djmsg_icon_image + .djmsg_number {
+	position: absolute;
+	top: 0;
+	left: auto;
+	right: 5px;
+	background: #ff0000;
+	color: #fff;
+	border-radius: 50%;
+	font-size: 12px;
+	height: 16px;
+	line-height: 16px;
+	width: 16px;
+	text-align: center;
+}
+
+html[dir='rtl'] .mod_djmsgnotifications .djmsg_icon + .djmsg_number,
+html[dir='rtl'] .mod_djmsgnotifications .djmsg_icon_image + .djmsg_number {
+	left: 5px;
+	right: auto;
+}

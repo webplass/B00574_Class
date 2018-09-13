@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<config>
+		<fields name="params">
+		
+			<fieldset name="k2" addfieldpath="/administrator/components/com_k2/elements" label="PLG_DJSUGGESTER_K2">
+			
+				<field name="k2" type="djonlypro" default="1" label="PLG_DJSUGGESTER_K2_SUGGESTION" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_ENABLED</option>
+					<option value="0">PLG_DJSUGGESTER_DISABLED</option>
+				</field>
+				<field name="k2_mode" type="radio" default="0" label="PLG_DJSUGGESTER_FOLLOW_CATEGORY" description="PLG_DJSUGGESTER_FOLLOW_CATEGORY_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="k2_order" type="list" default="" label="PLG_DJSUGGESTER_ORDER" description="PLG_DJSUGGESTER_ORDER_DESC" class="btn-group">
+					<option value="">K2_DEFAULT</option>
+					<option value="date">PLG_DJSUGGESTER_DATE</option>
+					<option value="rdate">PLG_DJSUGGESTER_DATE_REVERSE</option>
+					<option value="publishUp">PLG_DJSUGGESTER_DATE_REVERSE_PUBLISH_UP</option>
+					<option value="alpha">K2_TITLE_ALPHABETICAL</option>
+					<option value="ralpha">K2_TITLE_REVERSEALPHABETICAL</option>
+					<option value="order">K2_ORDERING</option>
+					<option value="rorder">K2_ORDERING_REVERSE</option>
+					<option value="hits">K2_MOST_POPULAR</option>
+					<option value="modified">PLG_DJSUGGESTER_DATE_REVERSE_MODIFIED</option>
+					<option value="rand">K2_RANDOM_ORDERING</option>
+				</field>
+				<field name="k2_filter_cat" type="radio" default="1" label="PLG_DJSUGGESTER_CATEGORY_FILTER_TYPE" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_INCLUDE</option>
+					<option value="0">PLG_DJSUGGESTER_EXCLUDE</option>
+				</field>
+				<field name="k2_cats" type="categoriesmultiple" label="PLG_DJSUGGESTER_CATEGORIES" size="10" default="">
+					<option value="">PLG_DJSUGGESTER_ALL_CATEGORIES</option>
+				</field>
+				<field name="k2_image" type="radio" default="1" label="PLG_DJSUGGESTER_DISPLAY_IMAGE" description="PLG_DJSUGGESTER_DISPLAY_IMAGE_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="k2_imagesize" type="list" default="S" label="K2_IMAGE_SIZE" description="">
+					<option value="XS">K2_XSMALL</option>
+					<option value="S">K2_SMALL</option>
+					<option value="M">K2_MEDIUM</option>
+					<option value="L">K2_LARGE</option>
+					<option value="XL">K2_XLARGE</option>
+				</field>			
+				<field name="k2_header" type="text" default="" label="PLG_DJSUGGESTER_K2_HEADER_TEXT" description="PLG_DJSUGGESTER_HEADER_TEXT_DESC"/>
+				
+			</fieldset>
+				
+		</fields>
+	</config>
+</form>
+	

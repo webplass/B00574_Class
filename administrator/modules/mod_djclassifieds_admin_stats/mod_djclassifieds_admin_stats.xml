@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="administrator" method="upgrade" >
+	<name>DJ-Classifieds admin stats</name>
+	<creationDate>April 2017</creationDate>
+	<author>DJ-Extensions.com</author>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<copyright>dj-extensions.com</copyright>
+	<license>GPL</license>
+	<version>1.0.beta1</version>
+	<description>DJ-Classifieds admin statistics module</description>
+	<files>
+		<filename module="mod_djclassifieds_admin_stats">mod_djclassifieds_admin_stats.php</filename>
+		<filename>helper.php</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<scriptfile>script.djclassifieds_admin_stats.php</scriptfile>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+				<field name="time_type" type="list" default="d" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_TIME_TYPE">
+					<option value="d">MOD_DJCLASSIFIEDS_ADMIN_STATS_DAYS</option>
+					<option value="m">MOD_DJCLASSIFIEDS_ADMIN_STATS_MONTHS</option>
+					<option value="y">MOD_DJCLASSIFIEDS_ADMIN_STATS_YEARS</option>
+				</field>
+				<field name="component_only" type="list" default="0" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_COMPONENT_ONLY" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_COMPONENT_ONLY_DESC">
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_NO</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_YES</option>
+				</field>
+				
+				<field name="line_1" type="spacer" hr="true" />
+				<field name="ads_total" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADS_TOTAL_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADS_TOTAL_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+				<field name="ads_active" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADS_ACTIVE_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADS_ACTIVE_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+				<field name="auctions_count" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_AUCTIONS_COUNT_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_AUCTIONS_COUNT_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+				<field name="cat_count" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_CATEGORIES_COUNT_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_CATEGORIES_COUNT_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+
+				<field name="line_2" type="spacer" hr="true" />
+				<field name="ads_added_today" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_TODAY_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_TODAY_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+				<field name="ads_added_1" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_LAST_24H_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_LAST_24H_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+				<field name="ads_added_week" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_CURRENT_WEEK_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_CURRENT_WEEK_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+				<field name="ads_added_7" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_LAST_7_DAYS_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_LAST_7_DAYS_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+				<field name="ads_added_month" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_CURRENT_MONTH_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_CURRENT_MONTH_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+				<field name="ads_added_30" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_LAST_30_DAYS_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_LAST_30_DAYS_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+				<field name="ads_added_year" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_CURRENT_YEAR_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_CURRENT_YEAR_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+				<field name="ads_added_365" type="list" default="1" label="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_LAST_365_DAYS_LABEL" description="MOD_DJCLASSIFIEDS_ADMIN_STATS_ADDED_LAST_365_DAYS_DESC" >
+					<option value="0">MOD_DJCLASSIFIEDS_ADMIN_STATS_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ADMIN_STATS_SHOW</option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

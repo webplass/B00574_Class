@@ -1,0 +1,86 @@
+
+.djcf_admin_stats_cell {
+	display: inline-block;
+	padding: 10px;
+	margin: 0 5px 10px 0;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+.djcf_admin_stats_value {
+	font-size: 20px;
+	font-weight: 600;
+}
+.djcf_admin_stats_cell p {
+	display: inline;
+	font-size: 12px;
+}
+
+.djcf_admin_stats_box {
+	float: left;
+	width: calc(25% - 10px);
+	padding: 10px;
+	margin: 10px 5px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+.djcf_admin_stats_graph {
+	width: calc(33.33% - 10px);
+}
+.djcf_admin_stats_data {
+	font-size: 12px;
+}
+.djcf_admin_stats_data h6 {
+	padding: 5px 10px;
+	margin-top: 0;
+	background: #31708f;
+	color: #fff;
+}
+.djcf_admin_stats_data p {
+	color: #aaa;
+	font-size: 12px;
+	margin: 0;
+	text-align: center;
+}
+.djcf_admin_stats_data .title {
+	text-align: left;
+	padding: 3px 8px;
+	font-weight: bold;
+	font-size: inherit;
+}
+.djcf_admin_stats_data .title span:first-child:before {
+	content: "#";
+	margin-right: 10px;
+}
+.djcf_admin_stats_data ul {
+	margin: 0 auto;
+	list-style: none;
+	counter-reset: list;
+}
+.djcf_admin_stats_data ul li:nth-child(odd) {
+	background-color: #fafafa;
+}
+.djcf_admin_stats_data ul li {
+	border-top: 1px solid #eee;
+	padding: 3px 8px;
+}
+.djcf_admin_stats_data ul li:before {
+	counter-increment: list;
+	content: counter(list);
+	margin-right: 10px;
+}
+.djcf_admin_stats_data li span:first-child {
+	font-weight: bold;
+}
+.djcf_admin_stats_data span:last-child {
+	float: right;
+}
+
+@media (max-width: 1023px) {
+	.djcf_admin_stats_box {
+		float: none;
+		width: auto;
+	}
+}

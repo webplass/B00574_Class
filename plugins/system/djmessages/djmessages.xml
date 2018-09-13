@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" method="upgrade" group="system">
+	<name>plg_system_djmessages</name>
+	<creationDate>February 2018</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_SYSTEM_DJMESSAGES_DESCRIPTION</description>
+	<files>
+		<filename plugin="djmessages">djmessages.php</filename>
+		<filename>index.html</filename>
+		<folder>forms</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="frontend_enable" default="0" type="radio" class="btn-group" 
+					label="PLG_SYSTEM_DJMESSAGES_CONFIG_FRONTEND" description="PLG_SYSTEM_DJMESSAGES_CONFIG_FRONTEND_DESC">
+				
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="registration_enable" showon="frontend_enable:1" default="0" type="radio" class="btn-group" 
+					label="PLG_SYSTEM_DJMESSAGES_CONFIG_REGISTRATION" description="PLG_SYSTEM_DJMESSAGES_CONFIG_REGISTRATION_DESC">
+				
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="default_state" type="radio" default="0" 
+					label="PLG_SYSTEM_DJMESSAGES_CONFIG_DEFAULT_ALLOW_MESSAGES" 
+					description="PLG_SYSTEM_DJMESSAGES_CONFIG_DEFAULT_ALLOW_MESSAGES_DESC" class="btn-group">
+					
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="default_visible" showon="default_state:1" type="radio" default="0" 
+					label="PLG_SYSTEM_DJMESSAGES_CONFIG_DEFAULT_VISIBLE" 
+					description="PLG_SYSTEM_DJMESSAGES_CONFIG_DEFAULT_VISIBLE_DESC" class="btn-group">
+					
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

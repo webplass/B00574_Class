@@ -1,0 +1,20 @@
+/**
+ * @version $Id: djajax.js 2017-01-30
+ * @package DJ-Classifieds Ajax
+ * @copyright Copyright (C) 2017 DJ-Extensions.com, All rights reserved.
+ * @license DJ-Extensions.com Proprietary Use License
+ * @author url: http://dj-extensions.com
+ * @author email contact@dj-extensions.com
+ * @developer Piotr Dobrakowski - piotr.dobrakowski@design-joomla.eu
+ */
+
+.djajax-pagination.fixed{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 1000;
+}
+
+#dj-classifieds .djcf_items_blog .item_box_in2.auto-height{
+	height: auto !important;
+}

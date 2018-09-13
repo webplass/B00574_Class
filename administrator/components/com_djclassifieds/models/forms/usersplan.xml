@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" class="readonly" />		
+		<field name="user_id" type="user" label="COM_DJCLASSIFIEDS_USER"  required="true" />				
+		<field name="plan_id" type="sql" default="0" label="COM_DJCLASSIFIEDS_SUBSCRIPTION_PLAN" query="SELECT id, name FROM #__djcf_plans ORDER BY name" key_field="id" value_field="name" required="true" />		
+		<field name="adverts_limit" type="text" class="inputbox validate-numeric" default="5" label="COM_DJCLASSIFIEDS_ADVERTS_LIMIT_IN_PLAN"  />
+		<field name="adverts_available" type="text" class="inputbox validate-numeric" default="5" label="COM_DJCLASSIFIEDS_ADVERTS_AVAILABLE"  />		
+		<field name="date_start" type="calendar" label="COM_DJCLASSIFIEDS_START"  size="22" format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+		<field name="date_exp" type="calendar" label="COM_DJCLASSIFIEDS_EXPIRATION_DATE"  size="22" format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+		<field name="plan_params" type="textarea" class="inputbox" default="" rows="10" cols="25"  label="COM_DJCLASSIFIEDS_PARAMS"  />
+	</fieldset>	
+</form>
+ 

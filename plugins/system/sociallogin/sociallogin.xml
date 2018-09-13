@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4.0" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_SOCIALLOGIN</name>
+	<version>2.0.3</version>
+	<creationDate>2018-03-28</creationDate>
+
+	<author>Akeeba Ltd</author>
+	<authorEmail>no-reply@akeebabackup.com</authorEmail>
+	<authorUrl>https://www.akeebabackup.com</authorUrl>
+
+	<copyright>Copyright (c)2016-2017 Akeeba Ltd</copyright>
+	<license>GNU GPL v3 or later</license>
+
+	<description>PLG_SYSTEM_SOCIALLOGIN_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="sociallogin">sociallogin.php</filename>
+		<filename>abstraction.php</filename>
+		<folder>fields</folder>
+		<folder>layout</folder>
+		<folder>Library</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_sociallogin.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_sociallogin.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="loginmodules"
+						type="text"
+						label="PLG_SYSTEM_SOCIALLOGIN_CONFIG_LOGINMODULES_LABEL"
+						description="PLG_SYSTEM_SOCIALLOGIN_CONFIG_LOGINMODULES_DESC"
+						default="mod_login"
+				/>
+
+				<field
+						name="backendloginmodules"
+						type="text"
+						label="PLG_SYSTEM_SOCIALLOGIN_CONFIG_BACKENDLOGINMODULES_LABEL"
+						description="PLG_SYSTEM_SOCIALLOGIN_CONFIG_BACKENDLOGINMODULES_DESC"
+						default="none"
+				/>
+
+				<field
+						name="interceptlogin"
+						type="radio"
+						label="PLG_SYSTEM_SOCIALLOGIN_CONFIG_INTERCEPTLOGIN_LABEL"
+						description="PLG_SYSTEM_SOCIALLOGIN_CONFIG_INTERCEPTLOGIN_DESC"
+						default="1"
+						class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+						name="linkunlinkbuttons"
+						type="radio"
+						label="PLG_SYSTEM_SOCIALLOGIN_CONFIG_LINKUNLINKBUTTONS_LABEL"
+						description="PLG_SYSTEM_SOCIALLOGIN_CONFIG_LINKUNLINKBUTTONS_DESC"
+						default="1"
+						class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<!-- Installation script -->
+	<scriptfile>script.plg_system_sociallogin.php</scriptfile>
+</extension>

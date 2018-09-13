@@ -1,0 +1,1161 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// BOOTSTRAP
+//---------------------------------------------------------------
+
+// media.less
+// --------------------------
+
+.media-list > li {
+  background: none;
+  padding: 0;
+}
+
+.media {
+	background: @JMpageBackground;
+	-webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+	-moz-box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+	-ms-box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+	-o-box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+	box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+}
+
+.media-body {
+	padding: 30px;
+}
+
+.media > .pull-left {
+	margin-right: 0;
+}
+
+.media > .pull-right {
+	margin-left: 0;
+}
+
+@media screen and (max-width: 767px) {
+	.media > .pull-left,
+	.media > .pull-right {
+		float: none;
+		text-align: center;
+	}
+	.media-object {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+// sprites.less
+// --------------------------
+
+//button icons
+.btn [class^="icon-"],
+.btn [class*=" icon-"] {
+	top: 0;
+	height: @baseLineHeight;
+	line-height: @baseLineHeight;
+	vertical-align: top;
+	padding: 0 2px;
+}
+
+// thumbnails.less
+// -------------------------- 
+
+.thumbnails > li {
+  background: none;
+  padding: 0;
+}
+
+// JOOMLA COMPONENT
+//---------------------------------------------------------------
+  
+//page headings
+h1.componentheading, //extension headings support
+.tag-category > h1, //tag category
+.page-header > h1, //global
+.content-category > h1, //category-list
+.categories-list > h1, //categories-list
+.blog-featured > h1, //featured contacts
+.contact-category > h1, //contact category
+.contact > h1, //single contact
+.newsfeed-category > h1, //newsfeed category
+h1.page-title, //search form
+.finder > h1, //smart search
+.weblink-category > h1, //weblink category
+.edit > h1 //submit weblink 
+{
+	color: @JMarticleTitleFontColor;
+	font-family: @JMarticleTitleFontFamily;
+	font-size: @JMarticleTitleFontSize;
+	font-weight: @JMarticleTitleFontWeight;
+	margin: 0 0 30px;
+}
+
+//single article
+.item-page .page-header > h2 {
+	font-size: @JMarticleTitleFontSize;
+	font-family: @JMarticleTitleFontFamily;
+	font-weight: @JMarticleTitleFontWeight;
+	color: @JMarticleTitleColor;
+	display: block;
+	margin: 0 0 30px;
+	a {
+		color: @JMarticleTitleFontColor;
+		text-decoration: none;
+		&:hover {
+			color: @JMarticleTitleFontColorHover;
+			.transition(all 0.2s ease-in);
+		}
+	}
+}
+
+//component headings
+.blog > h2, //blog category  
+h2.item-title, //featured
+.page-header > h2, //global
+.content-category > h2, //category-list category
+.cat-children > h3, //category children
+.contact-category > h2, //contact category
+.weblink-category > h2, //weblink category
+.newsfeed > h2, //single newsfeed
+.newsfeed-category > h2, //newsfeed category 
+.weblink-category > h2, //weblink category
+.contact > h3 //contact headings
+{
+	font-family: @JMblogTitleFontFamily;
+	font-size: @JMblogTitleFontSize;
+	font-weight: @JMblogTitleFontWeight;
+	color: @JMblogTitleFontColor;
+	display: block;
+	margin: 0 0 20px;
+	a {
+		color: @JMblogTitleFontColor;
+		text-decoration: none;
+		&:hover {
+			color: @JMblogTitleFontColorHover;
+			.transition(all 0.2s ease-in);
+		}
+	}
+}
+
+//reduce margin
+.blog .page-header > h2 {
+	margin-bottom: 10px;
+}
+
+//accordion etc. headings
+h3.page-header {
+	font-size: 1em;
+	line-height: @JMbaseLineHeight;
+	display: inline-block;
+	width: 100%;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	> .btn-mini {
+		padding: 3px 6px;
+		[class^="icon-"], 
+		[class*=" icon-"] {
+			margin-top: 0;
+		}
+	}
+	> .badge {
+		margin: 0 5px;
+		vertical-align: middle;
+	}
+}
+
+//hides severals labels in Joomla
+.element-invisible {
+	display: none !important;
+}
+
+// single article
+// --------------------------
+
+// item view (specified in the template parameters)
+.item_view .item-page {
+  background: @JMclassifiedsBoxBackground;
+  color: @JMclassifiedsBoxFontColor;
+  .box-shadow(@JMboxShadow);
+  .border-radius(@baseBorderRadius);
+  .box-sizing(border-box);
+  .item-image {
+    margin: 0;
+    img {
+      width: 100%;
+      .border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+    }
+  }
+  .jm-desc-wrapper {
+    padding: 32px;
+  }
+}
+
+//article dropdown
+.page-header + .icons .btn.dropdown-toggle {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+//article details  
+dl.article-info {
+	font-size: @JMarticleInfoFontSize;
+	color: @JMarticleInfoFontColor;
+	margin: 0 0 15px;
+	text-transform: none;
+	.cf();
+	dd {
+		float: left;
+		margin: 0 10px 0 0;
+		position: relative;
+		[class*='icon'] {
+			line-height: 1;
+		}
+	}
+	~ dl.article-info {
+		margin: 0; 
+	}
+}
+
+//edit button
+.icons {
+  .cf();
+}
+
+.article-info-term {
+	display: none;
+}
+
+//rating and voting
+.content_rating {
+	margin-bottom: 10px;
+}
+
+.content_vote {
+	label {
+		margin-right: 5px;
+	}
+}
+
+// category list
+// --------------------------
+
+.category-list {
+	table {
+		.list-hits {
+			text-align: right;
+		}
+	}
+}
+
+// list all categories
+// --------------------------
+
+//categories 
+.categories-list { 
+	.collapse {
+		padding: 0 0 0 @JMbaseSpace;
+	}
+	div > .category-desc {
+		margin-bottom: @JMbaseSpace;
+	}
+}
+
+// category blog
+// --------------------------
+
+.blog,
+.blog-featured {
+	//category description
+	.category-desc {
+		margin-bottom: @JMbaseSpace;
+	}  
+	//leading article and rows
+	.items-leading div[class*="leading-"],
+	.items-row {
+		margin-bottom: @JMbaseSpace;
+	}
+	.items-leading div[class*="leading-"],
+	.items-row .item {
+		background: @JMclassifiedsBoxBackground;
+		color: @JMclassifiedsBoxFontColor;
+		.box-shadow(@JMboxShadow);
+		.border-radius(@baseBorderRadius);
+		.box-sizing(border-box);
+		.article-info {
+			color: darken(@JMclassifiedsBoxFontColor,5%);
+		}
+		ul.tags li a.label-info {
+			color: @JMclassifiedsBoxFontColor;
+		}
+	}
+	//more items
+	.items-more {
+		margin-bottom: @JMbaseSpace;
+	}
+	//category children
+	.cat-children {}
+	
+	//custom wrapper for description
+	.jm-desc-wrapper {
+		padding: 16px;
+	}
+}
+
+.content-links {
+	margin: 0 0 @JMbaseSpace;
+}
+
+//article image
+.item-image {
+	margin-bottom: @JMbaseSpace;
+	max-width: 100%;
+}
+
+.blog .item-image {
+	margin-bottom: 0;
+	img {
+    width: 100%;
+    .border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+	}
+}
+
+figure.pull-left,
+figure.pull-right,
+figure.pull-center {
+	max-width: 100%;
+	margin: 0 0 @JMbaseSpace;
+}
+
+.pull-none.item-image {
+	text-align: center;
+}
+
+.pull-left.item-image,
+figure.pull-left {
+	margin-right: @JMbaseSpace;
+}
+
+.pull-right.item-image,
+figure.pull-right {
+	margin-left: @JMbaseSpace;
+}
+
+.pull-center {
+	text-align: center;
+}
+
+//image caption
+div.img_caption {
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+figcaption,
+p.img_caption {
+	text-align: center;
+	background: @JMborder;
+	padding: 5px;
+	margin: 0;
+	max-width: 100%;
+}
+
+//readmore
+.readmore {
+	text-align: center;
+	font-size: @JMreadmoreFontSize;
+	font-weight: @JMreadmoreFontWeight;
+	color: @JMreadmoreFontColor;
+	background: none;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: @JMreadmorePadding;
+	line-height: @baseLineHeight;
+	text-decoration: none;
+	.box-sizing(border-box);
+	.box-shadow(none);
+	max-width: 100%;
+	position: relative;
+	overflow: hidden;
+	.border-radius(@baseBorderRadius);
+	&:hover, &:focus {
+		background: @JMreadmoreBackgroundHover;
+		text-decoration: none;
+	}
+  //ripple
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+    background: @JMdarkRippleColor;
+    .border-radius(100%);
+    .opacity(10);
+    .scale(0);
+  }
+  &:not(:active):after {
+    animation: ripple 1s ease-out;
+  }
+  /* fixes initial animation run, without user input, on page load.*/
+  &:after {
+    visibility: hidden;
+  }
+  &:focus:after {
+    visibility: visible;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    .scale(0);
+  }
+  20% {
+    .scale(1);
+  }
+  100% {
+    .opacity(0);
+    .scale(1);
+  }
+}
+
+p.readmore,
+p.readmore:hover {
+	display: block;
+	text-align: right;
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+#jm-allpage .blog p.readmore {
+	margin: 30px 0 0;
+	.btn {
+		background: none;
+		.readmore();
+	}
+}
+
+.mod-articles-category-readmore a {
+	.readmore();
+}
+
+//hide readmore icon
+p.readmore a.btn .icon-chevron-right {
+  display: none;
+} 
+ 
+// archived articles
+// --------------------------
+
+.archive {
+	form {
+		//filter options
+		.filters {
+			margin-bottom: @JMbaseSpace;
+		}
+		//items
+		#archive-items > div {
+			margin-bottom: @JMbaseSpace;
+		}
+	}
+}
+
+//contact categories
+.categories-list ul li {
+	h4 {
+		font-size: 1em;
+		line-height: @JMbaseLineHeight;
+		font-weight: bold;
+	}
+	small.category-desc {
+		font-size: 1em;
+		line-height: @JMbaseLineHeight;
+	}
+}
+
+//contact single category
+ul.list-striped li {
+	background: none;
+	padding: 10px;
+}
+
+//weblinks single category
+.weblink-count {
+	display: inline-block;
+	width: 100%;
+	dt,
+	dd {
+		float: left;
+	}
+}
+
+//single news feed
+.newsfeed > ol > li > h3 {
+	font-size: 1em;
+}
+
+// Registration
+// --------------------------
+
+strong.red,
+span.star {
+	color: #ff0000;
+}
+
+.form-horizontal .control-label strong.red, 
+.form-horizontal .control-label span.star {
+	padding: 0 5px;
+}
+
+// Login
+// --------------------------
+
+.login {
+	.form-horizontal {
+		.control-group {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// User Profile
+// --------------------------
+
+.profile {
+	ul.btn-toolbar li {
+		background: none;
+		padding: 0;
+	}
+	.btn-toolbar + fieldset {
+		clear: both;
+	}
+}
+
+// Single Contact
+// --------------------------
+
+.contact {
+	.contact-form {
+		input[type="text"],
+		input[type="email"],
+		textarea {
+			width: 100%;
+			max-width: 400px;
+		}
+		.well {
+			background: none;
+			.box-shadow(none);
+			padding: 0;
+      label,
+      legend {
+        color: @JMmoduleTitleColor;
+      }
+		}
+	}
+	dl.contact-address {
+		margin: @JMbaseSpace 0;
+	}
+	.thumbnail {
+		border: none;
+		.box-shadow(none);
+		float: none;
+		img {
+			margin-left: 0;
+		}
+	}
+	.dl-horizontal {
+		dt, dd {
+			line-height: 1.7;
+		}
+	}
+	h3 ~ h3 {
+	  margin-top: @JMbaseSpace;
+	}
+}
+
+// Search Results
+// --------------------------
+
+.search {
+	#searchForm {
+		display: inline-block;
+		width: 100%;
+		.form-limit {
+			float: left;
+		}
+		.counter {
+			float: right;
+		}
+	}
+	.phrases-box,
+		fieldset.only {
+			padding: 0 0 20px;
+			label {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	} 
+	fieldset.phrases {
+		padding-bottom: 20px;
+	}
+	span.icon-search {
+		float: right;
+		padding-left: 10px;
+		padding-right: 0;
+	}
+}
+
+fieldset.phrases {
+	padding-bottom: 20px;
+}
+
+//tagged items
+.tag-category .category > li > h3 {
+	font-size: 1em;
+	margin: 0;
+} 
+
+//tag-category
+.tag-category {
+	.form-inline label {
+		vertical-align: middle;
+		margin-right: 10px;
+	} 
+	> h2 {
+		margin-bottom: @JMbaseSpace;
+	}
+	form > ul > li > h3 {
+		margin-bottom: @JMbaseSpace;
+	}
+	form > ul > li {
+		padding: 0;
+		background: none!important;
+	}
+	.tag-body {
+		margin: @JMbaseSpace 0;
+		display: block;
+	}
+	.thumbnails > li,
+	.category > li {
+		background: none;
+		padding: 0;
+	}
+	.thumbnails > li h3 {
+		 font-size: 1em;
+	}
+}
+
+//joomla tooltip
+.tip-wrap {
+	.tip {
+		max-width: 300px;
+		padding: 3px 8px;
+		color: @tooltipColor;
+		text-align: center;
+		text-decoration: none;
+		background-color: @tooltipBackground;
+		.border-radius (@baseBorderRadius);
+		font-weight: normal;
+		z-index: 9999;
+		.opacity(100);
+	}
+	.tip-top {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+		top: -@tooltipArrowWidth;
+		left: 50%;
+		margin-left: -@tooltipArrowWidth;
+		border-width: 0 @tooltipArrowWidth @tooltipArrowWidth;
+		border-bottom-color: @tooltipArrowColor;
+		.opacity(80);
+	}
+	.tip-title {
+		font-weight: bold;
+	}
+}
+
+label.hasTooltip,
+label.hasPopover {
+	display: inline-block !important;
+}
+
+//joomla edit button
+.jmodedit {
+	line-height: 1 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none !important;
+	color: @JMstyle !important;
+	.box-shadow(none);
+}
+
+//article index
+.article-index {
+	margin-left: @JMbaseSpace;
+	+ .pagenavcounter {
+		margin-bottom: 10px;
+	}
+	.nav {
+		min-width: 150px;
+	}
+}
+
+//template options
+#jm-maincontent form #page-site {
+	padding: 0 @JMbaseSpace;
+}
+
+.jm-alert {
+	display: block;
+}
+
+#templates-form .form-horizontal .control-label {
+	float: none;
+	width: auto;
+	text-align: inherit;
+}
+
+#templates-form .form-horizontal .controls {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+//color picker
+#jm-allpage .minicolors-theme-bootstrap .minicolors-input {
+	line-height: 1.5;
+	height: auto;
+	width: auto;
+}
+
+//captcha
+#jform_captcha .recaptcha_theme_white,
+#jform_captcha .recaptcha_theme_blackglass,
+#jform_captcha .recaptcha_theme_red {
+	#recaptcha_response_field {
+		height: auto;
+		line-height: 1;
+		padding: 1px !important;
+	}
+}
+
+#jform_captcha .recaptcha_theme_clean {
+	#recaptcha_response_field {
+		border-color: @JMinputBorder !important;
+	}
+}
+
+#jform_captcha .recaptchatable a, 
+#jform_captcha .recaptchatable a:hover {
+	color: @JMstyle;
+}
+
+#jform_captcha .recaptcha_theme_blackglass.recaptchatable a, 
+#jform_captcha .recaptcha_theme_blackglass.recaptchatable a:hover {
+	color: @white;
+}
+
+// JOOMLA MODULES
+//---------------------------------------------------------------
+
+//mostread
+.mostread,
+.latestnews,
+.archive-module,
+.relateditems {
+	li {
+		padding: 10px 0;
+		border-top: 1px solid @JMborder;
+		a {
+			font-size: @JMmoduleTitleFontSize;
+			color: @JMmoduleTitleColor;
+			font-weight: @JMfontWeightMedium;
+			line-height: 1.2;
+			&:hover, &:focus {
+				color: @JMstyle;
+				text-decoration: none;
+			}
+		}
+		&:first-child {
+			padding-top: 0;
+			border-top: none;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
+
+#jm-allpage {
+	//color2 ms
+	.jm-module.color2-ms {
+		.mostread li a,
+		.latestnews li a,
+		.archive-module li a,
+		.relateditems li a {
+			color: @JMcolor2msFontColor;
+			&:hover {
+				color: @JMstyle;
+			}
+		}
+	}
+}
+
+//newsflash module
+.newsflash {
+	.newsflash-title {
+		font-size: 1em;
+		margin: 10px 0 5px;
+		clear: both;
+		&:first-child {
+			margin: 0 0 5px;
+		}
+	}
+}
+
+.newsflash-horiz li + li {
+	margin: 15px 0 0;
+}
+
+//article categories
+.categories-module li  {
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 1em;
+		line-height: @JMbaseLineHeight;
+		font-weight: normal;
+		margin: 0;
+	}
+}
+
+//article category
+.category-module li {
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 1em;
+		line-height: @JMbaseLineHeight;
+		font-weight: normal;
+		margin: 0;
+	}
+	span {
+		display: block;
+	}
+}
+
+
+#jm-allpage {
+	//color2-ms
+	.jm-category-module.color2-ms {
+		.description .mod-articles-category-title {
+			color: @JMcolor2msTitleFontColor;
+			&:hover {
+				color: @JMstyle;
+			}
+		}
+	}
+}
+
+//login module
+#login-form { 
+  margin: 0;
+	ul li .icon-arrow-right {
+		display: none;
+	}
+	.control-group.checkbox input[type="checkbox"] {
+		margin-right: 10px;
+		margin-top: 6px;
+	}
+}
+
+//smart search
+#mod-finder-searchform {
+	margin: 0;
+	a {
+		display: block;
+		margin-top: 5px;
+	}
+	.icon-search {
+		margin-left: 10px;
+		float: right;
+	}
+}
+
+//search module
+.form-search {
+	label.finder {
+		padding: 0 10px 0 0;
+	}
+}
+
+//feed
+.feed h2 ~ ul.newsfeed {
+	margin-top: 10px;
+}
+
+//weblinks
+.weblinks li {
+	margin-top: 5px;
+	&:first-child {
+		margin: 0;
+	}
+	p {
+		margin: 0;
+	}
+}
+
+//search
+.search input#mod-search-searchword {
+	width: auto;
+}
+
+//languages module
+.mod-languages ul {
+	list-style: none;
+	li {
+		background: none;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+}
+
+//tags
+#jm-allpage {
+	.tagspopular ul,
+	.tagssimilar ul {
+		li {
+			display: inline-block;
+      margin: 0 6px 10px 0;
+      padding: 0;
+			&:before {
+				display: none;
+			}
+		}
+		li a {
+			display: inline-block;
+			color: @JMtagsLinkColor;
+			padding: 6px 20px !important;
+      background: @JMtagsBackgroundColor;
+			font-size: @JMtagsFontSize;
+			line-height: @JMtagsLineHeight;
+			text-decoration: none;
+			.border-radius(16px);
+			&:after {
+				display: none;
+			}
+			&:hover,
+			&:focus {
+				background: @JMtagsBackgroundColorActive;
+			}
+		}
+	}
+}
+
+ul.tags {
+  margin: 15px 0 5px;
+	li {
+	  padding: 0;
+    margin: 0 6px 10px 0;
+    a.label-info {
+      color: @JMtagsLinkColor;
+      padding: 6px 20px;
+      background: @JMtagsBackgroundColor;
+      font-size: @JMtagsFontSize;
+      line-height: @JMtagsLineHeight;
+      text-decoration: none;
+      text-shadow: none;
+      .border-radius(16px);
+      &:after {
+        display: none;
+      }
+      &:hover,
+      &:focus {
+        background: @JMtagsBackgroundColorActive;
+      }
+    }
+	}
+}
+
+// chosen script
+// -------------------------- 
+
+.chzn-container {
+	li {
+		background: none;
+	}
+}
+
+.chzn-container-multi .chzn-choices li.search-field input[type="text"] {
+	height: 25px !important;
+}
+
+//chzn
+#jm-allpage {
+	.chzn-container-single .chzn-single,
+	.chzn-container-multi .chzn-choices {
+		line-height: @JMinputHeight;
+		height: @JMinputHeight;
+		font-size: @JMinputFontSize;
+		padding: 0 8px;
+		vertical-align: middle;
+		border: 1px solid @JMinputBorder;
+		color: @JMinputFontColor;
+		background: @JMinputBackground;
+		.border-radius(@baseBorderRadius);
+		.box-sizing(border-box);
+		.box-shadow(none);
+	}
+	.chzn-container-single .chzn-single div {
+		left: auto;
+		right: 8px;
+		width: 15px;
+	}
+	.chzn-container .chzn-drop {
+		border: 1px solid @JMinputBorder;
+		background: @white;
+		.border-radius(0);
+		.box-shadow(none);
+	}
+	.chzn-container-multi .chzn-choices .search-field input.default {
+		font-family: inherit;
+		color: @JMinputFontColor;
+		padding: 0;
+		margin: 0;
+		height: @JMinputHeight;
+	}
+	.chzn-container-single .chzn-single div b {
+		margin-top: 9px;
+	}
+	.chzn-container-multi .chzn-choices .search-choice {
+		line-height: 24px;
+		border: 1px solid @JMinputBorder;
+		background: @JMinputBackground;
+		span {
+			font-size: 14px;
+		}
+	} 
+	.chzn-container-multi .chzn-choices .search-choice .search-choice-close {
+		top: 10px;
+	}
+	.chzn-choices li,
+	.chzn-results li {
+		background-image: none!important;
+	}
+	.chzn-container .chzn-results {
+		padding-top: 4px;
+	}
+	.chzn-container .chzn-results li.highlighted {
+		background: @JMstyle;
+	}
+}
+
+// Other pages
+// --------------------------
+
+//error page
+.jm-error-page {
+	text-align: center;
+	> h1 {
+		color: @JMarticleTitleColor;
+		font-size: 64px;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+	> h2 {
+		color: @JMarticleTitleColor;
+		font-size: 24px;
+		line-height: 1;
+		text-transform: uppercase;
+		margin: 0 0 @JMbaseSpace * 2;
+	}
+	> p {
+		margin: 0 0 @JMbaseSpace * 2;
+	}
+	input.inputbox {
+		max-width: 260px;
+	}
+	.moduletable {
+		margin: 0 0 @JMbaseSpace * 2;
+	}
+}
+
+/** iks **/
+
+.login .well {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	.box-sizing(border-box);
+	-webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+	-moz-box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+	-ms-box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+	-o-box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+	box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+	.nav-tabs {
+		margin-top: 20px;
+		li a {
+			color: rgba(0, 0, 0, 0.24);
+			font-size: 14px;
+			&:hover,
+			&:focus {
+				color: @JMstyle;
+			}
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+.login + div {
+	.nav-tabs {
+		width: 100%;
+		max-width: 600px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		li a {
+			&:after{
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 2px;
+				bottom: 0;
+				left: 0;
+				background-color: @JMstyle;
+				visibility: visible;
+				width: 100%;
+				.transition(all 0.3s ease-in-out 0s);
+			}
+		}
+	}
+}
+
+select:not([name*="themecustomiser"]) {
+	background-position: right 15px center;
+}
+
+html[dir="rtl"] {
+	select:not([name*="themecustomiser"]) {
+		background-position: left 15px center;
+	}
+}
+
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 900;
+}

@@ -1,0 +1,70 @@
+
+#dj-suggester {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	z-index: 999;
+	width: 400px;
+}
+#dj-suggester-in {
+	position: relative;
+	overflow: hidden;
+	background: #f5f5f5;
+	color: #444;
+	border-top: 5px solid #ff6600;
+	padding: 5px 25px 5px 15px;
+	-webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+	box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+}
+#dj-suggester-in .dj-close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: block;
+	width: 21px;
+	height: 20px;
+	background: url(close.png) center center no-repeat;
+	cursor: pointer;
+}
+#dj-suggester-in .dj-close:hover {
+	background-color: #e5e5e5;
+}
+
+.dj-suggester {
+	padding: 5px 0;
+	text-align: left;
+	font-size: 12px;
+	line-height: 1.5;
+}
+.dj-suggester-head {
+	font-size: 11px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #9c9c9c;
+	text-transform: uppercase;
+	margin: 0 0 10px;
+}
+.dj-suggester-title {
+	font-size: 16px;
+	line-height: 1.1;
+	font-weight: bold;
+	margin: 0 0 10px;
+}
+.dj-suggester-title a:link, .dj-suggester-title a:visited {
+	color: #ff6600;
+	text-decoration: none;
+}
+.dj-suggester-title a:hover, .dj-suggester-title a:active, .dj-suggester-title a:focus {
+	text-decoration: underline;
+	background: none;
+}
+.dj-suggester-content {	
+}
+.dj-suggester-image {
+	float: left;
+	border: 2px solid #e5e5e5;
+	margin: 2px 20px 5px 0;
+}
+.dj-suggester img {
+	max-width: 100%;
+}

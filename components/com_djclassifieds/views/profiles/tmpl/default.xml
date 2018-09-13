@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DJCLASSIFIEDS_PROFILES">
+		<message></message>
+	</layout>
+	<state>
+		<name>COM_DJCLASSIFIEDS_PROFILES</name>
+	</state>
+	<fields name="params">
+		<fieldset name="global" label="COM_DJCLASSIFIEDS_CONFIG_GLOBAL_SETTINGS_LABEL">
+			<field name="user_type" type="usergroup" default="" label="COM_DJCLASSIFIEDS_USER_TYPE" menu="hide" >
+				<option value="0">COM_DJCLASSIFIEDS_ALL</option>
+			</field>					
+		</fieldset>
+	</fields>
+</metadata>

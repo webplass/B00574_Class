@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<config>
+		<fields name="params">
+	
+			<fieldset name="djclassifieds" addfieldpath="/administrator/components/com_djclassifieds/models/fields" label="PLG_DJSUGGESTER_DJCLASSIFIEDS">
+				
+				<field name="djclassifieds" type="djonlypro" default="1" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_SUGGESTION" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_ENABLED</option>
+					<option value="0">PLG_DJSUGGESTER_DISABLED</option>
+				</field>
+				<field name="djclassifieds_follow_category" type="radio" class="btn-group" default="0" label="PLG_DJSUGGESTER_FOLLOW_CATEGORY" description="PLG_DJSUGGESTER_FOLLOW_CATEGORY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="djclassifieds_follow_region" type="radio" class="btn-group" default="0" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_FALLOW_REGION" description="PLG_DJSUGGESTER_DJCLASSIFIEDS_FALLOW_REGION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="djclassifieds_order" type="list" default="display" label="PLG_DJSUGGESTER_ORDER" description="PLG_DJSUGGESTER_ORDER_DESC" class="btn-group">
+					<option value="date">PLG_DJSUGGESTER_DATE</option>
+					<option value="rdate">PLG_DJSUGGESTER_DATE_REVERSE</option>
+					<option value="title">PLG_DJSUGGESTER_TITLE</option>
+					<option value="rtitle">PLG_DJSUGGESTER_TITLE_REVERSE</option>
+					<option value="display">PLG_DJSUGGESTER_POPULAR</option>
+					<option value="random">PLG_DJSUGGESTER_RANDOM</option>
+				</field>				
+				<field name="djclassifieds_items_source" type="list" default="0" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_SOURCE" desc="PLG_DJSUGGESTER_DJCLASSIFIEDS_SOURCE_DESC">
+					<option value="0">PLG_DJSUGGESTER_DJCLASSIFIEDS_ALL_ADVERTS</option>
+					<option value="1">PLG_DJSUGGESTER_DJCLASSIFIEDS_USER_ADVERTS</option>
+					<option value="2">PLG_DJSUGGESTER_DJCLASSIFIEDS_FAVOURITE_ADVERTS</option>				
+				</field>
+				<field name="djclassifieds_filter_cat" type="radio" default="1" label="PLG_DJSUGGESTER_CATEGORY_FILTER_TYPE" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_INCLUDE</option>
+					<option value="0">PLG_DJSUGGESTER_EXCLUDE</option>
+				</field>
+				<field name="djclassifieds_catid" type="djcfcategory" default="0" parent="false" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_CATEGORIES" description="PLG_DJSUGGESTER_DJCLASSIFIEDS_CATEGORIES_DESC" multiple="true" size="10" />
+				<field name="djclassifieds_region_id" type="djcfregion" default="0" parent="false" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_REGIONS" description="PLG_DJSUGGESTER_DJCLASSIFIEDS_REGIONS_DESC" multiple="true" size="10"/>
+				<field name="djclassifieds_type_id" type="sql" default="0" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_TYPES" description="PLG_DJSUGGESTER_DJCLASSIFIEDS_TYPES_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_types ORDER BY name" key_field="id" value_field="title" multiple="true" size="10"  />
+				
+				<field name="djclassifieds_items_ids" type="text" default="" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_IDS" description="PLG_DJSUGGESTER_DJCLASSIFIEDS_IDS_DESC"  size="50" />
+				<field name="djclassifieds_users_ids" type="text" default="" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_USERS_IDS" description="PLG_DJSUGGESTER_DJCLASSIFIEDS_USERS_IDS_DESC"  size="50" />
+				<field name="djclassifieds_only_promoted" type="list" default="0" multiple="true" size="6" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_ONLY_PROMOTED">
+					<option value="p_special">PLG_DJSUGGESTER_DJCLASSIFIEDS_ONLY_PROMOTED_SPECIAL</option>
+					<option value="p_first">PLG_DJSUGGESTER_DJCLASSIFIEDS_ONLY_PROMOTED_FIRST</option>
+					<option value="p_bold">PLG_DJSUGGESTER_DJCLASSIFIEDS_ONLY_PROMOTED_BOLD</option>
+					<option value="p_border">PLG_DJSUGGESTER_DJCLASSIFIEDS_ONLY_PROMOTED_BORDER</option>
+					<option value="p_bg">PLG_DJSUGGESTER_DJCLASSIFIEDS_ONLY_PROMOTED_BG</option>
+				</field>
+				<field name="djclassifieds_show_img" type="radio" class="btn-group" default="1" label="PLG_DJSUGGESTER_DISPLAY_IMAGE" description="PLG_DJSUGGESTER_DISPLAY_IMAGE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="djclassifieds_show_default_img" type="list" default="0" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_SHOW_DEFAULT_ICON" description="PLG_DJSUGGESTER_DJCLASSIFIEDS_SHOW_DEFAULT_ICON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">PLG_DJSUGGESTER_DJCLASSIFIEDS_DEFAULT_IMAGE_FOR_ADVERTS</option>
+					<option value="2">PLG_DJSUGGESTER_DJCLASSIFIEDS_IMAGE_FROM_CATEGORY</option>
+				</field>
+				<field name="djclassifieds_only_with_img" type="radio" class="btn-group" default="0" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_SHOW_ONLY_ADS_WITH_IMG">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="djclassifieds_img_type" type="list" default="thm" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_IMAGE_THUMB_TYPE">
+					<option value="ths">PLG_DJSUGGESTER_DJCLASSIFIEDS_SMALL_THUMB</option>
+					<option value="thm">PLG_DJSUGGESTER_DJCLASSIFIEDS_MEDIUM_THUMB</option>
+					<option value="thb">PLG_DJSUGGESTER_DJCLASSIFIEDS_BIG_THUMB</option>
+				</field>
+				<field name="djclassifieds_header" type="text" default="" label="PLG_DJSUGGESTER_DJCLASSIFIEDS_HEADER_TEXT" description="PLG_DJSUGGESTER_HEADER_TEXT_DESC"/>
+			
+			</fieldset>
+			
+		</fields>
+	</config>
+</form>
+	

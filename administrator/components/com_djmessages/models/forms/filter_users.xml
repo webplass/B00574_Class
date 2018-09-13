@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_DJMESSAGES_FILTER_SEARCH_LABEL"
+			description="COM_DJMESSAGES_SEARCH_IN_SUBJECT"
+			hint="COM_DJMESSAGES_FILTER_SEARCH_HINT"
+		/>
+		<field
+			name="state"
+			type="list"
+			label="COM_DJMESSAGES_FILTER_STATES_LABEL"
+			description="COM_DJMESSAGES_FILTER_STATES_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+			<option value="1">COM_DJMESSAGES_OPTION_ENABLED</option>
+			<option value="0">COM_DJMESSAGES_OPTION_DISABLED</option>
+			<option value="*">JALL</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="a.name ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="u.state ASC">COM_DJMESSAGES_HEADING_STATE_ASC</option>
+			<option value="u.state DESC">COM_DJMESSAGES_HEADING_STATE_DESC</option>
+			<option value="a.name ASC">COM_DJMESSAGES_HEADING_NAME_ASC</option>
+			<option value="a.name DESC">COM_DJMESSAGES_HEADING_NAME_DESC</option>
+			<option value="u.visible ASC">COM_DJMESSAGES_HEADING_VISIBLE_ASC</option>
+			<option value="u.visible DESC">COM_DJMESSAGES_HEADING_VISIBLE_DESC</option>
+		</field> 
+		<field
+			name="limit"
+			type="limitbox"
+			label="JGLOBAL_LIMIT"
+			description="JGLOBAL_LIMIT"
+			class="input-mini"
+			default="5"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

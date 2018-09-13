@@ -1,0 +1,33 @@
+//
+// Wells
+// --------------------------------------------------
+
+
+// Base class
+.well {
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: @wellBackground;
+	color: @JMbaseFontColor;
+	.box-shadow(@JMboxShadowRTL);
+	.border-radius(@baseBorderRadius);
+	blockquote {
+		border-color: #ddd;
+		border-color: rgba(0,0,0,.15);
+	}
+  label,
+  legend {
+	  color: @JMbaseFontColor;
+  }
+}
+
+// Sizes
+.well-large {
+	padding: 24px;
+	.border-radius(@borderRadiusLarge);
+}
+.well-small {
+	padding: 9px;
+	.border-radius(@borderRadiusSmall);
+}

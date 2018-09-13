@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+
+#dj-suggester {
+	-webkit-animation-duration: 500ms;
+	animation-duration: 500ms;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+#dj-suggester.fast {
+	-webkit-animation-duration: 250ms;
+	animation-duration: 250ms;
+}
+#dj-suggester.slow {
+	-webkit-animation-duration: 750ms;
+	animation-duration: 750ms;
+}
+#dj-suggester.hinge {
+	-webkit-animation-duration: 1500ms;
+	animation-duration: 1500ms;
+}
+/* no animation support browsers */
+#dj-suggester.showBox {
+	display: block;
+}
+#dj-suggester.hideBox {
+	display: none;
+}
+
+@media screen and (max-width: 479px) {
+	#dj-suggester {
+		width: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		overflow: auto;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+	#dj-suggester-in {
+		opacity: 0.95;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+}
+
+@media print {	
+	#dj-suggester {
+		display: none !important;
+	}
+}

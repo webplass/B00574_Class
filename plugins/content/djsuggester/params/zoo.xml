@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<config>
+		<fields name="params">
+	
+			<fieldset name="zoo" label="PLG_DJSUGGESTER_ZOO" addfieldpath="/administrator/components/com_zoo/joomla/fields">
+				
+				<field name="zoo" type="djonlypro" default="1" label="PLG_DJSUGGESTER_ZOO_SUGGESTION" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_ENABLED</option>
+					<option value="0">PLG_DJSUGGESTER_DISABLED</option>
+				</field>
+				<field name="zoo_mode" type="radio" default="0" label="PLG_DJSUGGESTER_FOLLOW_CATEGORY" description="PLG_DJSUGGESTER_FOLLOW_CATEGORY_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="zoo_order" type="list" default="hits" label="PLG_DJSUGGESTER_ORDER" description="PLG_DJSUGGESTER_ORDER_DESC" class="btn-group">
+					<option value="date">PLG_DJSUGGESTER_DATE</option>
+					<option value="rdate">PLG_DJSUGGESTER_DATE_REVERSE</option>
+					<option value="hits">PLG_DJSUGGESTER_POPULAR</option>
+					<option value="modified">PLG_DJSUGGESTER_DATE_REVERSE_MODIFIED</option>
+					<option value="name">PLG_DJSUGGESTER_TITLE</option>
+					<option value="rname">PLG_DJSUGGESTER_TITLE_REVERSE</option>
+					<option value="publish_down">PLG_DJSUGGESTER_DATE_PUBLISH_DOWN</option>
+					<option value="publish_up">PLG_DJSUGGESTER_DATE_REVERSE_PUBLISH_UP</option>
+					<option value="random">PLG_DJSUGGESTER_RANDOM</option>
+				</field>
+				<field name="zoo_filter_cat" type="radio" default="1" label="PLG_DJSUGGESTER_CATEGORY_FILTER_TYPE" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_INCLUDE</option>
+					<option value="0">PLG_DJSUGGESTER_EXCLUDE</option>
+				</field>
+				<field name="zoo_cats" type="zoocategories" label="PLG_DJSUGGESTER_CATEGORIES" size="10" default="all" />
+				<field name="zoo_image" type="radio" default="1" label="PLG_DJSUGGESTER_DISPLAY_IMAGE" description="PLG_DJSUGGESTER_DISPLAY_IMAGE_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="zoo_imagewidth" type="text" default="150" label="PLG_DJSUGGESTER_IMG_WIDTH" description="PLG_DJSUGGESTER_IMG_WIDTH_DESC"/>
+				<field name="zoo_header" type="text" default="" label="PLG_DJSUGGESTER_ZOO_HEADER_TEXT" description="PLG_DJSUGGESTER_HEADER_TEXT_DESC"/>
+
+			</fieldset>
+			
+		</fields>
+	</config>
+</form>
+	

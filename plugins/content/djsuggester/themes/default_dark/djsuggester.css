@@ -1,0 +1,72 @@
+
+#dj-suggester {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	z-index: 999;
+	width: 400px;
+}
+#dj-suggester-in {
+	position: relative;
+	overflow: hidden;
+	background: #292929;
+	color: #9c9c9c;
+	padding: 5px 25px 5px 15px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow:  0px 0px 0px 5px rgba(0, 0, 0, 0.2);
+	box-shadow:  0px 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+#dj-suggester-in .dj-close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: block;
+	width: 21px;
+	height: 23px;
+	background: url(close.png) center center no-repeat;
+	cursor: pointer;
+	opacity: 0.5;
+}
+#dj-suggester-in .dj-close:hover {
+	opacity: 1;
+}
+
+.dj-suggester {
+	padding: 5px 0;
+	text-align: left;
+	font-size: 12px;
+	line-height: 1.5;
+}
+.dj-suggester-head {
+	font-size: 10px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #6c6c6c;
+	text-transform: uppercase;
+	margin: 0 0 10px;
+}
+.dj-suggester-title {
+	font-size: 16px;
+	line-height: 1.1;
+	font-weight: bold;
+	margin: 0 0 10px;
+}
+.dj-suggester-title a:link, .dj-suggester-title a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.dj-suggester-title a:hover, .dj-suggester-title a:active, .dj-suggester-title a:focus {
+	text-decoration: underline;
+	background: none;
+}
+.dj-suggester-content {	
+}
+.dj-suggester-image {
+	float: left;
+	border: 2px solid #6c6c6c;
+	margin: 2px 20px 5px 0;
+}
+.dj-suggester img {
+	max-width: 100%;
+}

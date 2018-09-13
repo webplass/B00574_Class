@@ -1,0 +1,246 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+
+// Space out pagination from surrounding content
+.pagination {
+	clear: both;
+	margin: @JMbaseSpace 0 0;
+	padding: (@JMbaseSpace - 5) 0 0;
+	text-align: center;
+	border-top: 1px solid @JMpaginationBorder;
+}
+
+.pagination ul {
+
+}
+
+.pagination ul > li {
+	display: inline-block; // Remove list-style and block-level defaults //JM edited
+	padding: 0;
+	margin: 5px 3px 0;
+	vertical-align: top;
+	&:before {
+		display: none;
+	}
+}
+
+.pagination ul > li > a,
+.pagination ul > li > span {
+	float: right; // Collapse white-space
+	text-decoration: none;
+	line-height: @JMpaginationHeight;
+	display: inline-block;
+	padding: 0 13px;
+	min-width: 10px;
+	.transition(all 0.2s ease-in);
+	text-decoration: none;
+	text-transform: lowercase;
+	font-size: @JMpaginationFontSize;
+	font-weight: @JMpaginationFontWeight;
+	color: @JMpaginationFontColor;
+	.border-radius(@baseBorderRadius);
+	&:hover, &:focus {
+		color: @JMpaginationFontColor;
+		background: @JMpaginationBackground;
+	}
+	//ripple
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 200px;
+		height: 200px;
+		margin-left: -100px;
+		margin-top: -100px;
+		background: @JMdarkRippleColor;
+		.border-radius(100%);
+		.opacity(10);
+		.scale(0);
+	}
+	&:not(:active):after {
+		animation: ripple 1s ease-out;
+	}
+	/* fixes initial animation run, without user input, on page load.*/
+	&:after {
+		visibility: hidden;
+	}
+	&:focus:after {
+		visibility: visible;
+	}
+}
+
+.pagination ul > li.active > a,
+.pagination ul > li > span.pagenav {
+	color: @JMpaginationActiveFontColor;
+	background: @JMstylePaginationActiveBackground;
+}
+
+.pagination {
+	ul li.pagination-start span.pagenav,
+	ul li.pagination-prev span.pagenav,
+	ul li.pagination-next span.pagenav,
+	ul li.pagination-end span.pagenav {
+		color: @JMpaginationInactiveFontColor;
+		background: none;
+		font-size: 0;
+		line-height: 1;
+		padding: 0 6px;
+		&:before {
+			font-family: 'Material Icons';
+			text-rendering: optimizeLegibility;
+			font-feature-settings: "liga" 1;
+			font-style: normal;
+			text-transform: none;
+			line-height: 36px;
+			font-size: @JMpaginationFontSize;
+			width: 24px;
+			height: 36px;
+			display: inline-block;
+			overflow: hidden;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		&:hover, &:active, &:focus {
+			color: @JMpaginationInactiveFontColor;
+		}
+	}
+	ul li.pagination-start a.pagenav,
+	ul li.pagination-prev a.pagenav,
+	ul li.pagination-next a.pagenav,
+	ul li.pagination-end a.pagenav {
+		background: none;
+		font-size: 0;
+		line-height: 1;
+		padding: 0 6px;
+		&:before {
+			font-family: 'Material Icons';
+			text-rendering: optimizeLegibility;
+			font-feature-settings: "liga" 1;
+			font-style: normal;
+			text-transform: none;
+			line-height: 36px;
+			font-size: @JMpaginationFontSize;
+			width: 24px;
+			height: 36px;
+			display: inline-block;
+			overflow: hidden;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		&:hover, &:focus {
+			color: @JMpaginationFontColor;
+			background: @JMpaginationBackground;
+		}
+	}
+	ul li.pagination-start .pagenav {
+		&:before {
+			content: 'last_page';
+		}
+	}
+	ul li.pagination-prev .pagenav {
+		&:before {
+			content: 'chevron_right';
+		}
+	}
+	ul li.pagination-next .pagenav {
+		&:before {
+			content: 'chevron_left';
+		}
+	}
+	ul li.pagination-end .pagenav {
+		&:before {
+			content: 'first_page';
+		}
+	}
+}
+
+p.counter {
+	margin: 0 0 10px;
+	text-align: center;
+	font-weight: @JMpaginationFontWeight;
+	&.pull-right {
+		float: none;
+	}
+}
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+	color: @JMpaginationActiveFontColor;
+}
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+	cursor: default;
+}
+
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > a:focus {
+	cursor: default;
+}
+
+// Alignment
+// --------------------------------------------------
+
+.pagination-centered {
+	text-align: center;
+}
+
+.pagination-right {
+	text-align: left;
+}
+
+// Sizing
+// --------------------------------------------------
+
+// Large
+.pagination-large {
+	ul > li > a,
+	ul > li > span {
+		padding: @paddingLarge;
+		font-size: @fontSizeLarge;
+	}
+	ul > li:first-child > a,
+	ul > li:first-child > span {
+		.border-right-radius(@borderRadiusLarge);
+	}
+	ul > li:last-child > a,
+	ul > li:last-child > span {
+		.border-left-radius(@borderRadiusLarge);
+	}
+}
+
+// Small and mini
+.pagination-mini,
+.pagination-small {
+	ul > li:first-child > a,
+	ul > li:first-child > span {
+		.border-right-radius(@borderRadiusSmall);
+	}
+	ul > li:last-child > a,
+	ul > li:last-child > span {
+		.border-left-radius(@borderRadiusSmall);
+	}
+}
+
+// Small
+.pagination-small {
+	ul > li > a,
+	ul > li > span {
+		padding: @paddingSmall;
+		font-size: @fontSizeSmall;
+	}
+}
+
+// Mini
+.pagination-mini {
+	ul > li > a,
+	ul > li > span {
+		padding: @paddingMini;
+		font-size: @fontSizeMini;
+	}
+}

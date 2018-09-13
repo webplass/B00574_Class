@@ -1,0 +1,98 @@
+//
+// Accordion
+// --------------------------------------------------
+
+
+// Parent container
+.accordion,
+.pane-sliders {
+  margin-top: @baseLineHeight;
+  margin-bottom: @baseLineHeight;
+}
+
+.accordion-heading,
+.pane-sliders h3.title {
+  font-size: @JMaccordionFontSize;
+  margin: 0;
+}
+
+.accordion-group,
+.pane-sliders .panel {
+  background: @JMaccordionBackgroundColor;
+  .border-radius(@baseBorderRadius);
+   .box-shadow(@JMboxShadowRTL);
+  margin-bottom: 16px;
+}
+
+.accordion-heading .accordion-toggle,
+.pane-sliders h3.title a {
+  display: block;
+  text-decoration: none;
+  color: @JMaccordionFontColor;
+  .transition(all 0.2s ease-in);
+  text-transform: uppercase;
+  font-size: @JMaccordionFontSize;
+  font-weight: @JMaccordionFontWeight;
+  line-height: 1.2;
+  padding: 22px 50px;
+  position: relative;
+  &:before {
+    content: 'expand_more';
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    font-family: 'Material Icons';
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga" 1;
+    font-style: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 17px;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;        
+  }
+  &.collapsed {
+    &:before {
+      content: 'chevron_left';
+    }
+  }
+  &:focus,
+  &:hover {
+    color: @JMaccordionFontColorHover;
+    outline: 0;
+  }
+}
+
+.accordion-heading a.active,
+.pane-sliders h3.title.pane-toggler-down a {
+  color: @JMaccordionFontColorHover;
+}
+
+// General toggle styles
+.accordion-toggle,
+.pane-sliders h3.title {
+  cursor: pointer;
+}
+
+.accordion-body.in {
+  border-top: 1px solid @JMaccordionBorderColor;
+}
+
+// Inner needs the styles because you can't animate properly with any styles on the element
+.accordion-inner {
+  padding: 24px;
+  color: @JMaccordionContentFontColor;
+}
+
+.pane-sliders h3.title + .content {
+  padding: 0 30px !important;
+  color: @JMaccordionContentFontColor;
+}
+
+.pane-sliders h3.title.pane-toggler-down + .content {
+  padding: 10px 30px 30px !important;
+}

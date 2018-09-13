@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" client="site" method="upgrade">
+	<name>mod_djmsgnotifications</name>
+	<creationDate>May 2018</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2018 DJ-Extensions.com LTD, All rights
+		reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.1</version>
+	<description>MOD_DJMSGNOTIFICATIONS_DESC</description>
+	<files>
+		<filename module="mod_djmsgnotifications">mod_djmsgnotifications.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field name="show_icon" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_DJMSGNOTIFICATIONS_SHOW_ICON" description="MOD_DJMSGNOTIFICATIONS_SHOW_ICON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="image_icon" type="media" directory="" label="MOD_DJMSGNOTIFICATIONS_ICON_IMAGE" description="MOD_DJMSGNOTIFICATIONS_ICON_IMAGE_DESC" showon="show_icon:1" />
+				<field name="icon" type="text" default="" hint="fa fa-envelope-o" label="MOD_DJMSGNOTIFICATIONS_ICON_CLASS" description="MOD_DJMSGNOTIFICATIONS_ICON_CLASS_DESC" showon="show_icon:1" />
+
+				<field name="load_fontawesome" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_DJMSGNOTIFICATIONS_LOAD_AWESOME" description="MOD_DJMSGNOTIFICATIONS_LOAD_AWESOME_DESC" showon="show_icon:1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="selected_layout" type="radio" class="btn-group" default="1" label="MOD_DJMSGNOTIFICATIONS_MESSAGE" description="MOD_DJMSGNOTIFICATIONS_MESSAGE_DESC">
+					<option value="0">JNONE</option>
+					<option value="1">MOD_DJMSGNOTIFICATIONS_MESSAGE_LABEL_WITH_NUMBER</option>
+					<option value="2">MOD_DJMSGNOTIFICATIONS_MESSAGE_NUMBER_ALWAYS</option>
+					<option value="3">MOD_DJMSGNOTIFICATIONS_MESSAGE_NUMBER_UNREAD</option>
+				</field>
+
+				<field name="show_button" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_DJMSGNOTIFICATIONS_SHOW_BUTTON" description="MOD_DJMSGNOTIFICATIONS_SHOW_BUTTON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3"
+				/>
+				<field name="cache" type="list" default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field name="cache_time" type="text" default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

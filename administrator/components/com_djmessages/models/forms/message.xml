@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="user_to"
+			type="djmsgusermessages"
+			label="COM_DJMESSAGES_FIELD_USER_ID_TO_LABEL"
+			description="COM_DJMESSAGES_FIELD_USER_ID_TO_DESC"
+			default="0"
+			required="true" />
+
+		<field
+			name="subject"
+			type="text"
+			label="COM_DJMESSAGES_FIELD_SUBJECT_LABEL"
+			description="COM_DJMESSAGES_FIELD_SUBJECT_DESC"
+			required="true" />
+
+		<field
+			name="message"
+			type="textarea"
+			label="COM_DJMESSAGES_FIELD_MESSAGE_LABEL"
+			description="COM_DJMESSAGES_FIELD_MESSAGE_DESC"
+			required="true"
+			filter="JComponentHelper::filterText"
+			buttons="false"
+			height="200"
+			editor="none"
+			class="required"
+			rows="10"
+			cols="40"
+			/>
+			
+		<field 
+			name="attachments" 
+			type="djmsgplupload" 
+			default="" 
+			label="COM_DJMESSAGES_ATTACHMENTS" 
+			readonly="true" 
+			class="readonly" 
+			multiple_files="true" 
+			limit="0" 
+			preview="false" 
+			caption="false" 
+			filter="RAW" />
+		
+		<field name="parent_id" type="hidden" default="0" />
+		<field name="reply_to_id" type="hidden" default="0" />
+		<field name="msg_source" type="hidden" default="" />
+		<field name="msg_source_id" type="hidden" default="0" />
+	</fieldset>
+</form>

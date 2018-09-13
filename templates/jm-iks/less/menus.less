@@ -1,0 +1,297 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MENUS
+//---------------------------------------------------------------
+
+// default
+.nav.menu {
+  margin: -4px 0;
+  li a,
+  li span.separator {
+    color: @JMbaseFontColor;
+    font-size: round(@JMbaseFontSize * 0.93);
+    padding: 4px 0;
+    display: block;
+    text-decoration: none;
+    img {
+      max-height: (round(@JMbaseFontSize * 0.93)) * @JMbaseLineHeight;
+    }
+  }
+  li span.separator {
+    cursor: default;
+  }
+  li > a:hover,
+  li > span.separator:hover,
+  li.active > a,
+  li.active > span.separator {
+    color: @JMstyle;
+  }
+  li a span.image-title {
+    margin: 0 0 0 8px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  //submenu
+  ul {
+    padding: 0 0 0 16px;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+// horizontal
+.nav.menu.horizontal-ms,
+.horizontal-ms .nav.menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  > li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: @JMbaseSpace;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  li > a,
+  li > span.separator {
+    padding: 0;
+  }
+  ul,
+  .nav-header {
+    display: none;
+  }
+}
+
+// menu columns
+.nav.menu.col2,
+.col2 .nav.menu,
+.nav.menu.col3,
+.col3 .nav.menu,
+.nav.menu.col4,
+.col4 .nav.menu,
+.nav.menu.col5,
+.col5 .nav.menu {
+  .cf();
+  margin-left: -(@JMbaseSpace /2);
+  margin-right: -(@JMbaseSpace /2);
+  li {
+    float: left;
+    padding: 0 (@JMbaseSpace /2);
+    .box-sizing(border-box);
+    ul li {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+.nav.menu.col2,
+.col2 .nav.menu {
+  li {
+    width: 50%;
+    &:nth-child(2n+1) {
+      clear: both;
+    }
+  }
+}
+
+.nav.menu.col3,
+.col3 .nav.menu {
+  li {
+    width: 33.33%;
+    &:nth-child(3n+1) {
+      clear: both;
+    }
+  }
+}
+
+.nav.menu.col4,
+.col4 .nav.menu {
+  li {
+    width: 25%;
+    &:nth-child(4n+1) {
+      clear: both;
+    }
+  }
+}
+
+.nav.menu.col5,
+.col5 .nav.menu {
+  li {
+    width: 20%;
+    &:nth-child(5n+1) {
+      clear: both;
+    }
+  }
+}
+
+// top1 + top3 + bottom1 + bottom3
+#jm-top1,
+#jm-top3,
+#jm-bottom1,
+#jm-bottom3 {
+  .nav.menu {
+    li a,
+    li span.separator {
+      color: @JMtop1FontColor;
+    }
+    .nav-header {
+      color: @JMtop1FontColor;
+    }
+    li > a:hover,
+    li > span.separator:hover,
+    li.active > a,
+    li.active > span.separator {
+      color: @JMstyle;
+    }
+  }
+}
+
+// bottom2
+#jm-bottom2 .nav.menu {
+  li a,
+  li span.separator {
+    color: @JMbottom2FontColor;
+  }
+  .nav-header {
+    color: @JMbottom2FontColor;
+  }
+  li > a:hover,
+  li > span.separator:hover,
+  li.active > a,
+  li.active > span.separator {
+    color: @JMstyle2;
+  }
+}
+
+// footer-mod
+#jm-footer-mod .nav.menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  li a,
+  li span.separator {
+    padding: 0;
+    color: @JMfootermodFontColor;
+  }
+  .nav-header {
+    color: @JMfootermodFontColor;
+  }
+  li > a:hover,
+  li > span.separator:hover,
+  li.active > a,
+  li.active > span.separator {
+    color: @JMstyle;
+  }
+}
+
+// offcanvas
+#jm-offcanvas-content {
+  .nav.menu {
+    li a,
+    li span.separator {
+      color: @JMoffCanvasFontColor;
+    }
+    .nav-header {
+      color: @JMoffCanvasFontColor;
+    }
+    li > a:hover,
+    li > span.separator:hover,
+    li.active > a,
+    li.active > span.separator {
+      color: @JMstyle;
+    }
+  }
+}
+
+// megamenu 
+.dj-megamenu .nav.menu {
+  margin: 0 -16px;
+  li a,
+  li span.separator {   
+    color: @JMtopmenuSubmenuFontColor;
+    font-size: @JMtopmenuSubmenuFontSize;
+    font-weight: @JMfontWeightMedium;
+    padding: 12px 16px;
+    line-height: @JMtopmenuSubmenuLineHeight;
+    position: relative;
+    overflow: hidden;
+    img {
+      max-height: @JMtopmenuSubmenuLineHeight;
+    }
+    &:hover {
+      color: @JMstyle;
+    }
+  }
+  .nav-header {
+    color: @JMtopmenuSubmenuFontColor;
+  }
+  > li {
+    margin-bottom: 1px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  > li > a,
+  > li > span.separator {
+    //ripple
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 400px;
+      height: 400px;
+      margin-left: -200px;
+      margin-top: -200px;
+      background: @JMdarkRippleColor;
+      .transition(0.5s ease);
+      .border-radius(100%);
+      .opacity(10);
+      .scale(0);
+    }
+    &:not(:active):after {
+      animation: ripple 1s ease-out;
+    }
+    /* fixes initial animation run, without user input, on page load.*/
+    &:after {
+      visibility: hidden;
+    }
+    &:focus:after {
+      visibility: visible;
+    }
+  }
+  > li > a:hover,
+  > li > span.separator:hover,
+  > li.active > a,
+  > li.active > span.separator {
+    color: inherit;
+    background: @JMtopmenuSubmenuHoverBackground;
+  }
+}
+
+#jm-allpage {
+  // color2-ms
+  .jm-module.color2-ms {
+    .nav.menu {
+      li a,
+      li span.separator {
+        color: darken(@JMcolor2msFontColor, 19%);
+      }
+      .nav-header {
+        color: darken(@JMcolor2msFontColor, 19%);
+      }
+      li > a:hover,
+      li > span.separator:hover,
+      li.active > a,
+      li.active > span.separator {
+        color: @JMstyle;
+      }
+    }
+  }
+}

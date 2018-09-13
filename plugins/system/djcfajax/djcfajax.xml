@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="1.6.0" group="system" method="upgrade">
+	<name>plg_system_djcfajax</name>
+	<creationDate>January 2017</creationDate>
+	<author>DJ-Extensions.com</author>
+	<copyright>Copyright (C) 2017 DJ-Extensions.com, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.3.2.1</version>
+	<description>PLG_SYSTEM_DJCFAJAX_DESC</description>
+	<scriptfile>djcfajax.script.php</scriptfile>
+	<files>
+		<filename plugin="djcfajax">djcfajax.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="PLG_SYSTEM_DJCFAJAX_CONFIG_BASIC_SETTINGS">
+				<field name="enable_in" type="menuitem" label="PLG_SYSTEM_DJCFAJAX_CONFIG_ENABLE_IN" description="PLG_SYSTEM_DJCFAJAX_CONFIG_ENABLE_IN_DESC" multiple="true" />
+				<field name="on_pagination" type="radio" default="0" class="btn-group" label="PLG_SYSTEM_DJCFAJAX_CONFIG_ON_PAGINATION" 
+					description="PLG_SYSTEM_DJCFAJAX_CONFIG_ON_PAGINATION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+	            </field>
+				<field name="on_sorting" type="radio" default="0" class="btn-group" label="PLG_SYSTEM_DJCFAJAX_CONFIG_ON_SORTING" 
+					description="PLG_SYSTEM_DJCFAJAX_CONFIG_ON_SORTING_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+	            </field>
+				<field name="on_categories" type="radio" default="0" class="btn-group" label="PLG_SYSTEM_DJCFAJAX_CONFIG_ON_CATEGORIES" 
+					description="PLG_SYSTEM_DJCFAJAX_CONFIG_ON_CATEGORIES_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+	           </field>
+				<field name="update_url" type="radio" default="1" class="btn-group" label="PLG_SYSTEM_DJCFAJAX_CONFIG_UPDATE_URL" 
+					description="PLG_SYSTEM_DJCFAJAX_CONFIG_UPDATE_URL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+	            </field>
+	            <field name="input_timeout" type="text" default="" size="50" label="PLG_SYSTEM_DJCFAJAX_CONFIG_INPUT_TIMEOUT" description="PLG_SYSTEM_DJCFAJAX_CONFIG_INPUT_TIMEOUT_DESC" />
+				<field name="progress_bar" type="radio" default="0" class="btn-group" label="PLG_SYSTEM_DJCFAJAX_CONFIG_PROGRESS_BAR" 
+					description="PLG_SYSTEM_DJCFAJAX_CONFIG_PROGRESS_BAR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+	            </field>
+			</fieldset>
+			<fieldset name="pagination" label="PLG_SYSTEM_DJCFAJAX_CONFIG_PAGINATION_SETTINGS">				
+				<field showon="on_pagination!:1" name="note13" type="note" label="No options available" description="Enable 'On Pagination' parameter to see corresponding options" />
+				<field name="items_lazy_loading" type="radio" default="0" class="btn-group" label="PLG_SYSTEM_DJCFAJAX_CONFIG_ITEMS_LAZY_LOADING" 
+					description="PLG_SYSTEM_DJCFAJAX_CONFIG_ITEMS_LAZY_LOADING_DESC" showon="on_pagination:1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+					<field showon="items_lazy_loading:1[AND]on_pagination:1" name="pagination" type="radio" default="0" class="btn-group" label="PLG_SYSTEM_DJCFAJAX_CONFIG_PAGINATION" 
+						description="PLG_SYSTEM_DJCFAJAX_CONFIG_PAGINATION_DESC">
+						<option value="0">PLG_SYSTEM_DJCFAJAX_CONFIG_PAGINATION_HIDE</option>
+						<option value="1">PLG_SYSTEM_DJCFAJAX_CONFIG_PAGINATION_SHOW</option>
+						<option value="2">PLG_SYSTEM_DJCFAJAX_CONFIG_PAGINATION_FIXED</option>
+		            </field>
+				<field showon="items_lazy_loading:1[AND]on_pagination:1" name="blog_grid_layout" type="radio" default="0" class="btn-group" label="PLG_SYSTEM_DJCFAJAX_CONFIG_BLOG_GRID_LAYOUT" 
+					description="PLG_SYSTEM_DJCFAJAX_CONFIG_BLOG_GRID_LAYOUT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+	            </field>
+			</fieldset>
+   		</fields>
+   </config>
+   
+</extension>

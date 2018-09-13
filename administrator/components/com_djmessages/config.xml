@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="global-config" description="COM_DJMESSAGES_GLOBAL_SETTINGS" label="COM_DJMESSAGES_GLOBAL_SETTINGS">
+		<field name="admin_notifications" type="radio" default="0" class="btn-group" label="COM_DJMESSAGES_CONFIG_ADMIN_NOTIFICATIONS" description="COM_DJMESSAGES_CONFIG_ADMIN_NOTIFICATIONS_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="admin_notifications_user" showon="admin_notifications:1" type="user" label="COM_DJMESSAGES_CONFIG_ADMIN_NOTIFICATIONS_USER" description="COM_DJMESSAGES_CONFIG_ADMIN_NOTIFICATIONS_USER_DESC" />
+	</fieldset>
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC"
+		label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" component="com_djmessages"
+			filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+	</fieldset>
+</config>

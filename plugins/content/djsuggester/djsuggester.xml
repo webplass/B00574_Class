@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.5" type="plugin" group="content" method="upgrade">
+	<name>plg_content_djsuggester</name>
+	<creationDate>June 2018</creationDate>
+	<author>DJ-Extensions.com</author>
+	<copyright>Copyright (C) DJ-Extensions.com, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>2.6.0</version>
+	<description>PLG_DJSUGGESTER_LIGHT_DESC</description>
+	<files>
+		<filename plugin="djsuggester">djsuggester.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>assets</folder>
+		<folder>themes</folder>
+		<folder>fields</folder>
+		<folder>params</folder>
+		<folder>helpers</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/plugins/content/djsuggester/fields">
+
+			<fieldset name="basic" label="PLG_DJSUGGESTER_BASIC_SETTINGS" ext="djsuggester">
+				<field name="updater" type="djupdater" extension="plg_content_djsuggester" pro="0" label="PLG_DJSUGGESTER_UPDATER" />
+				<field name="theme" type="djfolderlist" default="default" label="PLG_DJSUGGESTER_THEME" description="PLG_DJSUGGESTER_THEME_DESC" directory="plugins/content/djsuggester/themes" filter="" exclude="" stripext="" hide_none="true" hide_default="true">
+					<option value="_override">PLG_DJSUGGESTER_THEME_OVERRIDE</option>
+					<option value="_custom">PLG_DJSUGGESTER_CUSTOM_THEME</option>
+				</field>
+				
+				<field type="djspacer" label="PLG_DJSUGGESTER_CUSTOM_THEME_DESC" showon="theme:_custom" />
+				<field name="sgbg" type="djonlypro" format="rgba" default="#f5f5f5" label="PLG_DJSUGGESTER_CUSTOM_BG" showon="theme:_custom" />
+				<field name="sgcolor" type="djonlypro" format="rgba" default="#444444" label="PLG_DJSUGGESTER_CUSTOM_COLOR" showon="theme:_custom" />
+				<field name="sgborder" type="djonlypro" format="rgba" default="#ff6600" label="PLG_DJSUGGESTER_CUSTOM_BORDER" showon="theme:_custom" />
+				<field name="btnbg" type="djonlypro" format="rgba" default="#f5f5f5" label="PLG_DJSUGGESTER_CUSTOM_BTN_BG" showon="theme:_custom" />
+				<field name="btncolor" type="djonlypro" format="rgba" default="#9c9c9c" label="PLG_DJSUGGESTER_CUSTOM_BTN_COLOR" showon="theme:_custom" />
+				<field name="btnbghover" type="djonlypro" format="rgba" default="#e5e5e5" label="PLG_DJSUGGESTER_CUSTOM_BTN_BG_HOVER" showon="theme:_custom" />
+				<field name="btncolorhover" type="djonlypro" format="rgba" default="#9c9c9c" label="PLG_DJSUGGESTER_CUSTOM_BTN_COLOR_HOVER" showon="theme:_custom" />
+				<field name="headcolor" type="djonlypro" format="rgba" default="#9c9c9c" label="PLG_DJSUGGESTER_CUSTOM_HEADING_COLOR" showon="theme:_custom" />
+				<field name="titlecolor" type="djonlypro" format="rgba" default="#ff6600" label="PLG_DJSUGGESTER_CUSTOM_TITLE_COLOR" showon="theme:_custom" />
+				<field name="titlecolorhover" type="djonlypro" format="rgba" default="#ff6600" label="PLG_DJSUGGESTER_CUSTOM_TITLE_COLOR_HOVER" showon="theme:_custom" />
+				<field name="imgborder" type="djonlypro" format="rgba" default="#e5e5e5" label="PLG_DJSUGGESTER_CUSTOM_IMG_BORDER" showon="theme:_custom" />
+				<field type="spacer" label="&lt;hr &#47;&gt;" showon="theme:_custom" />
+				
+				<field name="offset" type="djonlypro" label="PLG_DJSUGGESTER_OFFSET" description="PLG_DJSUGGESTER_OFFSET_DESC" size="10" default="400" filter="integer" />
+				<field name="hideintop" type="djonlypro" default="0" label="PLG_DJSUGGESTER_HIDE_IN_TOP" description="PLG_DJSUGGESTER_HIDE_IN_TOP_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_once" type="djonlypro" default="1" label="PLG_DJSUGGESTER_SHOW_ONCE" description="PLG_DJSUGGESTER_SHOW_ONCE_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="delay" type="djonlypro" label="PLG_DJSUGGESTER_OPEN_DELAY" description="PLG_DJSUGGESTER_OPEN_DELAY_DESC" size="5" default="15" filter="integer" />
+				
+				<field name="spacer2" type="spacer" hr="true" />
+				<field name="filter_menu" type="radio" default="1" label="PLG_DJSUGGESTER_MENU_FILTER_TYPE" description="PLG_DJSUGGESTER_MENU_FILTER_TYPE_DESC" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_INCLUDE</option>
+					<option value="0">PLG_DJSUGGESTER_EXCLUDE</option>
+				</field>
+				<field name="itemids" type="menuitem" label="PLG_DJSUGGESTER_MENU_ITEMS" multiple="true" size="10" default="">
+					<option value="">PLG_DJSUGGESTER_ALL_MENU_ITEMS</option>
+				</field>
+				
+				<field name="spacer3" type="spacer" hr="true" />
+				<field name="desc_turncate" type="radio" default="1" label="PLG_DJSUGGESTER_TURNCATE_DESCRIPTION" description="PLG_DJSUGGESTER_TURNCATE_DESCRIPTION_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="desc_limit" type="text" label="PLG_DJSUGGESTER_DESCRIPTION_LIMIT" description="PLG_DJSUGGESTER_DESCRIPTION_LIMIT_DESC" size="10" default="200" filter="integer" />
+								
+				<field name="spacer0" type="spacer" hr="true" />
+				<field name="animation_in" type="groupedlist" label="PLG_DJSUGGESTER_ENTRANCE_ANIMATION" default="rotateInDownRight">
+				
+					<group label="Bouncing Entrances">
+					  <option value="bounceIn">bounceIn</option>
+					  <option value="bounceInDown">bounceInDown</option>
+					  <option value="bounceInLeft">bounceInLeft</option>
+					  <option value="bounceInRight">bounceInRight</option>
+					  <option value="bounceInUp">bounceInUp</option>
+					</group>
+			
+					<group label="Fading Entrances">
+					  <option value="fadeIn">fadeIn</option>
+					  <option value="fadeInDown">fadeInDown</option>
+					  <option value="fadeInDownBig">fadeInDownBig</option>
+					  <option value="fadeInLeft">fadeInLeft</option>
+					  <option value="fadeInLeftBig">fadeInLeftBig</option>
+					  <option value="fadeInRight">fadeInRight</option>
+					  <option value="fadeInRightBig">fadeInRightBig</option>
+					  <option value="fadeInUp">fadeInUp</option>
+					  <option value="fadeInUpBig">fadeInUpBig</option>
+					</group>
+			
+					<group label="Flippers">
+					  <option value="flipInX">flipInX</option>
+					  <option value="flipInY">flipInY</option>
+					</group>
+						
+					<group label="Rotating Entrances">
+					  <option value="rotateIn">rotateIn</option>
+					  <option value="rotateInDownLeft">rotateInDownLeft</option>
+					  <option value="rotateInDownRight">rotateInDownRight</option>
+					  <option value="rotateInUpLeft">rotateInUpLeft</option>
+					  <option value="rotateInUpRight">rotateInUpRight</option>
+					</group>
+			
+					<group label="Sliders">
+					  <option value="slideInLeft">slideInLeft</option>
+					  <option value="slideInRight">slideInRight</option>
+					  <option value="slideInDown">slideInDown</option>
+					  <option value="slideInUp">slideInUp</option>
+					</group>
+					
+					<group label="Zooming Entrances">
+					  <option value="zoomIn">zoomIn</option>
+					  <option value="zoomInX">zoomInX</option>
+					  <option value="zoomInY">zoomInY</option>
+					</group>
+								
+					<group label="Specials">
+					  <option value="rollIn">rollIn</option>
+					  <option value="lightSpeedIn">lightSpeedIn</option>
+					</group>
+					
+				</field>
+				  
+				<field name="animation_out" type="groupedlist" label="PLG_DJSUGGESTER_EXIT_ANIMATION" default="fadeOutDown">
+				
+					<group label="Bouncing Exits">
+					  <option value="bounceOut">bounceOut</option>
+					  <option value="bounceOutDown">bounceOutDown</option>
+					  <option value="bounceOutLeft">bounceOutLeft</option>
+					  <option value="bounceOutRight">bounceOutRight</option>
+					  <option value="bounceOutUp">bounceOutUp</option>
+					</group>
+			
+					<group label="Fading Exits">
+					  <option value="fadeOut">fadeOut</option>
+					  <option value="fadeOutDown">fadeOutDown</option>
+					  <option value="fadeOutDownBig">fadeOutDownBig</option>
+					  <option value="fadeOutLeft">fadeOutLeft</option>
+					  <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+					  <option value="fadeOutRight">fadeOutRight</option>
+					  <option value="fadeOutRightBig">fadeOutRightBig</option>
+					  <option value="fadeOutUp">fadeOutUp</option>
+					  <option value="fadeOutUpBig">fadeOutUpBig</option>
+					</group>
+			
+					<group label="Flippers">
+					  <option value="flipOutX">flipOutX</option>
+					  <option value="flipOutY">flipOutY</option>
+					</group>
+						
+					<group label="Rotating Exits">
+					  <option value="rotateOut">rotateOut</option>
+					  <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+					  <option value="rotateOutDownRight">rotateOutDownRight</option>
+					  <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+					  <option value="rotateOutUpRight">rotateOutUpRight</option>
+					</group>
+			
+					<group label="Sliders">
+					  <option value="slideOutLeft">slideOutLeft</option>
+					  <option value="slideOutRight">slideOutRight</option>
+					  <option value="slideOutUp">slideOutUp</option>
+					  <option value="slideOutDown">slideOutDown</option>
+					</group>
+					
+					<group label="Zooming Exits">
+					  <option value="zoomOut">zoomOut</option>
+					  <option value="zoomOutX">zoomOutX</option>
+					  <option value="zoomOutY">zoomOutY</option>
+					</group>
+					
+					<group label="Specials">
+					  <option value="hinge">hinge</option>
+					  <option value="rollOut">rollOut</option>
+					  <option value="lightSpeedOut">lightSpeedOut</option>
+					</group>
+					
+				</field>
+				
+				<field name="animation_speed" type="list" label="PLG_DJSUGGESTER_ANIMATION_SPEED" default="normal">
+					<option value="fast">Fast</option>
+					<option value="normal">Normal</option>
+					<option value="slow">Slow</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="articles" label="PLG_DJSUGGESTER_ARTICLES">
+			
+				<field name="articles" type="radio"	default="1" label="PLG_DJSUGGESTER_ARTICLE_SUGGESTION" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_ENABLED</option>
+					<option value="0">PLG_DJSUGGESTER_DISABLED</option>
+				</field>
+				<field name="articles_mode" type="radio" default="0" label="PLG_DJSUGGESTER_FOLLOW_CATEGORY" description="PLG_DJSUGGESTER_FOLLOW_CATEGORY_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="articles_order" type="list" default="ordering" label="PLG_DJSUGGESTER_ORDER" description="PLG_DJSUGGESTER_ORDER_DESC" class="btn-group">
+					<option value="title">PLG_DJSUGGESTER_TITLE</option>
+					<option value="rtitle">PLG_DJSUGGESTER_TITLE_REVERSE</option>
+					<option value="date">PLG_DJSUGGESTER_DATE</option>
+					<option value="rdate">PLG_DJSUGGESTER_DATE_REVERSE</option>
+					<option value="ordering">PLG_DJSUGGESTER_ORDERING</option>
+					<option value="rordering">PLG_DJSUGGESTER_ORDERING_REVERSE</option>
+					<option value="random">PLG_DJSUGGESTER_RANDOM</option>
+				</field>
+				<field name="articles_filter_cat" type="radio" default="1" label="PLG_DJSUGGESTER_CATEGORY_FILTER_TYPE" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_INCLUDE</option>
+					<option value="0">PLG_DJSUGGESTER_EXCLUDE</option>
+				</field>
+				<field name="articles_cats" type="category" extension="com_content" label="PLG_DJSUGGESTER_CATEGORIES" description="PLG_DJSUGGESTER_CATEGORIES" multiple="true" size="10" default="">
+					<option value="">PLG_DJSUGGESTER_ALL_CATEGORIES</option>
+				</field>
+				<field name="articles_image" type="radio" default="1" label="PLG_DJSUGGESTER_DISPLAY_IMAGE" description="PLG_DJSUGGESTER_DISPLAY_IMAGE_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="articles_imagewidth" type="text" default="150" label="PLG_DJSUGGESTER_IMG_WIDTH" description="PLG_DJSUGGESTER_IMG_WIDTH_DESC"/>
+				<field name="articles_header" type="text" default="" label="PLG_DJSUGGESTER_CONTENT_HEADER_TEXT" description="PLG_DJSUGGESTER_HEADER_TEXT_DESC"/>
+			
+			</fieldset>
+			
+			<fieldset name="djcatalog2" label="PLG_DJSUGGESTER_DJCATALOG2">
+				<field name="djcatalog2" type="djspacer" label="PLG_DJSUGGESTER_COMPONENT_NOT_INSTALLED" alert_type="error" />
+			</fieldset>
+			
+			<fieldset name="djclassifieds" label="PLG_DJSUGGESTER_DJCLASSIFIEDS">
+				<field name="djclassifieds" type="djspacer" label="PLG_DJSUGGESTER_COMPONENT_NOT_INSTALLED" alert_type="error" />
+			</fieldset>
+			
+			<fieldset name="k2" label="PLG_DJSUGGESTER_K2">
+				<field name="k2" type="djspacer" label="PLG_DJSUGGESTER_COMPONENT_NOT_INSTALLED" alert_type="error" />
+			</fieldset>
+			
+			<fieldset name="easyblog" label="PLG_DJSUGGESTER_EASYBLOG">
+				<field name="easyblog" type="djspacer" label="PLG_DJSUGGESTER_COMPONENT_NOT_INSTALLED" alert_type="error" />
+			</fieldset>
+			
+			<fieldset name="zoo" label="PLG_DJSUGGESTER_ZOO">
+				<field name="zoo" type="djspacer" label="PLG_DJSUGGESTER_COMPONENT_NOT_INSTALLED" alert_type="error" />
+			</fieldset>
+			
+			<fieldset name="modules" addfieldpath="libraries/joomla/form/fields" label="PLG_DJSUGGESTER_MODULES_SETTINGS">
+				
+				<field type="djspacer" label="PLG_DJSUGGESTER_MODULES_DESC" />
+				<field name="modules_order" type="djonlypro"	default="last" label="PLG_DJSUGGESTER_MODULES_ORDER" description="PLG_DJSUGGESTER_MODULES_ORDER_DESC" class="btn-group">
+					<option value="first">PLG_DJSUGGESTER_FIRST</option>
+					<option value="last">PLG_DJSUGGESTER_LAST</option>
+					<option value="replace">PLG_DJSUGGESTER_REPLACE</option>
+				</field>
+				<field name="modules_style" type="djonlypro" default="xhtml" description="PLG_DJSUGGESTER_MODULES_STYLE_DESC" label="PLG_DJSUGGESTER_MODULES_STYLE">
+					<option value="table">PLG_DJSUGGESTER_TABLE</option>
+					<option value="horz">PLG_DJSUGGESTER_HORIZONTAL</option>
+					<option value="xhtml">PLG_DJSUGGESTER_DIVS</option>
+					<option value="rounded">PLG_DJSUGGESTER_MULTIPLEDIVS</option>
+					<option value="none">PLG_DJSUGGESTER_RAW</option>
+				</field>
+				
+				<field type="djspacer" label="PLG_DJSUGGESTER_MODULES_CUSTOM_DESC" />
+				<field name="manual" type="djonlypro"	default="1" label="PLG_DJSUGGESTER_MANUAL_SUGGESTION" description="PLG_DJSUGGESTER_MANUAL_SUGGESTION_DESC" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_ENABLED</option>
+					<option value="0">PLG_DJSUGGESTER_DISABLED</option>
+				</field>
+				
+				<field name="manual_order" type="djonlypro"	default="replace" label="PLG_DJSUGGESTER_MANUAL_ORDER" description="PLG_DJSUGGESTER_MANUAL_ORDER_DESC" class="btn-group">
+					<option value="first">PLG_DJSUGGESTER_FIRST</option>
+					<option value="last">PLG_DJSUGGESTER_LAST</option>
+					<option value="replace">PLG_DJSUGGESTER_REPLACE</option>
+				</field>
+				<field name="manual_style" type="djonlypro" default="xhtml" description="PLG_DJSUGGESTER_MANUAL_STYLE_DESC" label="PLG_DJSUGGESTER_MANUAL_STYLE">
+					<option value="table">PLG_DJSUGGESTER_TABLE</option>
+					<option value="horz">PLG_DJSUGGESTER_HORIZONTAL</option>
+					<option value="xhtml">PLG_DJSUGGESTER_DIVS</option>
+					<option value="rounded">PLG_DJSUGGESTER_MULTIPLEDIVS</option>
+					<option value="none">PLG_DJSUGGESTER_RAW</option>
+				</field>
+								
+			</fieldset>
+
+		</fields>
+	</config>
+	
+	<media destination="djextensions" folder="media">
+		<folder>css</folder>
+	</media>
+	
+	<scriptfile>script.djsuggester.php</scriptfile>
+	
+	<server type="extension" priority="1" name="DJ-Suggester">https://dj-extensions.com/api/getUpdateInfo?extension=djsuggester_light.xml</server>
+</extension>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<config>
+		<fields name="params">
+			
+			<fieldset name="djcatalog2" addfieldpath="/administrator/components/com_djcatalog2/models/fields" label="PLG_DJSUGGESTER_DJCATALOG2">
+				
+				<field name="djcatalog2" type="djonlypro"	default="1" label="PLG_DJSUGGESTER_DJCATALOG2_SUGGESTION" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_ENABLED</option>
+					<option value="0">PLG_DJSUGGESTER_DISABLED</option>
+				</field>
+				<field name="djcatalog2_mode" type="radio" default="0" label="PLG_DJSUGGESTER_FOLLOW_CATEGORY" description="PLG_DJSUGGESTER_FOLLOW_CATEGORY_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="djcatalog2_order" type="list" default="ordering" label="PLG_DJSUGGESTER_ORDER" description="PLG_DJSUGGESTER_ORDER_DESC" class="btn-group">
+					<option value="title">PLG_DJSUGGESTER_PRODUCT_NAME</option>
+					<option value="rtitle">PLG_DJSUGGESTER_PRODUCT_NAME_REVERSE</option>
+					<option value="date">PLG_DJSUGGESTER_DATE</option>
+					<option value="rdate">PLG_DJSUGGESTER_DATE_REVERSE</option>
+					<option value="ordering">PLG_DJSUGGESTER_ORDERING</option>
+					<option value="rordering">PLG_DJSUGGESTER_ORDERING_REVERSE</option>
+					<option value="random">PLG_DJSUGGESTER_RANDOM</option>
+				</field>
+				<field name="djcatalog2_filter_cat" type="radio" default="1" label="PLG_DJSUGGESTER_CATEGORY_FILTER_TYPE" class="btn-group">
+					<option value="1">PLG_DJSUGGESTER_INCLUDE</option>
+					<option value="0">PLG_DJSUGGESTER_EXCLUDE</option>
+				</field>
+				<field name="djcatalog2_cats" type="djcategory" label="PLG_DJSUGGESTER_CATEGORIES" multiple="true" size="10" default="0" required="false" default_name="PLG_DJSUGGESTER_ALL_CATEGORIES" />
+				<field name="djcatalog2_image" type="radio" default="1" label="PLG_DJSUGGESTER_DISPLAY_IMAGE" description="PLG_DJSUGGESTER_DISPLAY_IMAGE_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="djc2_imageprocess" type="list" default="0" label="PLG_DJSUGGESTER_IMG_PROCESS" description="PLG_DJSUGGESTER_IMG_PROCESS_DESC">
+					<option value="1">PLG_DJSUGGESTER_IMAGE_RESIZE_AND_CROP</option>
+					<option value="0">PLG_DJSUGGESTER_IMAGE_RESIZE</option>
+				</field>
+				<field name="djc2_imagewidth" type="text" default="150" label="PLG_DJSUGGESTER_IMG_WIDTH" description="PLG_DJSUGGESTER_IMG_WIDTH_DESC"/>
+				<field name="djc2_imageheight" type="text" default="150" label="PLG_DJSUGGESTER_IMG_HEIGHT" description="PLG_DJSUGGESTER_IMG_HEIGHT_DESC" />
+				<field name="djcatalog2_header" type="text" default="" label="PLG_DJSUGGESTER_DJCATALOG_HEADER_TEXT" description="PLG_DJSUGGESTER_HEADER_TEXT_DESC"/>
+			
+			</fieldset>
+			
+		</fields>
+	</config>
+</form>
+	
